@@ -38,8 +38,8 @@ def _parse_zh_line(line: str) -> tuple[str, str, str, str] | None:
 
 
 def parse_mapping(path: Path) -> tuple[list[tuple[str, str]], list[tuple[str, str]]]:
-    main_pairs: list[tuple[str, str]] = []
-    renderer_pairs: list[tuple[str, str]] = []
+    main_dict: dict[str, str] = {}
+    renderer_dict: dict[str, str] = {}
     text = path.read_text(encoding="utf-8")
     for raw in text.splitlines():
         line = raw.strip()
@@ -53,27 +53,31 @@ def parse_mapping(path: Path) -> tuple[list[tuple[str, str]], list[tuple[str, st
         source, target, _category, target_file = parsed
         target_file = target_file.strip()
         if target_file == "main.js":
-            main_pairs.append((source, target))
+            main_dict[source] = target
         elif target_file == "renderer.js":
-            renderer_pairs.append((source, target))
+            renderer_dict[source] = target
         else:
             print(f"[skip] unknown file column: {target_file!r}", file=sys.stderr)
-    return main_pairs, renderer_pairs
+    return list(main_dict.items()), list(renderer_dict.items())
 
 
 def apply_pairs(content: str, pairs: list[tuple[str, str]], label: str) -> str:
     # 先替換較長的來源字串，避免子字串先被換掉導致長字串對不到
     sorted_pairs = sorted(pairs, key=lambda x: len(x[0]), reverse=True)
+    orig_content = content
     missing: list[str] = []
     for src, dst in sorted_pairs:
         if not src:
             continue
         if src not in content:
-            missing.append(src[:80] + ("…" if len(src) > 80 else ""))
+            # 若在原始檔案中完全不存在，才視為無效/版本不合
+            # 若在原始檔案存在但現在已被較長詞條覆蓋，則屬於正常包覆替換
+            if src not in orig_content:
+                missing.append(src[:80] + ("…" if len(src) > 80 else ""))
             continue
         content = content.replace(src, dst)
     if missing:
-        print(f"[warn] {label}: {len(missing)} source string(s) not found (version mismatch?)", file=sys.stderr)
+        print(f"[warn] {label}: {len(missing)} source string(s) not found in original bundle (version mismatch or obsolete?)", file=sys.stderr)
         for m in missing[:15]:
             print(f"  - {m!r}", file=sys.stderr)
         if len(missing) > 15:

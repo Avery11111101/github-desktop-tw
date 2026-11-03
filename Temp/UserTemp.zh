@@ -72,7 +72,7 @@ Create a tutorial repository…>*.*<建立教學儲存庫…>*.*<開始頁面>*.
 onClick:this.onCloneSelectedRepository},"Clone"," ",_e.createElement("strong",null,e.owner.login>*.*<onClick:this.onCloneSelectedRepository},"複製"," ",_e.createElement("strong",null,e.owner.login>*.*<開始頁面>*.*<renderer.js
 null,"ProTip!">*.*<null,"提示：">*.*<開始頁面>*.*<renderer.js
 ProTip! Press>*.*<提示：>*.*<開始頁面>*.*<renderer.js
-You can drag & drop an existing repository folder here to add it to Desktop>*.*<您可以將現有的儲存庫資料夾拖放到此處以新增至 Desktop>*.*<渲染器介面>*.*<renderer.js
+You can drag & drop an existing repository folder here to add it to Desktop>*.*<您可以將現有的儲存庫資料夾拖放至此處，以將其新增至 Desktop>*.*<渲染器介面>*.*<renderer.js
 Clone a repository>*.*<複製儲存庫>*.*<待分組>*.*<renderer.js
 "Sign in";>*.*<"登入";>*.*<待分組>*.*<renderer.js
 Sign in to your GitHub.com account to access your repositories.>*.*<登入您的 GitHub.com 帳戶以存取儲存庫。>*.*<待分組>*.*<renderer.js
@@ -105,7 +105,7 @@ The commits from the selected branch will be added to the current branch via a m
 The commits in the selected branch will be combined into one commit in the current branch.>*.*<所選分支的所有提交將合併為單一提交後加入目前分支。>*.*<介面補齊>*.*<renderer.js
 The commits from the selected branch will be rebased and added to the current branch.>*.*<所選分支的提交將重新定基底（rebase）後加入目前分支。>*.*<介面補齊>*.*<renderer.js
 Unable to start rebase. Check you have chosen a valid branch.>*.*<無法開始重新定基底。請確認您已選擇有效的分支。>*.*<介面補齊>*.*<renderer.js
-Unable to merge unrelated histories in this repository>*.*<無法在此儲存庫中合併無關的歷程記錄>*.*<渲染器介面>*.*<renderer.js
+Unable to merge unrelated histories in this repository>*.*<無法在此儲存庫中合併無關聯的歷史記錄>*.*<渲染器介面>*.*<renderer.js
 Unable to merge unrelated histories in this repository.>*.*<無法合併此儲存庫中不相關的歷史記錄。>*.*<介面補齊>*.*<renderer.js
 This action cannot be undone.>*.*<此動作無法復原。>*.*<介面補齊>*.*<renderer.js
 Sign in to your GitHub Enterprise>*.*<登入您的 GitHub Enterprise>*.*<介面補齊>*.*<renderer.js
@@ -447,8 +447,8 @@ Invalid operator type, expected string but got>*.*<無效的運算子類型，�
 Invalid operator, expected one of>*.*<無效的運算子，應為下列其中之一：>*.*<遺漏補翻>*.*<renderer.js
 Invalid operator:>*.*<無效的運算子：>*.*<遺漏補翻>*.*<renderer.js
 Invalid patch version>*.*<無效的修訂版本號 (Patch version)>*.*<主程序介面>*.*<main.js
-MMM D, YYYY>*.*<MMM D, YYYY>*.*<主程序介面>*.*<main.js
-MMMM D, YYYY>*.*<MMMM D, YYYY>*.*<主程序介面>*.*<main.js
+MMM D, YYYY>*.*<YYYY年M月D日>*.*<主程序介面>*.*<main.js
+MMMM D, YYYY>*.*<YYYY年M月D日>*.*<主程序介面>*.*<main.js
 May not write null values to stream>*.*<無法將 null 值寫入串流>*.*<主程序介面>*.*<main.js
 Premature close>*.*<過早關閉>*.*<主程序介面>*.*<main.js
 Run the trap, drop the bass>*.*<Run the trap, drop the bass>*.*<主程序介面>*.*<main.js
@@ -461,8 +461,8 @@ call pause flowing=%j>*.*<呼叫 pause flowing=%j>*.*<主程序介面>*.*<main.j
 caret return>*.*<脫字元號傳回 (caret return)>*.*<主程序介面>*.*<main.js
 comparator trim>*.*<修剪比較運算子 (comparator trim)>*.*<主程序介面>*.*<main.js
 concurrency limit cannot be less than 1>*.*<並行限制不能小於 1>*.*<主程序介面>*.*<main.js
-ddd MMM DD YYYY HH:mm:ss>*.*<ddd MMM DD YYYY HH:mm:ss>*.*<主程序介面>*.*<main.js
-dddd, MMMM D, YYYY>*.*<dddd, MMMM D, YYYY>*.*<主程序介面>*.*<main.js
+ddd MMM DD YYYY HH:mm:ss>*.*<YYYY年M月DD日 ddd HH:mm:ss>*.*<主程序介面>*.*<main.js
+dddd, MMMM D, YYYY>*.*<YYYY年M月D日 dddd>*.*<主程序介面>*.*<main.js
 do read>*.*<執行讀取 (do read)>*.*<主程序介面>*.*<main.js
 end must be a Number>*.*<end 必須是數值 (Number)>*.*<主程序介面>*.*<main.js
 eval at>*.*<評估於 (eval at)>*.*<遺漏補翻>*.*<renderer.js
@@ -512,7 +512,7 @@ Skipped by Copilot>*.*<已由 Copilot 略過>*.*<渲染器介面>*.*<renderer.js
 Thanks @>*.*<感謝 @>*.*<渲染器介面>*.*<renderer.js
 The following files would be overwritten:>*.*<下列檔案將會被覆寫：>*.*<渲染器介面>*.*<renderer.js
 Your current stash will be overwritten by creating a new stash>*.*<建立新的暫存將會覆寫您目前的暫存>*.*<渲染器介面>*.*<renderer.js
- not defined: conflicts with the method >*.*<未定義：與此方法衝突>*.*<主程序介面>*.*<main.js
+not defined: conflicts with the method >*.*<未定義：與方法衝突>*.*<主程序介面>*.*<main.js
 Cannot call >*.*<無法呼叫>*.*<主程序介面>*.*<main.js
 Invalid SemVer Range: >*.*<無效的 SemVer 版本範圍：>*.*<主程序介面>*.*<main.js
 Invalid Version: >*.*<無效的版本：>*.*<主程序介面>*.*<main.js
@@ -524,65 +524,65 @@ Unexpected operation: >*.*<非預期的操作：>*.*<主程序介面>*.*<main.js
 Unknown encoding: >*.*<未知的編碼：>*.*<主程序介面>*.*<main.js
 eval at >*.*<eval 於>*.*<主程序介面>*.*<main.js
 invalid increment argument: >*.*<無效的遞增引數：>*.*<主程序介面>*.*<main.js
- Do you want to create a fork of this repository at >*.*<您是否要在以下位置建立此儲存庫的復刻（Fork）：>*.*<渲染器介面>*.*<renderer.js
- account. Do you want to sign in again?>*.*<帳號。您想要再次登入嗎？>*.*<渲染器介面>*.*<renderer.js
- added lines>*.*<新增的行數>*.*<渲染器介面>*.*<renderer.js
- already exists>*.*<已經存在>*.*<渲染器介面>*.*<renderer.js
- already exists on the remote.>*.*<已存在於遠端。>*.*<渲染器介面>*.*<renderer.js
- and renaming this branch will not change the branch name on the remote.>*.*<且重新命名此分支不會變更遠端的分支名稱。>*.*<渲染器介面>*.*<renderer.js
- appears to be owned by another user on your machine. Adding untrusted repositories may automatically execute files in the repository.>*.*<似乎屬於您電腦上的其他使用者。新增不受信任的儲存庫可能會自動執行該儲存庫中的檔案。>*.*<渲染器介面>*.*<renderer.js
- are entirely different commit histories.>*.*<是完全不同的提交歷程記錄。>*.*<渲染器介面>*.*<renderer.js
- been resolved.>*.*<已解決。>*.*<渲染器介面>*.*<renderer.js
- by applying its >*.*<透過套用其>*.*<渲染器介面>*.*<renderer.js
- changed files?>*.*<變更的檔案？>*.*<渲染器介面>*.*<renderer.js
- choose an email local to this repository from the>*.*<從下列位置選取適用於此儲存庫的本機電子郵件：>*.*<渲染器介面>*.*<renderer.js
- could not be created.>*.*<無法建立。>*.*<渲染器介面>*.*<renderer.js
- doesn't match your GitHub>*.*<與您的 GitHub 不符>*.*<渲染器介面>*.*<renderer.js
- exist on your machine.>*.*<存在於您的電腦上。>*.*<渲染器介面>*.*<renderer.js
- failed in your pull request>*.*<在您的拉取請求（PR）中失敗>*.*<渲染器介面>*.*<renderer.js
- file already. Checking this box will result in the existing file being overwritten.>*.*<檔案已存在。勾選此方塊將導致現有檔案被覆寫。>*.*<渲染器介面>*.*<renderer.js
- files changed>*.*<個檔案變更>*.*<渲染器介面>*.*<renderer.js
- files selected>*.*<個已選取的檔案>*.*<渲染器介面>*.*<renderer.js
- for GitHub Desktop in the>*.*<用於 GitHub Desktop，位於>*.*<渲染器介面>*.*<renderer.js
- for your repository.>*.*<用於您的儲存庫。>*.*<渲染器介面>*.*<renderer.js
- git configuration >*.*<git 設定>*.*<渲染器介面>*.*<renderer.js
-helps you work with GitHub locally.>*.*<協助您在本機上與 GitHub 協同工作。>*.*<渲染器介面>*.*<renderer.js
-hook failed. What would you like to do?>*.*<Hook 執行失敗。您想要做什麼？>*.*<渲染器介面>*.*<renderer.js
-in progress that you have not yet committed.>*.*<正在進行中且尚未提交。>*.*<渲染器介面>*.*<renderer.js
+Do you want to create a fork of this repository at >*.*<您是否要在下列位置建立此儲存庫的復刻（Fork）：>*.*<渲染器介面>*.*<renderer.js
+account. Do you want to sign in again?>*.*<帳號。您想要再次登入嗎？>*.*<渲染器介面>*.*<renderer.js
+added lines>*.*<行新增>*.*<渲染器介面>*.*<renderer.js
+already exists>*.*<已經存在>*.*<渲染器介面>*.*<renderer.js
+already exists on the remote.>*.*<已存在於遠端。>*.*<渲染器介面>*.*<renderer.js
+and renaming this branch will not change the branch name on the remote.>*.*<且重新命名此分支不會變更遠端上的分支名稱。>*.*<渲染器介面>*.*<renderer.js
+appears to be owned by another user on your machine. Adding untrusted repositories may automatically execute files in the repository.>*.*<似乎屬於您電腦上的其他使用者。新增不受信任的儲存庫可能會自動執行該儲存庫中的檔案。>*.*<渲染器介面>*.*<renderer.js
+are entirely different commit histories.>*.*<為完全不同的提交歷史記錄。>*.*<渲染器介面>*.*<renderer.js
+been resolved.>*.*<已解決。>*.*<渲染器介面>*.*<renderer.js
+by applying its >*.*<透過套用其>*.*<渲染器介面>*.*<renderer.js
+changed files?>*.*<個變更的檔案？>*.*<渲染器介面>*.*<renderer.js
+choose an email local to this repository from the>*.*<從中為此儲存庫選擇本機電子郵件：>*.*<渲染器介面>*.*<renderer.js
+could not be created.>*.*<無法建立。>*.*<渲染器介面>*.*<renderer.js
+doesn't match your GitHub>*.*<與您的 GitHub 不符>*.*<渲染器介面>*.*<renderer.js
+exist on your machine.>*.*<存在於您的電腦上。>*.*<渲染器介面>*.*<renderer.js
+failed in your pull request>*.*<在您的提取請求（Pull Request）中失敗>*.*<渲染器介面>*.*<renderer.js
+file already. Checking this box will result in the existing file being overwritten.>*.*<檔案已存在。勾選此方塊將會導致現有檔案被覆寫。>*.*<渲染器介面>*.*<renderer.js
+files changed>*.*<個檔案已變更>*.*<渲染器介面>*.*<renderer.js
+files selected>*.*<個已選取的檔案>*.*<渲染器介面>*.*<renderer.js
+for GitHub Desktop in the>*.*<適用於 GitHub Desktop，位於>*.*<渲染器介面>*.*<renderer.js
+for your repository.>*.*<針對您的儲存庫。>*.*<渲染器介面>*.*<renderer.js
+git configuration >*.*<Git 組態設定>*.*<渲染器介面>*.*<renderer.js
+helps you work with GitHub locally.>*.*<協助您在本地端使用 GitHub。>*.*<渲染器介面>*.*<renderer.js
+hook failed. What would you like to do?>*.*<掛鉤（Hook）執行失敗。您想要執行什麼操作？>*.*<渲染器介面>*.*<renderer.js
+in progress that you have not yet committed.>*.*<正在進行中，且您尚未提交。>*.*<渲染器介面>*.*<renderer.js
 in your >*.*<在您的>*.*<渲染器介面>*.*<renderer.js
-is a fork of>*.*<是復刻自>*.*<渲染器介面>*.*<renderer.js
-is already up to date>*.*<已是最新狀態>*.*<渲染器介面>*.*<renderer.js
-is already up to date with >*.*<已是最新狀態，同步自>*.*<渲染器介面>*.*<renderer.js
-is an open source project published under the MIT License. You can view the source code and contribute to this project on>*.*<是以 MIT 授權條款發布的開源專案。您可以在下列位置檢視原始碼並為專案做出貢獻：>*.*<渲染器介面>*.*<renderer.js
+is a fork of>*.*<是下列項目的復刻（Fork）：>*.*<渲染器介面>*.*<renderer.js
+is already up to date>*.*<已經是最新狀態>*.*<渲染器介面>*.*<renderer.js
+is already up to date with >*.*<已經與下列內容同步至最新狀態：>*.*<渲染器介面>*.*<renderer.js
+is an open source project published under the MIT License. You can view the source code and contribute to this project on>*.*<是依 MIT 授權條款發布的開源專案。您可以檢視原始碼並在下列位置參與貢獻：>*.*<渲染器介面>*.*<renderer.js
 is configured to delete items immediately.>*.*<已設定為立即刪除項目。>*.*<渲染器介面>*.*<renderer.js
 is expected':n.ProtectedBranchRequiredStatus,>*.*<為必填':n.ProtectedBranchRequiredStatus,>*.*<渲染器介面>*.*<renderer.js
-is not a valid name.>*.*<不是有效名稱。>*.*<渲染器介面>*.*<renderer.js
-is potentially unsafe>*.*<可能不安全>*.*<渲染器介面>*.*<renderer.js
+is not a valid name.>*.*<不是有效的名稱。>*.*<渲染器介面>*.*<renderer.js
+is potentially unsafe>*.*<潛在不安全>*.*<渲染器介面>*.*<renderer.js
 is the >*.*<是>*.*<渲染器介面>*.*<renderer.js
 is the version control system.>*.*<是版本控制系統。>*.*<渲染器介面>*.*<renderer.js
-is up to date with all commits from>*.*<已同步所有提交，來自>*.*<渲染器介面>*.*<renderer.js
-is where you store your code and collaborate with others.>*.*<是您儲存程式碼並與他人協作的地方。>*.*<渲染器介面>*.*<renderer.js
+is up to date with all commits from>*.*<已同步來自下列項目的所有最新提交：>*.*<渲染器介面>*.*<renderer.js
+is where you store your code and collaborate with others.>*.*<是您存放代碼並與他人協作的地方。>*.*<渲染器介面>*.*<renderer.js
 key fingerprint is>*.*<金鑰指紋為>*.*<渲染器介面>*.*<renderer.js
-machine and will be installed at the next launch or>*.*<電腦，將在下次啟動時安裝，或>*.*<渲染器介面>*.*<renderer.js
+machine and will be installed at the next launch or>*.*<電腦，並將在下次啟動時安裝，或者>*.*<渲染器介面>*.*<renderer.js
 menu or>*.*<選單或>*.*<渲染器介面>*.*<renderer.js
-no longer exists. Remove it from this repository?>*.*<已不存在。是否從此儲存庫中移除？>*.*<渲染器介面>*.*<renderer.js
-on top of >*.*<基於>*.*<渲染器介面>*.*<renderer.js
-removed lines>*.*<已移除的行數>*.*<渲染器介面>*.*<renderer.js
+no longer exists. Remove it from this repository?>*.*<已不存在。要從此儲存庫中將其移除嗎？>*.*<渲染器介面>*.*<renderer.js
+on top of >*.*<於基底之上：>*.*<渲染器介面>*.*<renderer.js
+removed lines>*.*<行已刪除>*.*<渲染器介面>*.*<renderer.js
 repositories use>*.*<儲存庫使用>*.*<渲染器介面>*.*<renderer.js
 to a branch>*.*<至分支>*.*<渲染器介面>*.*<renderer.js
 to choose a new location.>*.*<以選擇新位置。>*.*<渲染器介面>*.*<renderer.js
 to confirm.>*.*<以確認。>*.*<渲染器介面>*.*<renderer.js
-to continue?>*.*<以繼續？>*.*<渲染器介面>*.*<renderer.js
+to continue?>*.*<是否繼續？>*.*<渲染器介面>*.*<renderer.js
 to match >*.*<以符合>*.*<渲染器介面>*.*<renderer.js
-to store large files on GitHub.>*.*<以在 GitHub 上儲存大型檔案。>*.*<渲染器介面>*.*<renderer.js
+to store large files on GitHub.>*.*<以便在 GitHub 上儲存大型檔案。>*.*<渲染器介面>*.*<renderer.js
 users weren't found and won't be added as co-authors of this commit. Are you sure you want to commit?>*.*<位使用者未找到，將不會被新增為此提交的共同作者。確定要提交嗎？>*.*<渲染器介面>*.*<renderer.js
-was unknown. Available options are {auto, browser, node}>*.*<未知。可用選項為 {auto, browser, node}>*.*<渲染器介面>*.*<renderer.js
+was unknown. Available options are {auto, browser, node}>*.*<為未知選項。可用的選項為 {auto, browser, node}>*.*<渲染器介面>*.*<renderer.js
 when changes are present on your branch.>*.*<當您的分支上有變更時。>*.*<渲染器介面>*.*<renderer.js
-when merging >*.*<當合併>*.*<渲染器介面>*.*<renderer.js
+when merging >*.*<合併時：>*.*<渲染器介面>*.*<renderer.js
 will be started, including all of >*.*<將會啟動，包含所有的>*.*<渲染器介面>*.*<renderer.js
 with the account>*.*<使用帳號>*.*<渲染器介面>*.*<renderer.js
 you can share it, >*.*<您可以分享它，>*.*<渲染器介面>*.*<renderer.js
-your pull request>*.*<您的拉取請求（PR）>*.*<渲染器介面>*.*<renderer.js
+your pull request>*.*<您的提取請求（Pull Request）>*.*<渲染器介面>*.*<renderer.js
 1 conflict>*.*<1 個衝突>*.*<渲染器介面>*.*<renderer.js
 1 conflicted file>*.*<1 個衝突檔案>*.*<渲染器介面>*.*<renderer.js
 1 day>*.*<1 天>*.*<渲染器介面>*.*<renderer.js
@@ -687,3 +687,1236 @@ Avatar URL>*.*<大頭貼 URL>*.*<渲染器介面>*.*<renderer.js
 Avatar URL already resolved or endpoint is missing>*.*<大頭貼 URL 已解析或缺少端點>*.*<渲染器介面>*.*<renderer.js
 Avatar for unknown user>*.*<未知使用者的大頭貼>*.*<渲染器介面>*.*<renderer.js
 Avatar token missing>*.*<缺少大頭貼權杖（Token）>*.*<渲染器介面>*.*<renderer.js
+he is here   >*.*<他在這裡>*.*<主程序介面>*.*<main.js
+Avatar tokens are only available for ghe.com>*.*<頭像權杖僅適用於 ghe.com>*.*<渲染器介面>*.*<renderer.js
+Azure API version>*.*<Azure API 版本>*.*<渲染器介面>*.*<renderer.js
+Background updates>*.*<背景更新>*.*<渲染器介面>*.*<renderer.js
+Base URL>*.*<基礎 URL>*.*<渲染器介面>*.*<renderer.js
+Base URL must be an https URL, or an http URL pointing at the local machine.>*.*<基礎 URL 必須是 https URL，或是指向本機電腦的 http URL。>*.*<渲染器介面>*.*<renderer.js
+Bearer token>*.*<Bearer 權杖>*.*<渲染器介面>*.*<renderer.js
+Before Christ>*.*<西元前>*.*<渲染器介面>*.*<renderer.js
+Beta Channel>*.*<Beta 通道>*.*<渲染器介面>*.*<renderer.js
+Binary files >*.*<二進位檔案>*.*<渲染器介面>*.*<renderer.js
+Binding to mouse events:>*.*<繫結至滑鼠事件：>*.*<渲染器介面>*.*<renderer.js
+Branch (optional)>*.*<分支（選填）>*.*<渲染器介面>*.*<renderer.js
+Branch fast-forwarding failed>*.*<分支快轉失敗>*.*<渲染器介面>*.*<renderer.js
+Branch filter>*.*<分支篩選條件>*.*<渲染器介面>*.*<renderer.js
+Branch name>*.*<分支名稱>*.*<渲染器介面>*.*<renderer.js
+By creating an account, you agree to the>*.*<建立帳號即表示您同意>*.*<渲染器介面>*.*<renderer.js
+Bypass push detection>*.*<略過推送偵測>*.*<渲染器介面>*.*<renderer.js
+Cache Git hook environment variables>*.*<快取 Git 掛鉤環境變數>*.*<渲染器介面>*.*<renderer.js
+Cached input>*.*<已快取的輸入>*.*<渲染器介面>*.*<renderer.js
+Can only recycle when the buffer is full>*.*<僅能在緩衝區已滿時進行回收>*.*<渲染器介面>*.*<renderer.js
+Can't check for updates on Windows 8.1 or older. Next available update only supports Windows 10 and later>*.*<無法在 Windows 8.1 或更早版本上檢查更新。下一個可用更新僅支援 Windows 10 及更新版本>*.*<渲染器介面>*.*<renderer.js
+Can't check for updates on macOS 12 or older. Next available update only supports macOS 13 and later>*.*<無法在 macOS 12 或更早版本上檢查更新。下一個可用更新僅支援 macOS 13 及更新版本>*.*<渲染器介面>*.*<renderer.js
+Can't find \">*.*<找不到 \">*.*<渲染器介面>*.*<renderer.js
+Can't send requests with id null since the response can't be correlated.>*.*<無法傳送 id 為 null 的請求，因為回應無法進行關聯。>*.*<渲染器介面>*.*<renderer.js
+Cancellation over SharedArrayBuffer doesn't support cancellation events>*.*<透過 SharedArrayBuffer 取消不支援取消事件>*.*<渲染器介面>*.*<renderer.js
+Cannot create Copilot client: Account has no token>*.*<無法建立 Copilot 用戶端：帳號沒有權杖>*.*<渲染器介面>*.*<renderer.js
+Cannot create Copilot client: Runtime entry point not found>*.*<無法建立 Copilot 用戶端：找不到執行階段進入點>*.*<渲染器介面>*.*<renderer.js
+Cannot destructure >*.*<無法解構>*.*<渲染器介面>*.*<renderer.js
+Cannot enable accessibility before Terminal.open>*.*<在 Terminal.open 之前無法啟用協助工具>*.*<渲染器介面>*.*<renderer.js
+Cannot open >*.*<無法開啟>*.*<渲染器介面>*.*<renderer.js
+Cannot pull from a remote whose name starts with '-'.>*.*<無法從名稱以 '-' 開頭的遠端進行拉取。>*.*<渲染器介面>*.*<renderer.js
+Cannot read so many bytes!>*.*<無法讀取這麼多位元組！>*.*<渲染器介面>*.*<renderer.js
+Cannot resolve while operation is being aborted>*.*<在操作正在中止時無法進行解析>*.*<渲染器介面>*.*<renderer.js
+Cannot shift elements in list beyond index 0>*.*<無法將清單中的元素移至索引 0 之外>*.*<渲染器介面>*.*<renderer.js
+Cannot update a null pull request state>*.*<無法更新為 null 的拉取請求狀態>*.*<渲染器介面>*.*<renderer.js
+Cannot use a symbolic link as the root .gitignore file>*.*<無法使用符號連結作為根 .gitignore 檔案>*.*<渲染器介面>*.*<renderer.js
+Capacity must be greater than 0>*.*<容量必須大於 0>*.*<渲染器介面>*.*<renderer.js
+Change resolution choice>*.*<變更解決方式選擇>*.*<渲染器介面>*.*<renderer.js
+Changes can be restored by retrieving them from the >*.*<可透過從 取回以還原變更>*.*<渲染器介面>*.*<renderer.js
+Chat completions (default)>*.*<交談補全 (預設)>*.*<渲染器介面>*.*<renderer.js
+Chat messages>*.*<交談訊息>*.*<渲染器介面>*.*<renderer.js
+Check for Updates>*.*<檢查更新>*.*<渲染器介面>*.*<renderer.js
+Check out the>*.*<簽出>*.*<渲染器介面>*.*<renderer.js
+Check run steps incoming!>*.*<檢查執行步驟傳入中！>*.*<渲染器介面>*.*<renderer.js
+Check runs incoming!>*.*<檢查執行傳入中！>*.*<渲染器介面>*.*<renderer.js
+Checking for ability to >*.*<正在檢查是否能夠>*.*<渲染器介面>*.*<renderer.js
+Checking for ability to merge automatically...>*.*<正在檢查是否能自動合併...>*.*<渲染器介面>*.*<renderer.js
+Checking out>*.*<正在簽出>*.*<渲染器介面>*.*<renderer.js
+Checking out a commit>*.*<正在簽出提交>*.*<渲染器介面>*.*<renderer.js
+Checking out commit>*.*<正在簽出提交>*.*<渲染器介面>*.*<renderer.js
+Checking out files>*.*<正在簽出檔案>*.*<渲染器介面>*.*<renderer.js
+Checkout commit>*.*<簽出提交>*.*<渲染器介面>*.*<renderer.js
+Checkout commit?>*.*<簽出提交？>*.*<渲染器介面>*.*<renderer.js
+Checks Summary>*.*<檢查摘要>*.*<渲染器介面>*.*<renderer.js
+Cherry-pick to new branch>*.*<揀選至新分支>*.*<渲染器介面>*.*<renderer.js
+Cherry-pick undone. Successfully removed the >*.*<已復原揀選。已成功移除>*.*<渲染器介面>*.*<renderer.js
+Cherry-picking from >*.*<正在揀選自>*.*<渲染器介面>*.*<renderer.js
+Choose GitHub Copilot>*.*<選擇 GitHub Copilot>*.*<渲染器介面>*.*<renderer.js
+Choose a base branch>*.*<選擇基礎分支>*.*<渲染器介面>*.*<renderer.js
+Choose a branch to merge into >*.*<選擇要合併至的分支>*.*<渲染器介面>*.*<renderer.js
+Choose a model>*.*<選擇模型>*.*<渲染器介面>*.*<renderer.js
+Choose a resolution>*.*<選擇解決方式>*.*<渲染器介面>*.*<renderer.js
+Choose a resolution for this file>*.*<選擇此檔案的解決方式>*.*<渲染器介面>*.*<renderer.js
+Choose a valid token expiration date and time.>*.*<選擇有效的權杖到期日期與時間。>*.*<渲染器介面>*.*<renderer.js
+Choose an account>*.*<選擇帳戶>*.*<渲染器介面>*.*<renderer.js
+Choose the GitHub Copilot executable (github.exe).>*.*<選擇 GitHub Copilot 執行檔 (github.exe)。>*.*<渲染器介面>*.*<renderer.js
+Clone Again>*.*<再次複製>*.*<渲染器介面>*.*<renderer.js
+Clone As:>*.*<複製為：>*.*<渲染器介面>*.*<renderer.js
+Clone URL>*.*<複製 URL>*.*<渲染器介面>*.*<renderer.js
+Clone failed>*.*<複製失敗>*.*<渲染器介面>*.*<renderer.js
+CloneRepository: Path validation failed. Error: >*.*<CloneRepository: 路徑驗證失敗。錯誤：>*.*<渲染器介面>*.*<renderer.js
+Cloning into >*.*<正在複製至>*.*<渲染器介面>*.*<renderer.js
+Code completions>*.*<程式碼補全>*.*<渲染器介面>*.*<renderer.js
+Collapse commit details>*.*<摺疊提交詳細資訊>*.*<渲染器介面>*.*<renderer.js
+Collapse description>*.*<摺疊描述>*.*<渲染器介面>*.*<renderer.js
+Column must be greater than or equal to 0, got >*.*<欄必須大於或等於 0，但得到>*.*<渲染器介面>*.*<renderer.js
+Command Prompt>*.*<命令提示字元>*.*<渲染器介面>*.*<renderer.js
+Command line arguments>*.*<命令列引數>*.*<渲染器介面>*.*<renderer.js
+Command line tool installed>*.*<已安裝命令列工具>*.*<渲染器介面>*.*<renderer.js
+Commit Length>*.*<提交長度>*.*<渲染器介面>*.*<renderer.js
+Commit anyway>*.*<仍要提交>*.*<渲染器介面>*.*<renderer.js
+Commit failed>*.*<提交失敗>*.*<渲染器介面>*.*<renderer.js
+Commit filtered changes?>*.*<提交已篩選的變更？>*.*<渲染器介面>*.*<renderer.js
+Commit may be misattributed. View warning.>*.*<提交可能被錯誤歸屬。檢視警告。>*.*<渲染器介面>*.*<renderer.js
+Commit message generation>*.*<提交訊息產生>*.*<渲染器介面>*.*<renderer.js
+Commit message override>*.*<覆寫提交訊息>*.*<渲染器介面>*.*<renderer.js
+Commit reachability>*.*<提交可達性>*.*<渲染器介面>*.*<renderer.js
+Committing as >*.*<正在以此身分提交>*.*<渲染器介面>*.*<renderer.js
+Committing changes>*.*<正在提交變更>*.*<渲染器介面>*.*<renderer.js
+Committing changes hidden by filter>*.*<正在提交被篩選器隱藏的變更>*.*<渲染器介面>*.*<renderer.js
+Committing with >*.*<正在與共同作者一同提交>*.*<渲染器介面>*.*<renderer.js
+Common reasons are:>*.*<常見原因如下：>*.*<渲染器介面>*.*<renderer.js
+Compressing objects>*.*<正在壓縮物件>*.*<渲染器介面>*.*<renderer.js
+Configure Copilot in app settings>*.*<在應用程式設定中設定 Copilot>*.*<渲染器介面>*.*<renderer.js
+Configure Git>*.*<設定 Git>*.*<渲染器介面>*.*<renderer.js
+Configure manually>*.*<手動設定>*.*<渲染器介面>*.*<renderer.js
+Confirm committing conflicted files>*.*<確認提交發生衝突的檔案>*.*<渲染器介面>*.*<renderer.js
+Confirm discard all changes>*.*<確認捨棄所有變更>*.*<渲染器介面>*.*<renderer.js
+Confirm discard changes>*.*<確認捨棄變更>*.*<渲染器介面>*.*<renderer.js
+Confirm this address appears in your browser. Otherwise, cancel and contact your repository administrator.>*.*<請確認此位址顯示在您的瀏覽器中。否則，請取消並聯絡您的儲存庫管理員。>*.*<渲染器介面>*.*<renderer.js
+Conflict 1 of N>*.*<衝突 1 / N>*.*<渲染器介面>*.*<renderer.js
+Conflict 2 of N>*.*<衝突 2 / N>*.*<渲染器介面>*.*<renderer.js
+Conflict contains lines too long to resolve automatically>*.*<衝突包含過長的行，無法自動解決>*.*<渲染器介面>*.*<renderer.js
+Conflict region too large to resolve automatically>*.*<衝突區域過大，無法自動解決>*.*<渲染器介面>*.*<renderer.js
+Conflict resolution>*.*<衝突解決>*.*<渲染器介面>*.*<renderer.js
+Conflict resolution failed>*.*<衝突解決失敗>*.*<渲染器介面>*.*<renderer.js
+Conflict state missing during finishConflictedMerge. No merge will be committed.>*.*<finishConflictedMerge 期間缺少衝突狀態。將不會提交任何合併。>*.*<渲染器介面>*.*<renderer.js
+Conflicting changes>*.*<衝突變更>*.*<渲染器介面>*.*<renderer.js
+ConflictsDialog: onAbort failed>*.*<ConflictsDialog: onAbort 失敗>*.*<渲染器介面>*.*<renderer.js
+ConflictsDialog: onSubmit failed>*.*<ConflictsDialog: onSubmit 失敗>*.*<渲染器介面>*.*<renderer.js
+Connecting to GitHub>*.*<正在連線至 GitHub>*.*<渲染器介面>*.*<renderer.js
+Connection already closed>*.*<連線已關閉>*.*<渲染器介面>*.*<renderer.js
+Connection is already listening>*.*<連線已在接聽>*.*<渲染器介面>*.*<renderer.js
+Connection is closed.>*.*<連線已關閉。>*.*<渲染器介面>*.*<renderer.js
+Connection is disposed.>*.*<連線已處置。>*.*<渲染器介面>*.*<renderer.js
+Considering both sides of each conflict>*.*<正在考量每個衝突的雙方>*.*<渲染器介面>*.*<renderer.js
+Contact Us. Please send any questions about these Application Terms to >*.*<聯絡我們。若對本應用程式條款有任何疑問，請傳送至>*.*<渲染器介面>*.*<renderer.js
+Contribute to a project that interests you>*.*<為您感興趣的專案做出貢獻>*.*<渲染器介面>*.*<renderer.js
+Copilot Instructions>*.*<Copilot 指示>*.*<渲染器介面>*.*<renderer.js
+Copilot billing issue>*.*<Copilot 計費問題>*.*<渲染器介面>*.*<renderer.js
+Copilot billing not configured>*.*<尚未設定 Copilot 計費>*.*<渲染器介面>*.*<renderer.js
+Copilot conflict resolution summary>*.*<Copilot 衝突解決摘要>*.*<渲染器介面>*.*<renderer.js
+Copilot features in GitHub Desktop require a GitHub Copilot license.>*.*<GitHub Desktop 中的 Copilot 功能需要 GitHub Copilot 授權。>*.*<渲染器介面>*.*<renderer.js
+Copilot in GitHub Desktop>*.*<GitHub Desktop 中的 Copilot>*.*<渲染器介面>*.*<renderer.js
+Copilot is powered by AI, so mistakes are possible.>*.*<Copilot 由 AI 提供技術支援，因此可能會出錯。>*.*<渲染器介面>*.*<renderer.js
+Copilot returned an invalid commit message payload: expected an object>*.*<Copilot 傳回無效的提交訊息承載資料：預期為物件>*.*<渲染器介面>*.*<renderer.js
+Copilot returned invalid JSON for commit message generation>*.*<Copilot 在產生提交訊息時傳回無效的 JSON>*.*<渲染器介面>*.*<renderer.js
+Copilot settings>*.*<Copilot 設定>*.*<渲染器介面>*.*<renderer.js
+CopilotStore: Conflict resolution parse/validation failed, retrying>*.*<CopilotStore: 衝突解決剖析/驗證失敗，正在重試>*.*<渲染器介面>*.*<renderer.js
+CopilotStore: Error stopping client>*.*<CopilotStore: 停止用戶端時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+CopilotStore: Failed to clean up cancelled operation>*.*<CopilotStore: 無法清理已取消的操作>*.*<渲染器介面>*.*<renderer.js
+CopilotStore: Failed to fetch and cache models>*.*<CopilotStore: 無法擷取並快取模型>*.*<渲染器介面>*.*<renderer.js
+CopilotStore: Failed to fetch and cache quota snapshots>*.*<CopilotStore: 無法擷取並快取配額快照>*.*<渲染器介面>*.*<renderer.js
+CopilotStore: Failed to generate commit message>*.*<CopilotStore: 無法產生提交訊息>*.*<渲染器介面>*.*<renderer.js
+CopilotStore: Failed to resolve conflicts after retry>*.*<CopilotStore: 重試後仍無法解決衝突>*.*<渲染器介面>*.*<renderer.js
+Copy SHA>*.*<複製 SHA>*.*<渲染器介面>*.*<renderer.js
+Copy tag>*.*<複製標籤>*.*<渲染器介面>*.*<renderer.js
+Copy tags>*.*<複製標籤>*.*<渲染器介面>*.*<renderer.js
+Copy to>*.*<複製到>*.*<渲染器介面>*.*<renderer.js
+Copy worktree name>*.*<複製工作樹名稱>*.*<渲染器介面>*.*<renderer.js
+Copy worktree path>*.*<複製工作樹路徑>*.*<渲染器介面>*.*<renderer.js
+Could not determine main worktree repository type>*.*<無法判斷主工作樹儲存庫類型>*.*<渲染器介面>*.*<renderer.js
+Could not determine repository type>*.*<無法判斷儲存庫類型>*.*<渲染器介面>*.*<renderer.js
+Could not determine the main worktree of the repository>*.*<無法判斷儲存庫的主工作樹>*.*<渲染器介面>*.*<renderer.js
+Could not dispose an addon that has not been loaded>*.*<無法處置尚未載入的附加元件>*.*<渲染器介面>*.*<renderer.js
+Could not find a branch to perform force push>*.*<找不到可執行強制推送的分支>*.*<渲染器介面>*.*<renderer.js
+Could not find a default branch to compare against.>*.*<找不到可用於比較的預設分支。>*.*<渲染器介面>*.*<renderer.js
+Could not find an upstream branch which will be pushed>*.*<找不到要推送的上游分支>*.*<渲染器介面>*.*<renderer.js
+Could not find executable for 'Command Prompt' at path 'some/invalid/path'.  Please open Options and select an available shell.>*.*<在路徑 'some/invalid/path' 找不到 '命令提示字元' 的執行檔。  請開啟 [選項] 並選取可用的 Shell。>*.*<渲染器介面>*.*<renderer.js
+Could not find main worktree>*.*<找不到主工作樹>*.*<渲染器介面>*.*<renderer.js
+Could not find matching menu item for 'create-pull-request'>*.*<找不到符合 'create-pull-request' 的功能表項目>*.*<渲染器介面>*.*<renderer.js
+Could not find matching menu item for 'preview-pull-request'>*.*<找不到符合 'preview-pull-request' 的功能表項目>*.*<渲染器介面>*.*<renderer.js
+Could not generate a patch, no changes>*.*<無法產生修補檔，沒有任何變更>*.*<渲染器介面>*.*<renderer.js
+Could not get checks for PR>*.*<無法取得 PR 的檢查>*.*<渲染器介面>*.*<renderer.js
+Could not get git version information>*.*<無法取得 git 版本資訊>*.*<渲染器介面>*.*<renderer.js
+Could not get remote URL>*.*<無法取得遠端 URL>*.*<渲染器介面>*.*<renderer.js
+Could not hand off to GitHub Copilot>*.*<無法移交給 GitHub Copilot>*.*<渲染器介面>*.*<renderer.js
+Could not list worktrees>*.*<無法列出工作樹>*.*<渲染器介面>*.*<renderer.js
+Could not list worktrees from the main worktree>*.*<無法從主工作樹列出工作樹>*.*<渲染器介面>*.*<renderer.js
+Could not open global Git config for editing>*.*<無法開啟全域 Git 設定以進行編輯>*.*<渲染器介面>*.*<renderer.js
+Could not prompt for GitHub sign in>*.*<無法提示進行 GitHub 登入>*.*<渲染器介面>*.*<renderer.js
+Could not resolve the main worktree path>*.*<無法解析主工作樹路徑>*.*<渲染器介面>*.*<renderer.js
+Could not retrieve passphrase for SSH key:>*.*<無法取得 SSH 金鑰的密碼短語：>*.*<渲染器介面>*.*<renderer.js
+Could not store passphrase for SSH key:>*.*<無法儲存 SSH 金鑰的密碼短語：>*.*<渲染器介面>*.*<renderer.js
+Couldn't determine the last time an update check was performed. You may be running an old version. Please try manually checking for updates and contact GitHub Support if the problem persists>*.*<無法判斷上次執行更新檢查的時間。您可能正在執行舊版本。請嘗試手動檢查更新，如果問題持續發生，請聯絡 GitHub 支援>*.*<渲染器介面>*.*<renderer.js
+Couldn't find the GitHub Copilot App on your machine. Experience agent-driven development built natively on GitHub by>*.*<在您的電腦上找不到 GitHub Copilot 應用程式。體驗原生建置於 GitHub 上的代理驅動開發，只需>*.*<渲染器介面>*.*<renderer.js
+Couldn't parse licenses!>*.*<無法剖析授權！>*.*<渲染器介面>*.*<renderer.js
+Couldn't read 'pull.ff' config>*.*<無法讀取 'pull.ff' 設定>*.*<渲染器介面>*.*<renderer.js
+Create Pull Request>*.*<建立 Pull Request>*.*<渲染器介面>*.*<renderer.js
+Create a Pull Request from your current branch>*.*<從您目前的分支建立 Pull Request>*.*<渲染器介面>*.*<renderer.js
+Create a branch>*.*<建立分支>*.*<渲染器介面>*.*<renderer.js
+Create a merge commit>*.*<建立合併提交>*.*<渲染器介面>*.*<renderer.js
+Create a tag>*.*<建立標籤>*.*<渲染器介面>*.*<renderer.js
+Create branch>*.*<建立分支>*.*<渲染器介面>*.*<renderer.js
+Create branch and cherry-pick>*.*<建立分支並揀選>*.*<渲染器介面>*.*<renderer.js
+Create branch from commit>*.*<從提交建立分支>*.*<渲染器介面>*.*<renderer.js
+Create tag>*.*<建立標籤>*.*<渲染器介面>*.*<renderer.js
+Create worktree>*.*<建立工作樹>*.*<渲染器介面>*.*<renderer.js
+Create your free account.>*.*<建立您的免費帳戶。>*.*<渲染器介面>*.*<renderer.js
+Creating your fork >*.*<正在建立您的 Fork>*.*<渲染器介面>*.*<renderer.js
+Creative Commons Attribution license>*.*<Creative Commons 姓名標示授權條款>*.*<渲染器介面>*.*<renderer.js
+Cross-referencing related files>*.*<交叉參照相關檔案>*.*<渲染器介面>*.*<renderer.js
+Ctx cannot be null>*.*<Ctx 不能為 null>*.*<渲染器介面>*.*<renderer.js
+Current branch>*.*<目前分支>*.*<渲染器介面>*.*<renderer.js
+Current branch dropdown button>*.*<目前分支下拉式選單按鈕>*.*<渲染器介面>*.*<renderer.js
+Current local expiry:>*.*<目前本機到期時間：>*.*<渲染器介面>*.*<renderer.js
+Current worktree>*.*<目前工作樹>*.*<渲染器介面>*.*<renderer.js
+Current worktree dropdown button>*.*<目前工作樹下拉式選單按鈕>*.*<渲染器介面>*.*<renderer.js
+Currently on a detached HEAD>*.*<目前處於分離 HEAD 狀態>*.*<渲染器介面>*.*<renderer.js
+Cursor (User)>*.*<Cursor (使用者)>*.*<渲染器介面>*.*<renderer.js
+Custom Shell>*.*<自訂 Shell>*.*<渲染器介面>*.*<renderer.js
+Custom providers>*.*<自訂提供者>*.*<渲染器介面>*.*<renderer.js
+DOMPurify and Trusted Types>*.*<DOMPurify 與 Trusted Types>*.*<渲染器介面>*.*<renderer.js
+Date format>*.*<日期格式>*.*<渲染器介面>*.*<renderer.js
+Default branch>*.*<預設分支>*.*<渲染器介面>*.*<renderer.js
+Default branch name for new repositories>*.*<新儲存庫的預設分支名稱>*.*<渲染器介面>*.*<renderer.js
+Delete branch >*.*<刪除分支>*.*<渲染器介面>*.*<renderer.js
+Delete file>*.*<刪除檔案>*.*<渲染器介面>*.*<renderer.js
+Delete remote branch >*.*<刪除遠端分支>*.*<渲染器介面>*.*<renderer.js
+Delete tag>*.*<刪除標籤>*.*<渲染器介面>*.*<renderer.js
+Delete worktree>*.*<刪除工作樹>*.*<渲染器介面>*.*<renderer.js
+Delete worktree failed>*.*<刪除工作樹失敗>*.*<渲染器介面>*.*<renderer.js
+Deleting the worktree >*.*<正在刪除工作樹>*.*<渲染器介面>*.*<renderer.js
+Detached HEAD>*.*<分離 HEAD>*.*<渲染器介面>*.*<renderer.js
+Determining which checks can be re-run.>*.*<正在判定哪些檢查可重新執行。>*.*<渲染器介面>*.*<renderer.js
+Diff is too large to render>*.*<Diff 過大，無法轉譯>*.*<渲染器介面>*.*<renderer.js
+Diff tab size>*.*<Diff Tab 大小>*.*<渲染器介面>*.*<renderer.js
+Directory could not be created at this path.>*.*<無法在此路徑建立目錄。>*.*<渲染器介面>*.*<renderer.js
+Directory could not be created at this path. You may not have permissions to create a directory here.>*.*<無法在此路徑建立目錄。您可能沒有在此建立目錄的權限。>*.*<渲染器介面>*.*<renderer.js
+Discard all changes>*.*<捨棄所有變更>*.*<渲染器介面>*.*<renderer.js
+Discard changes>*.*<捨棄變更>*.*<渲染器介面>*.*<renderer.js
+Discard stash?>*.*<捨棄暫存？>*.*<渲染器介面>*.*<renderer.js
+Discarded changes will be unrecoverable>*.*<捨棄的變更將無法復原>*.*<渲染器介面>*.*<renderer.js
+Discarding changes>*.*<正在捨棄變更>*.*<渲染器介面>*.*<renderer.js
+Discarding changes permanently>*.*<正在永久捨棄變更>*.*<渲染器介面>*.*<renderer.js
+Discarding stash>*.*<正在捨棄暫存>*.*<渲染器介面>*.*<renderer.js
+Disclaimers and Limitations of Liability>*.*<免責聲明與責任限制>*.*<渲染器介面>*.*<renderer.js
+Dismiss this message>*.*<關閉此訊息>*.*<渲染器介面>*.*<renderer.js
+Dispatch CLI Action>*.*<分派 CLI 動作>*.*<渲染器介面>*.*<renderer.js
+Display name>*.*<顯示名稱>*.*<渲染器介面>*.*<renderer.js
+Do not close GitHub Desktop while the update is in progress. Closing now may break your installation.>*.*<更新進行時請勿關閉 GitHub Desktop。現在關閉可能會損毀您的安裝。>*.*<渲染器介面>*.*<renderer.js
+Do not include this file>*.*<不要包含此檔案>*.*<渲染器介面>*.*<renderer.js
+Do you want to fork this repository?>*.*<您要 Fork 此儲存庫嗎？>*.*<渲染器介面>*.*<renderer.js
+Do you want to move GitHub Desktop to the Applications folder now? This will also restart the app.>*.*<您現在要將 GitHub Desktop 移至「應用程式」資料夾嗎？這同時會重新啟動應用程式。>*.*<渲染器介面>*.*<renderer.js
+Do you want to switch to that Pull Request now and start fixing>*.*<您現在要切換至該拉取請求並開始修復>*.*<渲染器介面>*.*<renderer.js
+Drag the commits to squash or reorder them.>*.*<拖曳提交以進行壓扁或重新排序。>*.*<渲染器介面>*.*<renderer.js
+Drag the commits to the branch menu to cherry-pick them.>*.*<將提交拖曳至分支選單以進行揀選。>*.*<渲染器介面>*.*<renderer.js
+Edit a file>*.*<編輯檔案>*.*<渲染器介面>*.*<renderer.js
+Edit custom provider>*.*<編輯自訂提供者>*.*<渲染器介面>*.*<renderer.js
+Edit model>*.*<編輯模型>*.*<渲染器介面>*.*<renderer.js
+Email address is disallowed. View warning.>*.*<此電子郵件地址不被允許。檢視警告。>*.*<渲染器介面>*.*<renderer.js
+Email does not appear to be a bot email>*.*<此電子郵件似乎不是機器人電子郵件>*.*<渲染器介面>*.*<renderer.js
+Empty commit message>*.*<空白的提交訊息>*.*<渲染器介面>*.*<renderer.js
+Enable notifications>*.*<啟用通知>*.*<渲染器介面>*.*<renderer.js
+Enter passphrase for key >*.*<輸入金鑰的通關密語>*.*<渲染器介面>*.*<renderer.js
+Entitlement requests>*.*<授權資格請求>*.*<渲染器介面>*.*<renderer.js
+Error checking for updates>*.*<檢查更新時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Error checking merge status.>*.*<檢查合併狀態時發生錯誤。>*.*<渲染器介面>*.*<renderer.js
+Error creating trampoline command:>*.*<建立 trampoline 指令時發生錯誤：>*.*<渲染器介面>*.*<renderer.js
+Error details>*.*<錯誤詳細資訊>*.*<渲染器介面>*.*<renderer.js
+Error installing CLI>*.*<安裝 CLI 時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Error loading licenses>*.*<載入授權條款時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Error migrating existing GUID>*.*<移轉現有 GUID 時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Error parsing updates url>*.*<解析更新 URL 時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Error processing trampoline command>*.*<處理 trampoline 指令時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Error processing trampoline data>*.*<處理 trampoline 資料時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Error reporting stats:>*.*<回報統計資料時發生錯誤：>*.*<渲染器介面>*.*<renderer.js
+Error setting sign in endpoint>*.*<設定登入端點時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Error updating priority update status>*.*<更新優先更新狀態時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Error writing LFS progress file>*.*<寫入 LFS 進度檔案時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Example commit>*.*<範例提交>*.*<渲染器介面>*.*<renderer.js
+Exciting new features have been added>*.*<已加入令人期待的新功能>*.*<渲染器介面>*.*<renderer.js
+Exit tutorial>*.*<結束教學課程>*.*<渲染器介面>*.*<renderer.js
+Expand commit details>*.*<展開提交詳細資訊>*.*<渲染器介面>*.*<renderer.js
+Expand description>*.*<展開說明>*.*<渲染器介面>*.*<renderer.js
+Expected `concurrency` to be a number from 1 and up>*.*<預期 `concurrency` 應為 1 以上的數字>*.*<渲染器介面>*.*<renderer.js
+Expected a SourceNode, string, or an array of SourceNodes and strings. Got >*.*<預期為 SourceNode、字串，或 SourceNode 與字串的陣列。但收到>*.*<渲染器介面>*.*<renderer.js
+Expected a string, got >*.*<預期為字串，但收到>*.*<渲染器介面>*.*<renderer.js
+Expected hunk header but reached end of diff>*.*<預期應有 hunk 標頭，但已達到 diff 的結尾>*.*<渲染器介面>*.*<renderer.js
+Expected more digits in base 64 VLQ value.>*.*<Base 64 VLQ 值中預期應有更多位數。>*.*<渲染器介面>*.*<renderer.js
+Expected unified diff line but reached end of diff>*.*<預期應有 unified diff 行，但已達到 diff 的結尾>*.*<渲染器介面>*.*<renderer.js
+Experience agent-driven development built natively on GitHub.>*.*<體驗原生建置於 GitHub 上的代理人驅動開發。>*.*<渲染器介面>*.*<renderer.js
+Expiration (local time)>*.*<到期時間（本機時間）>*.*<渲染器介面>*.*<renderer.js
+Expiration override applied.>*.*<已套用到期時間覆寫。>*.*<渲染器介面>*.*<renderer.js
+Explore projects on GitHub>*.*<在 GitHub 上探索專案>*.*<渲染器介面>*.*<renderer.js
+Exposing this secret can allow someone to:>*.*<洩漏此秘密可能會讓他人：>*.*<渲染器介面>*.*<renderer.js
+External editor>*.*<外部編輯器>*.*<渲染器介面>*.*<renderer.js
+Failed calculating ahead/behind status>*.*<計算超前/落後狀態失敗>*.*<渲染器介面>*.*<renderer.js
+Failed creating repository>*.*<建立儲存庫失敗>*.*<渲染器介面>*.*<renderer.js
+Failed determining mergeability>*.*<判定可合併性失敗>*.*<渲染器介面>*.*<renderer.js
+Failed discarding changes>*.*<捨棄變更失敗>*.*<渲染器介面>*.*<renderer.js
+Failed emitting update>*.*<發出更新事件失敗>*.*<渲染器介面>*.*<renderer.js
+Failed moving repository to trash>*.*<將儲存庫移至垃圾桶失敗>*.*<渲染器介面>*.*<renderer.js
+Failed recording token refresh stats>*.*<記錄權杖重新整理統計資料失敗>*.*<渲染器介面>*.*<renderer.js
+Failed recording unhandled rejection>*.*<記錄未處理的拒絕失敗>*.*<渲染器介面>*.*<renderer.js
+Failed refreshing commit status>*.*<重新整理提交狀態失敗>*.*<渲染器介面>*.*<renderer.js
+Failed resolving Git proxy>*.*<解析 Git Proxy 失敗>*.*<渲染器介面>*.*<renderer.js
+Failed resolving JetBrains Toolbox products>*.*<解析 JetBrains Toolbox 產品失敗>*.*<渲染器介面>*.*<renderer.js
+Failed resolving current editor at startup>*.*<啟動時解析目前編輯器失敗>*.*<渲染器介面>*.*<renderer.js
+Failed to compute resolution diff>*.*<計算解決衝突的 diff 失敗>*.*<渲染器介面>*.*<renderer.js
+Failed to discard changes to >*.*<無法捨棄對以下項目的變更>*.*<渲染器介面>*.*<renderer.js
+Failed to find the newly created worktree>*.*<找不到新建立的工作樹>*.*<渲染器介面>*.*<renderer.js
+Failed to get GIT_EXEC_PATH from Git>*.*<無法從 Git 取得 GIT_EXEC_PATH>*.*<渲染器介面>*.*<renderer.js
+Failed to parse custom integration arguments:>*.*<無法剖析自訂整合引數：>*.*<渲染器介面>*.*<renderer.js
+Failed to parse renamed or copied entry, could not parse old path>*.*<無法剖析已重新命名或複製的項目，無法剖析舊路徑>*.*<渲染器介面>*.*<renderer.js
+Failed to parse status line for changed entry>*.*<無法剖析已變更項目的狀態行>*.*<渲染器介面>*.*<renderer.js
+Failed to parse status line for renamed or copied entry>*.*<無法剖析已重新命名或複製項目的狀態行>*.*<渲染器介面>*.*<renderer.js
+Failed to parse status line for unmerged entry>*.*<無法剖析未合併項目的狀態行>*.*<渲染器介面>*.*<renderer.js
+Failed to push>*.*<推送失敗>*.*<渲染器介面>*.*<renderer.js
+Failed to refresh worktrees>*.*<重新整理工作樹失敗>*.*<渲染器介面>*.*<renderer.js
+Failed to start pull request because pull request state was null>*.*<無法發起拉取請求，因為拉取請求狀態為 null>*.*<渲染器介面>*.*<renderer.js
+Failed to unlink config lock file>*.*<無法刪除設定鎖定檔案>*.*<渲染器介面>*.*<renderer.js
+Failed to update Git configuration file. A lock file already exists at>*.*<更新 Git 設定檔失敗。鎖定檔案已存在於>*.*<渲染器介面>*.*<renderer.js
+Failed to validate custom integration:>*.*<驗證自訂整合失敗：>*.*<渲染器介面>*.*<renderer.js
+Failed to write text to clipboard>*.*<將文字寫入剪貼簿失敗>*.*<渲染器介面>*.*<renderer.js
+Failed trying to find Git on PATH>*.*<嘗試在 PATH 中尋找 Git 失敗>*.*<渲染器介面>*.*<renderer.js
+Failed updating remote HEAD>*.*<更新遠端 HEAD 失敗>*.*<渲染器介面>*.*<renderer.js
+Fake account>*.*<虛擬帳戶>*.*<渲染器介面>*.*<renderer.js
+Fast-forwarding branches>*.*<正在快轉分支>*.*<渲染器介面>*.*<renderer.js
+File could not be read>*.*<無法讀取檔案>*.*<渲染器介面>*.*<renderer.js
+File does not exist on disk>*.*<磁碟上不存在此檔案>*.*<渲染器介面>*.*<renderer.js
+File options>*.*<檔案選項>*.*<渲染器介面>*.*<renderer.js
+File path could not be resolved safely>*.*<無法安全地解析檔案路徑>*.*<渲染器介面>*.*<renderer.js
+File path is outside the repository>*.*<檔案路徑位於儲存庫之外>*.*<渲染器介面>*.*<renderer.js
+File resolution options>*.*<檔案解決選項>*.*<渲染器介面>*.*<renderer.js
+File size limit exceeded>*.*<已超過檔案大小限制>*.*<渲染器介面>*.*<renderer.js
+File too large to resolve automatically>*.*<檔案過大，無法自動解決>*.*<渲染器介面>*.*<renderer.js
+Files that exceed the limit>*.*<超過限制的檔案>*.*<渲染器介面>*.*<renderer.js
+Files too large>*.*<檔案過大>*.*<渲染器介面>*.*<renderer.js
+Filter models>*.*<篩選模型>*.*<渲染器介面>*.*<renderer.js
+Filtering content>*.*<正在篩選內容>*.*<渲染器介面>*.*<renderer.js
+Finalizing tutorial repository>*.*<正在完成教學儲存庫>*.*<渲染器介面>*.*<renderer.js
+Fix all the things>*.*<修復所有問題>*.*<渲染器介面>*.*<renderer.js
+Flags should only be a combination of MULTILINE, DOTALL, CASE_INSENSITIVE, DISABLE_UNICODE_GROUPS, LONGEST_MATCH>*.*<旗標只能是 MULTILINE、DOTALL、CASE_INSENSITIVE、DISABLE_UNICODE_GROUPS、LONGEST_MATCH 的組合>*.*<渲染器介面>*.*<renderer.js
+For my own purposes>*.*<供我自己使用>*.*<渲染器介面>*.*<renderer.js
+Force pushing>*.*<正在強制推送>*.*<渲染器介面>*.*<renderer.js
+Forcefully delete>*.*<強制刪除>*.*<渲染器介面>*.*<renderer.js
+Fork this repository>*.*<Fork 此儲存庫>*.*<渲染器介面>*.*<renderer.js
+Format string contains an unescaped latin alphabet character `>*.*<格式字串包含未跳脫的拉丁字母字元 `>*.*<渲染器介面>*.*<renderer.js
+Found a source and line, but no column>*.*<找到來源與行，但沒有欄>*.*<渲染器介面>*.*<renderer.js
+Found a source, but no line and column>*.*<找到來源，但沒有行與欄>*.*<渲染器介面>*.*<renderer.js
+Full Name: >*.*<全名：>*.*<渲染器介面>*.*<renderer.js
+Get started>*.*<開始使用>*.*<渲染器介面>*.*<renderer.js
+Git LFS filters are already configured in>*.*<Git LFS 篩選器已設定於>*.*<渲染器介面>*.*<renderer.js
+Git ignore>*.*<Git 忽略>*.*<渲染器介面>*.*<renderer.js
+Git is requesting permission to sign in to this server:>*.*<Git 正在請求登入此伺服器的權限：>*.*<渲染器介面>*.*<renderer.js
+Git requesting credentials to access>*.*<Git 正在請求存取憑證以存取>*.*<渲染器介面>*.*<renderer.js
+GitHub Copilot billing is not configured for this account.>*.*<此帳號尚未設定 GitHub Copilot 計費。>*.*<渲染器介面>*.*<renderer.js
+GitHub Copilot could not be found.>*.*<找不到 GitHub Copilot。>*.*<渲染器介面>*.*<renderer.js
+GitHub Copilot returned a billing error.>*.*<GitHub Copilot 傳回計費錯誤。>*.*<渲染器介面>*.*<renderer.js
+GitHub Desktop also distributes these libraries:>*.*<GitHub Desktop 也散布這些函式庫：>*.*<渲染器介面>*.*<renderer.js
+GitHub Desktop cannot verify the identity of >*.*<GitHub Desktop 無法驗證下列項目的身分：>*.*<渲染器介面>*.*<renderer.js
+GitHub Desktop sends usage metrics to improve the product and inform feature decisions.>*.*<GitHub Desktop 會傳送使用情況指標以改進產品並協助功能決策。>*.*<渲染器介面>*.*<renderer.js
+GitHub Desktop tutorial repository>*.*<GitHub Desktop 教學儲存庫>*.*<渲染器介面>*.*<renderer.js
+GitHub Desktop was not able to contact the update server. Ensure you have internet connectivity and try again.>*.*<GitHub Desktop 無法連接更新伺服器。請確認您的網際網路連線並重試。>*.*<渲染器介面>*.*<renderer.js
+GitHub Open Source Applications Terms and Conditions>*.*<GitHub 開放原始碼應用程式條款與條件>*.*<渲染器介面>*.*<renderer.js
+GitHub Privacy Statement>*.*<GitHub 隱私權聲明>*.*<渲染器介面>*.*<renderer.js
+GitHub Privacy Statement.>*.*<GitHub 隱私權聲明。>*.*<渲染器介面>*.*<renderer.js
+GitHub Terms>*.*<GitHub 條款>*.*<渲染器介面>*.*<renderer.js
+Hands clapping>*.*<鼓掌>*.*<渲染器介面>*.*<renderer.js
+Help GitHub Desktop improve by submitting>*.*<提交下列資訊以協助改善 GitHub Desktop>*.*<渲染器介面>*.*<renderer.js
+How are you planning to use this fork?>*.*<您打算如何使用此 Fork？>*.*<渲染器介面>*.*<renderer.js
+Html syntax icon>*.*<HTML 語法圖示>*.*<渲染器介面>*.*<renderer.js
+I have an editor>*.*<我有編輯器>*.*<渲染器介面>*.*<renderer.js
+I understand>*.*<我了解>*.*<渲染器介面>*.*<renderer.js
+I'll fix it later>*.*<我稍後再修正>*.*<渲染器介面>*.*<renderer.js
+I'm sure>*.*<我確定>*.*<渲染器介面>*.*<renderer.js
+Icon Preview>*.*<圖示預覽>*.*<渲染器介面>*.*<renderer.js
+If I have changes and I switch branches...>*.*<如果我有變更且要切換分支時...>*.*<渲染器介面>*.*<renderer.js
+If this is a GitHub Enterprise trial.>*.*<如果這是 GitHub Enterprise 試用版。>*.*<渲染器介面>*.*<renderer.js
+If you are unsure of what to do, cancel and contact your system administrator.>*.*<如果您不確定該怎麼做，請取消並聯絡您的系統管理員。>*.*<渲染器介面>*.*<renderer.js
+If you commit these files, you will no longer be able to push this repository to GitHub.com.>*.*<如果您提交這些檔案，將無法再將此儲存庫推送到 GitHub.com。>*.*<渲染器介面>*.*<renderer.js
+If you trust the owner of the directory you can add an exception for this directory in order to continue.>*.*<如果您信任該目錄的擁有者，可以為此目錄新增例外以繼續。>*.*<渲染器介面>*.*<renderer.js
+If your GitHub Enterprise instance is run on an unusual top-level domain.>*.*<如果您的 GitHub Enterprise 執行個體是在不常見的頂級網域上運作。>*.*<渲染器介面>*.*<renderer.js
+Ignore and Continue>*.*<忽略並繼續>*.*<渲染器介面>*.*<renderer.js
+Ignored files>*.*<已忽略的檔案>*.*<渲染器介面>*.*<renderer.js
+Ignoring unavailable Copilot app handoff>*.*<忽略無法使用的 Copilot 應用程式交接>*.*<渲染器介面>*.*<renderer.js
+In 10 min>*.*<10 分鐘後>*.*<渲染器介面>*.*<renderer.js
+In 1h>*.*<1 小時後>*.*<渲染器介面>*.*<renderer.js
+In 62 min>*.*<62 分鐘後>*.*<渲染器介面>*.*<renderer.js
+In 8h>*.*<8 小時後>*.*<渲染器介面>*.*<renderer.js
+In some cases, this may be expected. For example:>*.*<在某些情況下，這可能是預期的。例如：>*.*<渲染器介面>*.*<renderer.js
+Initial commit>*.*<初始提交>*.*<渲染器介面>*.*<renderer.js
+Initialize Git LFS>*.*<初始化 Git LFS>*.*<渲染器介面>*.*<renderer.js
+Initializing local repository>*.*<正在初始化本機儲存庫>*.*<渲染器介面>*.*<renderer.js
+Input cleared>*.*<輸入已清除>*.*<渲染器介面>*.*<renderer.js
+Install Git>*.*<安裝 Git>*.*<渲染器介面>*.*<renderer.js
+Install a text editor>*.*<安裝文字編輯器>*.*<渲染器介面>*.*<renderer.js
+Install and restart>*.*<安裝並重新啟動>*.*<渲染器介面>*.*<renderer.js
+Interactive rebase>*.*<互動式變基>*.*<渲染器介面>*.*<renderer.js
+Invalid URL>*.*<無效的 URL>*.*<渲染器介面>*.*<renderer.js
+Invalid base64 digit: >*.*<無效的 base64 位數：>*.*<渲染器介面>*.*<renderer.js
+Invalid characters have been replaced by hyphens.>*.*<無效字元已替換為連字號。>*.*<渲染器介面>*.*<renderer.js
+Invalid date>*.*<無效的日期>*.*<渲染器介面>*.*<renderer.js
+Invalid diff output>*.*<無效的 diff 輸出>*.*<渲染器介面>*.*<renderer.js
+Invalid hunk header format>*.*<無效的 hunk 標頭格式>*.*<渲染器介面>*.*<renderer.js
+Invalid list>*.*<無效的清單>*.*<渲染器介面>*.*<renderer.js
+Invalid magic number in DDS header>*.*<DDS 標頭中的魔術數字無效>*.*<渲染器介面>*.*<renderer.js
+Invalid mapping: >*.*<無效的對應：>*.*<渲染器介面>*.*<renderer.js
+Invalid protocol>*.*<無效的通訊協定>*.*<渲染器介面>*.*<renderer.js
+Invalid selected rows that contained a negative number passed to List component. This will cause keyboard navigation and focus problems.>*.*<傳遞給 List 元件的所選資料列無效（包含負數）。這將導致鍵盤導覽和焦點問題。>*.*<渲染器介面>*.*<renderer.js
+Invalid selected rows that contained a negative number passed to SectionList component. This will cause keyboard navigation and focus problems.>*.*<傳遞給 SectionList 元件的所選資料列無效（包含負數）。這將導致鍵盤導覽和焦點問題。>*.*<渲染器介面>*.*<renderer.js
+Invalid time value>*.*<無效的時間值>*.*<渲染器介面>*.*<renderer.js
+Invalidated account token>*.*<已失效的帳號權杖>*.*<渲染器介面>*.*<renderer.js
+Issues will be created in >*.*<議題將建立於>*.*<渲染器介面>*.*<renderer.js
+Its API key will also be removed from your keychain.>*.*<其 API 金鑰也將從您的鑰匙圈中移除。>*.*<渲染器介面>*.*<renderer.js
+Its bearer token will also be removed from your keychain.>*.*<其 Bearer 權杖也將從您的鑰匙圈中移除。>*.*<渲染器介面>*.*<renderer.js
+Keep file>*.*<保留檔案>*.*<渲染器介面>*.*<renderer.js
+Keep this code private>*.*<將此程式碼設為私人>*.*<渲染器介面>*.*<renderer.js
+Keeping modified file>*.*<正在保留已修改的檔案>*.*<渲染器介面>*.*<renderer.js
+Learn about submodules.>*.*<深入了解子模組。>*.*<渲染器介面>*.*<renderer.js
+Learn more>*.*<深入了解>*.*<渲染器介面>*.*<renderer.js
+Learn more about Copilot in GitHub Desktop.>*.*<深入了解 GitHub Desktop 中的 Copilot。>*.*<渲染器介面>*.*<renderer.js
+Learn more about GitHub Copilot>*.*<深入了解 GitHub Copilot>*.*<渲染器介面>*.*<renderer.js
+Learn more about commit attribution>*.*<深入了解提交歸屬>*.*<渲染器介面>*.*<renderer.js
+Learn more about generating commit messages.>*.*<深入了解如何產生提交訊息。>*.*<渲染器介面>*.*<renderer.js
+Learn more about gitignore files>*.*<深入了解 gitignore 檔案>*.*<渲染器介面>*.*<renderer.js
+Learn more about remote repositories.>*.*<深入了解遠端儲存庫。>*.*<渲染器介面>*.*<renderer.js
+Learn more about unreachable commits.>*.*<深入了解無法到達的提交。>*.*<渲染器介面>*.*<renderer.js
+Learn more about user metrics.>*.*<深入了解使用者指標。>*.*<渲染器介面>*.*<renderer.js
+Learn more.>*.*<深入了解。>*.*<渲染器介面>*.*<renderer.js
+License and Open Source Notices>*.*<授權與開放原始碼聲明>*.*<渲染器介面>*.*<renderer.js
+License to GitHub Policies. These Application Terms are licensed under the>*.*<GitHub 政策授權條款。這些應用程式條款均依據下列條款授權：>*.*<渲染器介面>*.*<renderer.js
+Line must be greater than or equal to 1, got >*.*<行必須大於或等於 1，但得到>*.*<渲染器介面>*.*<renderer.js
+Lines changed:>*.*<變更行數：>*.*<渲染器介面>*.*<renderer.js
+LinkedMap got modified during iteration.>*.*<LinkedMap 在反覆運算期間遭到修改。>*.*<渲染器介面>*.*<renderer.js
+Load Git hook environment variables from shell>*.*<從 Shell 載入 Git 掛鉤環境變數>*.*<渲染器介面>*.*<renderer.js
+Loading chunk >*.*<正在載入區塊>*.*<渲染器介面>*.*<renderer.js
+Loading system theme>*.*<正在載入系統佈景主題>*.*<渲染器介面>*.*<renderer.js
+Looking for related context>*.*<正在尋找相關上下文>*.*<渲染器介面>*.*<renderer.js
+Looking for the latest features?>*.*<正在尋找最新功能嗎？>*.*<渲染器介面>*.*<renderer.js
+Make a commit>*.*<建立提交>*.*<渲染器介面>*.*<renderer.js
+Make sure notifications are >*.*<請確認通知已>*.*<渲染器介面>*.*<renderer.js
+Malformed diff, empty hunk>*.*<格式錯誤的 diff，空的 hunk>*.*<渲染器介面>*.*<renderer.js
+Manual conflict>*.*<手動衝突>*.*<渲染器介面>*.*<renderer.js
+Merge into >*.*<合併至>*.*<渲染器介面>*.*<renderer.js
+Merge options>*.*<合併選項>*.*<渲染器介面>*.*<renderer.js
+Missing existing owner id>*.*<缺少現有的擁有者 ID>*.*<渲染器介面>*.*<renderer.js
+Missing owner id>*.*<缺少擁有者 ID>*.*<渲染器介面>*.*<renderer.js
+Model changes apply to future conflict resolutions.>*.*<模型變更將套用於未來的衝突解決。>*.*<渲染器介面>*.*<renderer.js
+Model identifier>*.*<模型識別碼>*.*<渲染器介面>*.*<renderer.js
+Move GitHub Desktop to the Applications folder?>*.*<將 GitHub Desktop 移至「應用程式」資料夾？>*.*<渲染器介面>*.*<renderer.js
+Move and Restart>*.*<移動並重新啟動>*.*<渲染器介面>*.*<renderer.js
+Must be between 0 and 63: >*.*<必須介於 0 到 63 之間：>*.*<渲染器介面>*.*<renderer.js
+My provider>*.*<我的提供者>*.*<渲染器介面>*.*<renderer.js
+Need db id to create GitHubRepository>*.*<需要 db id 才能建立 GitHubRepository>*.*<渲染器介面>*.*<renderer.js
+Need to provide a version to compare against>*.*<需要提供版本以進行比較>*.*<渲染器介面>*.*<renderer.js
+Network and credentials>*.*<網路與認證>*.*<渲染器介面>*.*<renderer.js
+New branch>*.*<新增分支>*.*<渲染器介面>*.*<renderer.js
+New branches will be based on>*.*<新分支將基於>*.*<渲染器介面>*.*<renderer.js
+New to GitHub?>*.*<第一次使用 GitHub 嗎？>*.*<渲染器介面>*.*<renderer.js
+New worktree>*.*<新增工作樹>*.*<渲染器介面>*.*<renderer.js
+Newer commits on remote>*.*<遠端有較新的提交>*.*<渲染器介面>*.*<renderer.js
+No Copilot models available.>*.*<沒有可用的 Copilot 模型。>*.*<渲染器介面>*.*<renderer.js
+No Copilot resolution available>*.*<沒有可用的 Copilot 解決方案>*.*<渲染器介面>*.*<renderer.js
+No Copilot resolution available for this file.>*.*<此檔案沒有可用的 Copilot 解決方案。>*.*<渲染器介面>*.*<renderer.js
+No Copilot usage data available yet.>*.*<尚無 Copilot 用量資料。>*.*<渲染器介面>*.*<renderer.js
+No GitHub repository to test with - check out a GitHub repository and try again>*.*<沒有可用於測試的 GitHub 儲存庫 - 請簽出 GitHub 儲存庫後再試一次>*.*<渲染器介面>*.*<renderer.js
+No GitHub repository to test with - check out a github repo and try again>*.*<沒有可用於測試的 GitHub 儲存庫 - 請簽出 github 儲存庫後再試一次>*.*<渲染器介面>*.*<renderer.js
+No Waiver. The failure of GitHub to exercise or enforce any right or provision of these Application Terms shall not constitute a waiver of such right or provision.>*.*<不放棄權利。GitHub 未行使或執行本應用程式條款的任何權利或規定，不構成對該等權利或規定的放棄。>*.*<渲染器介面>*.*<renderer.js
+No account found for endpoint>*.*<找不到端點的帳號>*.*<渲染器介面>*.*<renderer.js
+No avatar url returned from API>*.*<API 未傳回頭像 URL>*.*<渲染器介面>*.*<renderer.js
+No branches to compare>*.*<沒有可比較的分支>*.*<渲染器介面>*.*<renderer.js
+No comments found>*.*<找不到任何留言>*.*<渲染器介面>*.*<renderer.js
+No commit selected>*.*<未選取任何提交>*.*<渲染器介面>*.*<renderer.js
+No commits to diff...>*.*<沒有可比較的提交...>*.*<渲染器介面>*.*<renderer.js
+No commits to list>*.*<沒有可列出的提交>*.*<渲染器介面>*.*<renderer.js
+No conflict markers found>*.*<找不到衝突標記>*.*<渲染器介面>*.*<renderer.js
+No conflicts remaining>*.*<沒有剩餘的衝突>*.*<渲染器介面>*.*<renderer.js
+No credentials will be sent with requests to this provider.>*.*<向此提供者發送請求時不會傳送任何認證資訊。>*.*<渲染器介面>*.*<renderer.js
+No editor configured in Options > Advanced>*.*<未在「選項」>「進階」中設定編輯器>*.*<渲染器介面>*.*<renderer.js
+No element indexed by >*.*<找不到以下索引的元素：>*.*<渲染器介面>*.*<renderer.js
+No file selected>*.*<未選取任何檔案>*.*<渲染器介面>*.*<renderer.js
+No files in commit>*.*<提交中沒有檔案>*.*<渲染器介面>*.*<renderer.js
+No history>*.*<沒有歷史紀錄>*.*<渲染器介面>*.*<renderer.js
+No local changes>*.*<沒有本機變更>*.*<渲染器介面>*.*<renderer.js
+No models available>*.*<沒有可用的模型>*.*<渲染器介面>*.*<renderer.js
+No models found.>*.*<找不到任何模型。>*.*<渲染器介面>*.*<renderer.js
+No models yet. Add at least one to use this provider.>*.*<尚無模型。請新增至少一個模型以使用此提供者。>*.*<渲染器介面>*.*<renderer.js
+No other editors found.>*.*<找不到其他編輯器。>*.*<渲染器介面>*.*<renderer.js
+No pull requests found>*.*<找不到任何拉取請求>*.*<渲染器介面>*.*<renderer.js
+No repositories>*.*<沒有儲存庫>*.*<渲染器介面>*.*<renderer.js
+No repository selected>*.*<未選取儲存庫>*.*<渲染器介面>*.*<renderer.js
+No repository to test with - check out a repository and try again>*.*<沒有可用於測試的儲存庫 - 請簽出儲存庫後再試一次>*.*<渲染器介面>*.*<renderer.js
+No response from Copilot>*.*<Copilot 沒有回應>*.*<渲染器介面>*.*<renderer.js
+No reviews found>*.*<找不到任何審查>*.*<渲染器介面>*.*<renderer.js
+No runtime abstraction layer installed>*.*<未安裝執行階段抽象層>*.*<渲染器介面>*.*<renderer.js
+No runtime abstraction layer provided>*.*<未提供執行階段抽象層>*.*<渲染器介面>*.*<renderer.js
+No usage limit>*.*<無用量限制>*.*<渲染器介面>*.*<renderer.js
+No worktrees found>*.*<找不到任何工作樹>*.*<渲染器介面>*.*<renderer.js
+Not Now>*.*<稍後再說>*.*<渲染器介面>*.*<renderer.js
+Not now>*.*<稍後再說>*.*<渲染器介面>*.*<renderer.js
+Notifications Settings>*.*<通知設定>*.*<渲染器介面>*.*<renderer.js
+Number format>*.*<數字格式>*.*<渲染器介面>*.*<renderer.js
+Only RGBA32f cubemaps are supported>*.*<僅支援 RGBA32f 立方體貼圖>*.*<渲染器介面>*.*<renderer.js
+Only continue if you recognize and trust this server.>*.*<僅在您確認並信任此伺服器時才繼續。>*.*<渲染器介面>*.*<renderer.js
+Open Copilot feature settings>*.*<開啟 Copilot 功能設定>*.*<渲染器介面>*.*<renderer.js
+Open GitHub Copilot settings>*.*<開啟 GitHub Copilot 設定>*.*<渲染器介面>*.*<renderer.js
+Open Source Licenses and Notices>*.*<開放原始碼授權與聲明>*.*<渲染器介面>*.*<renderer.js
+Open Source Notices>*.*<開放原始碼聲明>*.*<渲染器介面>*.*<renderer.js
+Open Your Card>*.*<開啟您的卡片>*.*<渲染器介面>*.*<renderer.js
+Open a pull request>*.*<建立拉取請求>*.*<渲染器介面>*.*<renderer.js
+Open editor>*.*<開啟編輯器>*.*<渲染器介面>*.*<renderer.js
+Open git settings>*.*<開啟 Git 設定>*.*<渲染器介面>*.*<renderer.js
+Open in browser>*.*<在瀏覽器中開啟>*.*<渲染器介面>*.*<renderer.js
+Open in command line,>*.*<在命令列中開啟，>*.*<渲染器介面>*.*<renderer.js
+Open options>*.*<開啟選項>*.*<渲染器介面>*.*<renderer.js
+Open pull request>*.*<開啟拉取請求>*.*<渲染器介面>*.*<renderer.js
+Open repository>*.*<開啟儲存庫>*.*<渲染器介面>*.*<renderer.js
+Open the Atom website>*.*<開啟 Atom 網站>*.*<渲染器介面>*.*<renderer.js
+Open the repository in your external editor>*.*<在外部編輯器中開啟儲存庫>*.*<渲染器介面>*.*<renderer.js
+Open the repository page on GitHub in your browser>*.*<在瀏覽器中開啟 GitHub 上的儲存庫頁面>*.*<渲染器介面>*.*<renderer.js
+Open this repository in your preferred text editor. Edit the>*.*<在您偏好的文字編輯器中開啟此儲存庫。編輯>*.*<渲染器介面>*.*<renderer.js
+Open without Git>*.*<不使用 Git 開啟>*.*<渲染器介面>*.*<renderer.js
+OpenAI / OpenAI-compatible>*.*<OpenAI / OpenAI 相容>*.*<渲染器介面>*.*<renderer.js
+Opening link blocked as opener could not be cleared>*.*<開啟連結已遭封鎖，因為無法清除 opener>*.*<渲染器介面>*.*<renderer.js
+Operation aborted>*.*<操作已中止>*.*<渲染器介面>*.*<renderer.js
+Ordinary requests refresh within 10 minutes of expiry. Copilot session creation refreshes within 61 minutes and 1 second. Renewal happens when authenticated work next requests a token.>*.*<一般請求會在到期前 10 分鐘內重新整理。Copilot 工作階段建立會在 61 分鐘 1 秒內重新整理。續約會在通過認證的工作下次請求權杖時進行。>*.*<渲染器介面>*.*<renderer.js
+Original expiration restored.>*.*<已還原原始到期時間。>*.*<渲染器介面>*.*<renderer.js
+Original expiry:>*.*<原始到期時間：>*.*<渲染器介面>*.*<renderer.js
+Overage allowed with exhausted quota>*.*<配額耗盡時允許超額使用>*.*<渲染器介面>*.*<renderer.js
+Overriding commit message with generated message>*.*<正在以產生的訊息覆寫提交訊息>*.*<渲染器介面>*.*<renderer.js
+Overwrite stash?>*.*<要覆寫暫存嗎？>*.*<渲染器介面>*.*<renderer.js
+PR cannot have a null base repo>*.*<PR 的基準儲存庫不能為空>*.*<渲染器介面>*.*<renderer.js
+Partially checked check list>*.*<部分勾選的核取清單>*.*<渲染器介面>*.*<renderer.js
+Path to executable>*.*<可執行檔路徑>*.*<渲染器介面>*.*<renderer.js
+Pending response rejected since connection got disposed>*.*<擱置的回應已遭拒絕，因為連線已被釋放>*.*<渲染器介面>*.*<renderer.js
+People with discussion bubbles overhead>*.*<頭頂有討論對話框的人群>*.*<渲染器介面>*.*<renderer.js
+Permanently discard changes>*.*<永久捨棄變更>*.*<渲染器介面>*.*<renderer.js
+Platform not currently supported for launching shells: win32>*.*<目前不支援在此平台啟動 Shell：win32>*.*<渲染器介面>*.*<renderer.js
+Please add at least one model.>*.*<請至少新增一個模型。>*.*<渲染器介面>*.*<renderer.js
+Please enter a base URL.>*.*<請輸入基底 URL。>*.*<渲染器介面>*.*<renderer.js
+Please enter a bearer token.>*.*<請輸入 Bearer 權杖。>*.*<渲染器介面>*.*<renderer.js
+Please enter a model identifier.>*.*<請輸入模型識別碼。>*.*<渲染器介面>*.*<renderer.js
+Please enter a name.>*.*<請輸入名稱。>*.*<渲染器介面>*.*<renderer.js
+Please enter an API key.>*.*<請輸入 API 金鑰。>*.*<渲染器介面>*.*<renderer.js
+Please wait>*.*<請稍候>*.*<渲染器介面>*.*<renderer.js
+Prefer absolute dates over relative>*.*<偏好絕對日期而非相對日期>*.*<渲染器介面>*.*<renderer.js
+Premium requests>*.*<進階請求>*.*<渲染器介面>*.*<renderer.js
+Premium requests / AI credits>*.*<進階請求 / AI 點數>*.*<渲染器介面>*.*<renderer.js
+Preview Pull Request>*.*<預覽拉取請求>*.*<渲染器介面>*.*<renderer.js
+Preview the Pull Request from your current branch>*.*<從您目前的分支預覽拉取請求>*.*<渲染器介面>*.*<renderer.js
+Previous tags>*.*<先前的標籤>*.*<渲染器介面>*.*<renderer.js
+Publish branch>*.*<發布分支>*.*<渲染器介面>*.*<renderer.js
+Publish repository>*.*<發布儲存庫>*.*<渲染器介面>*.*<renderer.js
+Publish to GitHub>*.*<發布至 GitHub>*.*<渲染器介面>*.*<renderer.js
+Publish your branch>*.*<發布您的分支>*.*<渲染器介面>*.*<renderer.js
+Publish your repository to GitHub>*.*<將您的儲存庫發布至 GitHub>*.*<渲染器介面>*.*<renderer.js
+Publish your repository to GitHub. Need help?>*.*<將您的儲存庫發布至 GitHub。需要協助嗎？>*.*<渲染器介面>*.*<renderer.js
+Pull Request Checks Failed>*.*<拉取請求檢查失敗>*.*<渲染器介面>*.*<renderer.js
+Pull Request Comment>*.*<拉取請求留言>*.*<渲染器介面>*.*<renderer.js
+Pull Request Review>*.*<拉取請求審查>*.*<渲染器介面>*.*<renderer.js
+Pull Request checks failed>*.*<拉取請求檢查失敗>*.*<渲染器介面>*.*<renderer.js
+Pull request file list>*.*<拉取請求檔案清單>*.*<渲染器介面>*.*<renderer.js
+Pull request markdown body>*.*<拉取請求 Markdown 內文>*.*<渲染器介面>*.*<renderer.js
+Pull request markdown comment>*.*<拉取請求 Markdown 留言>*.*<渲染器介面>*.*<renderer.js
+Pull requests>*.*<拉取請求>*.*<渲染器介面>*.*<renderer.js
+Pull requests for >*.*<拉取請求，針對>*.*<渲染器介面>*.*<renderer.js
+Pull requests targeting >*.*<拉取請求，目標為>*.*<渲染器介面>*.*<renderer.js
+PullRequestCoordinator: Error loading repositories>*.*<PullRequestCoordinator: 載入儲存庫時發生錯誤>*.*<渲染器介面>*.*<renderer.js
+Push blocked: secret detected>*.*<推送已遭封鎖：偵測到機密>*.*<渲染器介面>*.*<renderer.js
+Push rejected>*.*<推送已遭拒絕>*.*<渲染器介面>*.*<renderer.js
+Quit and Install Update>*.*<結束並安裝更新>*.*<渲染器介面>*.*<renderer.js
+Quit anyway>*.*<仍要結束>*.*<渲染器介面>*.*<renderer.js
+Quota exceeded>*.*<已超出配額>*.*<渲染器介面>*.*<renderer.js
+Rate limit preset>*.*<速率限制預設集>*.*<渲染器介面>*.*<renderer.js
+Re-authorization required>*.*<需要重新授權>*.*<渲染器介面>*.*<renderer.js
+Re-run Checks>*.*<重新執行檢查>*.*<渲染器介面>*.*<renderer.js
+Re-run all checks>*.*<重新執行所有檢查>*.*<渲染器介面>*.*<renderer.js
+Re-run failed checks>*.*<重新執行失敗的檢查>*.*<渲染器介面>*.*<renderer.js
+Reading recent commit history>*.*<正在讀取最近的提交歷史紀錄>*.*<渲染器介面>*.*<renderer.js
+Reasoning effort>*.*<推論投入度>*.*<渲染器介面>*.*<renderer.js
+Reasoning models (o1, o3, GPT-5 reasoning variants, etc.) think before responding. Higher levels are slower but produce better answers on complex tasks. Leave on >*.*<推論模型（o1、o3、GPT-5 推論衍生型號等）會在回應前進行思考。等級越高速度越慢，但在處理複雜任務時能產生更好的答案。維持在>*.*<渲染器介面>*.*<renderer.js
+Rebasing branch>*.*<變基分支>*.*<渲染器介面>*.*<renderer.js
+Received empty message.>*.*<收到空白訊息。>*.*<渲染器介面>*.*<renderer.js
+Received parameters by name but param is not an object literal.>*.*<依名稱接收到參數，但 param 不是物件常值。>*.*<渲染器介面>*.*<renderer.js
+Received response message without id. No further error information provided.>*.*<收到沒有 id 的回應訊息。未提供進一步的錯誤資訊。>*.*<渲染器介面>*.*<renderer.js
+Received value when in Finished>*.*<處於 Finished 狀態時收到值>*.*<渲染器介面>*.*<renderer.js
+Receiving objects>*.*<接收物件中>*.*<渲染器介面>*.*<renderer.js
+Refreshing repository>*.*<重新整理儲存庫>*.*<渲染器介面>*.*<renderer.js
+Release notes generated from markdown>*.*<從 Markdown 產生的版本資訊>*.*<渲染器介面>*.*<renderer.js
+Reload details>*.*<重新載入詳細資料>*.*<渲染器介面>*.*<renderer.js
+Remaining percentage>*.*<剩餘百分比>*.*<渲染器介面>*.*<renderer.js
+Remember passphrase>*.*<記住密碼短語>*.*<渲染器介面>*.*<renderer.js
+Remember password>*.*<記住密碼>*.*<渲染器介面>*.*<renderer.js
+Remote URL>*.*<遠端 URL>*.*<渲染器介面>*.*<renderer.js
+Remote URL configuration is missing a value>*.*<遠端 URL 設定缺少值>*.*<渲染器介面>*.*<renderer.js
+Remove custom provider>*.*<移除自訂提供者>*.*<渲染器介面>*.*<renderer.js
+Remove missing worktree>*.*<移除遺失的工作樹>*.*<渲染器介面>*.*<renderer.js
+Remove repository>*.*<移除儲存庫>*.*<渲染器介面>*.*<renderer.js
+Removing repositories>*.*<正在移除儲存庫>*.*<渲染器介面>*.*<renderer.js
+Removing worktrees>*.*<正在移除工作樹>*.*<渲染器介面>*.*<renderer.js
+Rename branch>*.*<重新命名分支>*.*<渲染器介面>*.*<renderer.js
+Rename worktree>*.*<重新命名工作樹>*.*<渲染器介面>*.*<renderer.js
+Reorder commit>*.*<重新排列提交>*.*<渲染器介面>*.*<renderer.js
+Reorder commits>*.*<重新排列提交>*.*<渲染器介面>*.*<renderer.js
+Reorder of >*.*<重新排列>*.*<渲染器介面>*.*<renderer.js
+Repository creation failed.>*.*<儲存庫建立失敗。>*.*<渲染器介面>*.*<renderer.js
+Repository must be GitHub repository>*.*<儲存庫必須是 GitHub 儲存庫>*.*<渲染器介面>*.*<renderer.js
+Repository sidebar>*.*<儲存庫側邊欄>*.*<渲染器介面>*.*<renderer.js
+Request timeout (seconds)>*.*<請求逾時（秒）>*.*<渲染器介面>*.*<renderer.js
+Request timeout must be a positive number of seconds.>*.*<請求逾時必須為正秒數。>*.*<渲染器介面>*.*<renderer.js
+Required font metrics not supported>*.*<不支援所需的字型度量資訊>*.*<渲染器介面>*.*<renderer.js
+Reset date>*.*<重設日期>*.*<渲染器介面>*.*<renderer.js
+Reset override>*.*<重設覆寫>*.*<渲染器介面>*.*<renderer.js
+Reset to commit>*.*<重設至提交>*.*<渲染器介面>*.*<renderer.js
+ResizeObserver loop completed with undelivered notifications.>*.*<ResizeObserver 迴圈已完成，但有未傳遞的通知。>*.*<渲染器介面>*.*<renderer.js
+Resolution summary>*.*<解決方案摘要>*.*<渲染器介面>*.*<renderer.js
+Resolve all changes before continuing>*.*<繼續之前請先解決所有變更>*.*<渲染器介面>*.*<renderer.js
+Resolve conflicts and commit to merge into>*.*<解決衝突並提交以合併至>*.*<渲染器介面>*.*<renderer.js
+Resolve conflicts to continue >*.*<解決衝突以繼續>*.*<渲染器介面>*.*<renderer.js
+Resolve conflicts to continue cherry-picking onto>*.*<解決衝突以繼續揀選至>*.*<渲染器介面>*.*<renderer.js
+Resolve conflicts to continue rebasing>*.*<解決衝突以繼續變基>*.*<渲染器介面>*.*<renderer.js
+Resolving deltas>*.*<解析差異中>*.*<渲染器介面>*.*<renderer.js
+Responses (GPT-5 series)>*.*<回應（GPT-5 系列）>*.*<渲染器介面>*.*<renderer.js
+Responsible use of Copilot in GitHub Desktop>*.*<在 GitHub Desktop 中負責任地使用 Copilot>*.*<渲染器介面>*.*<renderer.js
+Retry clone>*.*<重試複製>*.*<渲染器介面>*.*<renderer.js
+Return to in progress tutorial>*.*<返回進行中的教學>*.*<渲染器介面>*.*<renderer.js
+Revert changes in commit>*.*<還原提交中的變更>*.*<渲染器介面>*.*<renderer.js
+Revert progress button>*.*<還原進度按鈕>*.*<渲染器介面>*.*<renderer.js
+Review and edit the generated message carefully before use.>*.*<在使用前請仔細審閱並編輯產生的訊息。>*.*<渲染器介面>*.*<renderer.js
+Review requested>*.*<已請求審閱>*.*<渲染器介面>*.*<renderer.js
+Review the suggested resolutions carefully before applying them to your files.>*.*<在套用至檔案前，請仔細審閱建議的解決方案。>*.*<渲染器介面>*.*<renderer.js
+Review without body>*.*<無內文的審閱>*.*<渲染器介面>*.*<renderer.js
+Reviewing the changes from each side>*.*<正在審閱來自雙方的變更>*.*<渲染器介面>*.*<renderer.js
+Right click on multiple commits to see options.>*.*<在多個提交上按一下右鍵以查看選項。>*.*<渲染器介面>*.*<renderer.js
+SSH Host>*.*<SSH 主機>*.*<渲染器介面>*.*<renderer.js
+SSH Key Passphrase>*.*<SSH 金鑰密碼短語>*.*<渲染器介面>*.*<renderer.js
+SSH User Password>*.*<SSH 使用者密碼>*.*<渲染器介面>*.*<renderer.js
+SSH key passphrases>*.*<SSH 金鑰密碼短語>*.*<渲染器介面>*.*<renderer.js
+SSH user password>*.*<SSH 使用者密碼>*.*<渲染器介面>*.*<renderer.js
+Search for user>*.*<搜尋使用者>*.*<渲染器介面>*.*<renderer.js
+Secret Scanning>*.*<機密掃描>*.*<渲染器介面>*.*<renderer.js
+Section offsets must be ordered and non-overlapping.>*.*<區段位移必須依序排列且不得重疊。>*.*<渲染器介面>*.*<renderer.js
+Select a base branch above.>*.*<在上方選取基準分支。>*.*<渲染器介面>*.*<renderer.js
+Select a repository>*.*<選取儲存庫>*.*<渲染器介面>*.*<renderer.js
+Select a signed-in account.>*.*<選取已登入的帳號。>*.*<渲染器介面>*.*<renderer.js
+Select a single commit or a range of consecutive commits to view a diff.>*.*<選取單一提交或連續提交範圍以檢視差異。>*.*<渲染器介面>*.*<renderer.js
+Select an editor>*.*<選取編輯器>*.*<渲染器介面>*.*<renderer.js
+Select the type of notification to display:>*.*<選取要顯示的通知類型：>*.*<渲染器介面>*.*<renderer.js
+Select your editor in>*.*<選取您的編輯器於>*.*<渲染器介面>*.*<renderer.js
+Selected commit file list>*.*<所選提交的檔案清單>*.*<渲染器介面>*.*<renderer.js
+Sending notification failed.>*.*<傳送通知失敗。>*.*<渲染器介面>*.*<renderer.js
+Sending request failed.>*.*<傳送請求失敗。>*.*<渲染器介面>*.*<renderer.js
+Sending response failed.>*.*<傳送回應失敗。>*.*<渲染器介面>*.*<renderer.js
+Sending response for canceled message failed.>*.*<為已取消的訊息傳送回應失敗。>*.*<渲染器介面>*.*<renderer.js
+Server stack with cloud>*.*<含雲端的伺服器堆疊>*.*<渲染器介面>*.*<renderer.js
+Session limits>*.*<工作階段限制>*.*<渲染器介面>*.*<renderer.js
+Session quota exceeded>*.*<已超出工作階段配額>*.*<渲染器介面>*.*<renderer.js
+Shell to use when loading environment>*.*<載入環境時使用的 Shell>*.*<渲染器介面>*.*<renderer.js
+Should never happen.>*.*<絕不應該發生。>*.*<渲染器介面>*.*<renderer.js
+Show Copilot model credit costs>*.*<顯示 Copilot 模型點數消耗>*.*<渲染器介面>*.*<renderer.js
+Show Less Locations>*.*<顯示較少位置>*.*<渲染器介面>*.*<renderer.js
+Show More locations>*.*<顯示更多位置>*.*<渲染器介面>*.*<renderer.js
+Show a confirmation dialog before...>*.*<在...之前顯示確認對話方塊>*.*<渲染器介面>*.*<renderer.js
+Show check marks in the diff>*.*<在差異中顯示勾選標記>*.*<渲染器介面>*.*<renderer.js
+Show commit length warning>*.*<顯示提交長度警告>*.*<渲染器介面>*.*<renderer.js
+Show credit costs>*.*<顯示點數消耗>*.*<渲染器介面>*.*<renderer.js
+Show status icons in the repository list>*.*<在儲存庫清單中顯示狀態圖示>*.*<渲染器介面>*.*<renderer.js
+Showing changes from>*.*<顯示來自以下項目的變更>*.*<渲染器介面>*.*<renderer.js
+Showing changes from all commits>*.*<顯示所有提交的變更>*.*<渲染器介面>*.*<renderer.js
+Sign In>*.*<登入>*.*<渲染器介面>*.*<renderer.js
+Sign in>*.*<登入>*.*<渲染器介面>*.*<renderer.js
+Sign in to GitHub Enterprise>*.*<登入 GitHub Enterprise>*.*<渲染器介面>*.*<renderer.js
+Sign in to GitHub.com>*.*<登入 GitHub.com>*.*<渲染器介面>*.*<renderer.js
+Sign in to an account with a Copilot license to configure Copilot settings.>*.*<登入具有 Copilot 授權的帳號以設定 Copilot 設定。>*.*<渲染器介面>*.*<renderer.js
+Sign in to an account with a refreshable token to test expiration.>*.*<登入具有可重新整理權杖的帳號以測試過期。>*.*<渲染器介面>*.*<renderer.js
+Sign into>*.*<登入至>*.*<渲染器介面>*.*<renderer.js
+Skip this step>*.*<略過此步驟>*.*<渲染器介面>*.*<renderer.js
+Socket closed before receiving all data>*.*<通訊端在接收所有資料前已關閉>*.*<渲染器介面>*.*<renderer.js
+Some checks haven't completed yet>*.*<部分檢查尚未完成>*.*<渲染器介面>*.*<renderer.js
+Some checks were not successful>*.*<部分檢查未順利完成>*.*<渲染器介面>*.*<renderer.js
+Some files were skipped by Copilot. Those need to be resolved manually.>*.*<部分檔案已被 Copilot 略過。這些檔案需要手動解決。>*.*<渲染器介面>*.*<renderer.js
+Sorry, I can't find any repository matching>*.*<抱歉，找不到任何相符的儲存庫>*.*<渲染器介面>*.*<renderer.js
+Sorry, I can't find that remote branch.>*.*<抱歉，找不到該遠端分支。>*.*<渲染器介面>*.*<renderer.js
+Sorry, I can't find that repository>*.*<抱歉，找不到該儲存庫>*.*<渲染器介面>*.*<renderer.js
+Spaces and invalid characters have been replaced by hyphens.>*.*<空格和無效字元已替換為連字號。>*.*<渲染器介面>*.*<renderer.js
+Squash and >*.*<壓扁並>*.*<渲染器介面>*.*<renderer.js
+Squash and merge>*.*<壓扁並合併>*.*<渲染器介面>*.*<renderer.js
+Squash of >*.*<壓扁>*.*<渲染器介面>*.*<renderer.js
+Squashing into >*.*<正在壓扁至>*.*<渲染器介面>*.*<renderer.js
+Stand By>*.*<待命>*.*<渲染器介面>*.*<renderer.js
+Start tutorial>*.*<開始教學>*.*<渲染器介面>*.*<renderer.js
+Stash changes and continue>*.*<暫存變更並繼續>*.*<渲染器介面>*.*<renderer.js
+Stats reported.>*.*<統計資料已回報。>*.*<渲染器介面>*.*<renderer.js
+Subclasses must implement _parseMappings>*.*<子類別必須實作 _parseMappings>*.*<渲染器介面>*.*<renderer.js
+Submodules updated>*.*<子模組已更新>*.*<渲染器介面>*.*<renderer.js
+Successfully copied >*.*<已成功複製>*.*<渲染器介面>*.*<renderer.js
+Successfully merged >*.*<已成功合併>*.*<渲染器介面>*.*<renderer.js
+Successfully merged into >*.*<已成功合併至>*.*<渲染器介面>*.*<renderer.js
+Successfully rebased >*.*<已成功變基>*.*<渲染器介面>*.*<renderer.js
+Successfully reordered >*.*<已成功重新排列>*.*<渲染器介面>*.*<renderer.js
+Successfully squashed >*.*<已成功壓扁>*.*<渲染器介面>*.*<renderer.js
+Suggested actions for this branch>*.*<針對此分支的建議動作>*.*<渲染器介面>*.*<renderer.js
+Support details>*.*<支援詳細資料>*.*<渲染器介面>*.*<renderer.js
+Support for url field in sections not implemented.>*.*<尚未實作區段中 url 欄位的支援。>*.*<渲染器介面>*.*<renderer.js
+Supported operating systems>*.*<支援的作業系統>*.*<渲染器介面>*.*<renderer.js
+Switch branch>*.*<切換分支>*.*<渲染器介面>*.*<renderer.js
+Switch to manual>*.*<切換至手動>*.*<渲染器介面>*.*<renderer.js
+Switch to pull request>*.*<切換至拉取請求>*.*<渲染器介面>*.*<renderer.js
+Switch to repository and pull request>*.*<切換至儲存庫與拉取請求>*.*<渲染器介面>*.*<renderer.js
+Switching to branch>*.*<正在切換至分支>*.*<渲染器介面>*.*<renderer.js
+Tailer already running>*.*<Tailer 已在執行中>*.*<渲染器介面>*.*<renderer.js
+Tailor how Copilot behaves by using>*.*<透過使用以下項目自訂 Copilot 的行為>*.*<渲染器介面>*.*<renderer.js
+Tell Desktop which models this provider offers. Each one will appear in the model picker for Copilot features.>*.*<告訴 Desktop 此提供者提供哪些模型。每個模型都會顯示在 Copilot 功能的模型選取器中。>*.*<渲染器介面>*.*<renderer.js
+Terminal input>*.*<終端機輸入>*.*<渲染器介面>*.*<renderer.js
+Terminal must be opened first>*.*<必須先開啟終端機>*.*<渲染器介面>*.*<renderer.js
+Terminal requires a parent element.>*.*<終端機需要父元素。>*.*<渲染器介面>*.*<renderer.js
+Terminal.open was called on an element that was not attached to the DOM>*.*<在尚未附加至 DOM 的元素上呼叫了 Terminal.open>*.*<渲染器介面>*.*<renderer.js
+Terms and Conditions>*.*<條款與條件>*.*<渲染器介面>*.*<renderer.js
+Terms of Service>*.*<服務條款>*.*<渲染器介面>*.*<renderer.js
+Test Copilot Snapshot Card>*.*<測試 Copilot 快照卡片>*.*<渲染器介面>*.*<renderer.js
+Test Error - to use default error handler>*.*<測試錯誤 - 使用預設錯誤處理常式>*.*<渲染器介面>*.*<renderer.js
+Test Notifications>*.*<測試通知>*.*<渲染器介面>*.*<renderer.js
+Test Token Expiration>*.*<測試權杖到期>*.*<渲染器介面>*.*<renderer.js
+Test User>*.*<測試使用者>*.*<渲染器介面>*.*<renderer.js
+Test description>*.*<測試說明>*.*<渲染器介面>*.*<renderer.js
+Test summary>*.*<測試摘要>*.*<渲染器介面>*.*<renderer.js
+Thanks so much for all your hard work on GitHub Desktop>*.*<非常感謝您為 GitHub Desktop 所付出的所有辛勞>*.*<渲染器介面>*.*<renderer.js
+The Desktop team would like to thank you for your contributions.>*.*<Desktop 團隊由衷感謝您的貢獻。>*.*<渲染器介面>*.*<renderer.js
+The DropdownSuggestedActions component was provided an empty array. It requires an array of at least one item.>*.*<DropdownSuggestedActions 元件收到了空陣列。它需要至少包含一個項目的陣列。>*.*<渲染器介面>*.*<renderer.js
+The Git repository at >*.*<位於下列位置的 Git 儲存庫>*.*<渲染器介面>*.*<renderer.js
+The `input` option cannot be a stream in sync mode>*.*<在同步模式下，`input` 選項不能是串流>*.*<渲染器介面>*.*<renderer.js
+The application is currently running in development and will not receive any updates.>*.*<應用程式目前正在開發環境中執行，將不會收到任何更新。>*.*<渲染器介面>*.*<renderer.js
+The application is missing a dependency it needs to check and install updates. This is very, very bad.>*.*<應用程式缺少檢查與安裝更新所需的相依性。這非常非常糟糕。>*.*<渲染器介面>*.*<renderer.js
+The authenticity of host >*.*<主機的真實性>*.*<渲染器介面>*.*<renderer.js
+The authenticity of host '>*.*<主機的真實性 '>*.*<渲染器介面>*.*<renderer.js
+The branch also exists on the remote, do you wish to delete it there as well?>*.*<此分支也存在於遠端，您是否也想一併在遠端將其刪除？>*.*<渲染器介面>*.*<renderer.js
+The command cannot be generated if parsing is not finished>*.*<若剖析尚未完成，則無法產生指令>*.*<渲染器介面>*.*<renderer.js
+The command line tool has been installed at>*.*<命令列工具已安裝於>*.*<渲染器介面>*.*<renderer.js
+The commit message you have entered will be overridden by the generated commit message.>*.*<您輸入的提交訊息將會被產生的提交訊息覆寫。>*.*<渲染器介面>*.*<renderer.js
+The compared branch (>*.*<進行比較的分支 (>*.*<渲染器介面>*.*<renderer.js
+The current branch (>*.*<目前分支 (>*.*<渲染器介面>*.*<renderer.js
+The current branch is already up to date with the selected branch.>*.*<目前分支已與選取的分支保持最新狀態。>*.*<渲染器介面>*.*<renderer.js
+The current remote name differs from the branch remote>*.*<目前的遠端名稱與分支的遠端不同>*.*<渲染器介面>*.*<renderer.js
+The currently checked out branch is>*.*<目前簽出的分支為>*.*<渲染器介面>*.*<renderer.js
+The detected string is not a secret>*.*<偵測到的字串不是機密>*.*<渲染器介面>*.*<renderer.js
+The directory >*.*<目錄>*.*<渲染器介面>*.*<renderer.js
+The email in your global Git config (>*.*<您的全域 Git 設定中的電子郵件 (>*.*<渲染器介面>*.*<renderer.js
+The exact name your provider expects (e.g. >*.*<您的提供者預期的確切名稱（例如>*.*<渲染器介面>*.*<renderer.js
+The file was modified with important changes; the deletion was part of an incomplete refactor.>*.*<該檔案包含重要變更；刪除只是未完成重構的一部分。>*.*<渲染器介面>*.*<renderer.js
+The folder for the worktree >*.*<工作樹的資料夾>*.*<渲染器介面>*.*<renderer.js
+The following files are over 100MB.>*.*<下列檔案超過 100MB。>*.*<渲染器介面>*.*<renderer.js
+The friendly name shown in the Copilot model picker.>*.*<顯示在 Copilot 模型選取器中的易記名稱。>*.*<渲染器介面>*.*<renderer.js
+The push was rejected by the server for containing a modification to the workflow file >*.*<伺服器拒絕了此次推送，因為其中包含對工作流程檔案的修改>*.*<渲染器介面>*.*<renderer.js
+The received response has neither a result nor an error property.>*.*<收到的回應既沒有 result 屬性，也沒有 error 屬性。>*.*<渲染器介面>*.*<renderer.js
+The repositories use>*.*<這些儲存庫使用>*.*<渲染器介面>*.*<renderer.js
+The repository >*.*<儲存庫>*.*<渲染器介面>*.*<renderer.js
+The repository has no remotes.>*.*<此儲存庫沒有任何遠端。>*.*<渲染器介面>*.*<renderer.js
+The repository will be created at >*.*<儲存庫將建立於>*.*<渲染器介面>*.*<renderer.js
+The secret is real, I understand the risk, and I will need to revoke it. This will open a security alert and notify admins of this repository.>*.*<此機密確實有效，我瞭解其風險，且我必須將其撤銷。這將會開啟安全性警示，並通知此儲存庫的管理員。>*.*<渲染器介面>*.*<renderer.js
+The secret poses no risk. If anyone finds it, they cannot do any damage or gain access to sensitive information.>*.*<此機密沒有風險。即使有人發現它，也無法造成任何損害或存取機密資訊。>*.*<渲染器介面>*.*<renderer.js
+The short-lived token rollout response is invalid.>*.*<短期權杖推出回應無效。>*.*<渲染器介面>*.*<renderer.js
+The tag name cannot be longer than >*.*<標籤名稱長度不能超過>*.*<渲染器介面>*.*<renderer.js
+The trampoline token is missing>*.*<缺少 trampoline 權杖>*.*<渲染器介面>*.*<renderer.js
+The windows-argv-parser module is only available on Windows>*.*<windows-argv-parser 模組僅適用於 Windows>*.*<渲染器介面>*.*<renderer.js
+There are no changes.>*.*<沒有任何變更。>*.*<渲染器介面>*.*<renderer.js
+There are no steps to display for this check.>*.*<此檢查沒有可顯示的步驟。>*.*<渲染器介面>*.*<renderer.js
+There are no uncommitted changes in this repository. Here are some friendly suggestions for what to do next.>*.*<此儲存庫中沒有未提交的變更。以下是一些後續操作的實用建議。>*.*<渲染器介面>*.*<renderer.js
+There are uncommitted changes in this repository.>*.*<此儲存庫中有未提交的變更。>*.*<渲染器介面>*.*<renderer.js
+There is already a file with this name. Git can only clone to a folder.>*.*<已有同名的檔案存在。Git 只能複製至資料夾。>*.*<渲染器介面>*.*<renderer.js
+There will be>*.*<將會有>*.*<渲染器介面>*.*<renderer.js
+These arguments are not valid.>*.*<這些引數無效。>*.*<渲染器介面>*.*<renderer.js
+These branches can be automatically merged.>*.*<這些分支可以自動合併。>*.*<渲染器介面>*.*<renderer.js
+These changes will be unrecoverable from the >*.*<這些變更將無法從>*.*<渲染器介面>*.*<renderer.js
+These preferences will>*.*<這些偏好設定將會>*.*<渲染器介面>*.*<renderer.js
+These users weren't found and won't be added as co-authors of this commit. Are you sure you want to commit?>*.*<找不到這些使用者，他們將不會被新增為此提交的共同作者。您確定要提交嗎？>*.*<渲染器介面>*.*<renderer.js
+This API only accepts integers>*.*<此 API 僅接受整數>*.*<渲染器介面>*.*<renderer.js
+This API only accepts positive integers>*.*<此 API 僅接受正整數>*.*<渲染器介面>*.*<renderer.js
+This account does not have a refreshable token. Sign in again with short-lived tokens enabled to test expiration.>*.*<此帳戶沒有可重新整理的權杖。請在啟用短期權杖的情況下重新登入以測試過期。>*.*<渲染器介面>*.*<renderer.js
+This branch does not exist locally. Deleting it may impact others collaborating on this branch.>*.*<此分支在本地不存在。刪除它可能會影響協同處理此分支的其他人員。>*.*<渲染器介面>*.*<renderer.js
+This branch is tracking >*.*<此分支正在追蹤>*.*<渲染器介面>*.*<renderer.js
+This branch may have an open pull request associated with it.>*.*<此分支可能有與其關聯的開啟中拉取請求。>*.*<渲染器介面>*.*<renderer.js
+This can happen if another tool is currently modifying the Git configuration or if a Git process has terminated earlier without cleaning up the lock file. Do you want to>*.*<如果另一個工具目前正在修改 Git 設定，或是某個 Git 程序先前終止而未清理鎖定檔案，就可能會發生這種情況。您是否要>*.*<渲染器介面>*.*<renderer.js
+This commit has not been pushed to the remote repository>*.*<此提交尚未推送到遠端儲存庫>*.*<渲染器介面>*.*<renderer.js
+This commit will be misattributed>*.*<此提交將會被錯誤歸屬>*.*<渲染器介面>*.*<renderer.js
+This directory contains a >*.*<此目錄包含>*.*<渲染器介面>*.*<renderer.js
+This email address is disallowed>*.*<此電子郵件地址已被禁止>*.*<渲染器介面>*.*<renderer.js
+This folder contains files. Git can only clone to empty folders.>*.*<此資料夾包含檔案。Git 只能複製至空資料夾。>*.*<渲染器介面>*.*<renderer.js
+This is used to identify the commits you create. Anyone will be able to see this information if you publish commits.>*.*<這用於識別您建立的提交。如果您發布提交，任何人都將能夠看到此資訊。>*.*<渲染器介面>*.*<renderer.js
+This may indicate attackers are trying to steal your data.>*.*<這可能表示攻擊者正試圖竊取您的資料。>*.*<渲染器介面>*.*<renderer.js
+This path does not appear to be a valid executable.>*.*<此路徑似乎不是有效的可執行檔。>*.*<渲染器介面>*.*<renderer.js
+This repository is a fork. How do you plan to use it?>*.*<此儲存庫是一個 fork。您打算如何使用它？>*.*<渲染器介面>*.*<renderer.js
+This repository uses>*.*<此儲存庫使用>*.*<渲染器介面>*.*<renderer.js
+This version of GitHub Desktop is missing>*.*<此版本的 GitHub Desktop 缺少>*.*<渲染器介面>*.*<renderer.js
+This will create a repository on your local machine, and push it to your account >*.*<這將在您的本機電腦上建立儲存庫，並將其推送到您的帳戶>*.*<渲染器介面>*.*<renderer.js
+This will create a stash with your current changes. You can recover them by restoring the stash afterwards.>*.*<這將會為您目前的變更建立暫存。您稍後可以透過還原暫存來復原這些變更。>*.*<渲染器介面>*.*<renderer.js
+This will discard changes and they will be unrecoverable.>*.*<這將會捨棄變更，且這些變更將無法復原。>*.*<渲染器介面>*.*<renderer.js
+This will fast-forward >*.*<這將會快轉>*.*<渲染器介面>*.*<renderer.js
+This will merge>*.*<這將會合併>*.*<渲染器介面>*.*<renderer.js
+This will move GitHub Desktop to the Applications folder in your machine and restart the app.>*.*<這將會把 GitHub Desktop 移至您電腦上的「應用程式」資料夾並重新啟動應用程式。>*.*<渲染器介面>*.*<renderer.js
+This will not affect the original repository name on GitHub.>*.*<這不會影響 GitHub 上的原始儲存庫名稱。>*.*<渲染器介面>*.*<renderer.js
+This will take you back to the original branch state and the conflicts you have already resolved will be discarded.>*.*<這將讓您回到原始分支狀態，且您已解決的衝突將會被捨棄。>*.*<渲染器介面>*.*<renderer.js
+This will update >*.*<這將會更新>*.*<渲染器介面>*.*<renderer.js
+Throw It Away>*.*<直接丟棄>*.*<渲染器介面>*.*<renderer.js
+Thrown away :(....>*.*<已丟棄 :(....>*.*<渲染器介面>*.*<renderer.js
+Time format>*.*<時間格式>*.*<渲染器介面>*.*<renderer.js
+Tip is in unknown state. Cherry-pick aborted.>*.*<端點處於未知狀態。已中止揀選。>*.*<渲染器介面>*.*<renderer.js
+Tip is not in a valid state, which is required to initialize the merge operation>*.*<端點未處於有效狀態，而這是初始化合併操作所必需的>*.*<渲染器介面>*.*<renderer.js
+Tip is not in a valid state, which is required to start the cherry-pick flow>*.*<端點未處於有效狀態，而這是啟動揀選流程所必需的>*.*<渲染器介面>*.*<renderer.js
+Tip is not in a valid state, which is required to start the cherry-pick flow.>*.*<端點未處於有效狀態，而這是啟動揀選流程所必需的。>*.*<渲染器介面>*.*<renderer.js
+Tip is not in a valid state, which is required to start the merge operation>*.*<端點未處於有效狀態，而這是啟動合併操作所必需的>*.*<渲染器介面>*.*<renderer.js
+Tip is not in a valid state, which is required to start the rebase flow>*.*<端點未處於有效狀態，而這是啟動變基流程所必需的>*.*<渲染器介面>*.*<renderer.js
+Tip: You can use>*.*<提示：您可以使用>*.*<渲染器介面>*.*<renderer.js
+To contribute to the parent project>*.*<為父專案做出貢獻>*.*<渲染器介面>*.*<renderer.js
+To contribute to the parent repository>*.*<為父儲存庫做出貢獻>*.*<渲染器介面>*.*<renderer.js
+To help you get Git installed and configured for your operating system, we have some external resources available.>*.*<為了協助您在作業系統上安裝與設定 Git，我們提供了一些外部資源。>*.*<渲染器介面>*.*<renderer.js
+To many thunks active>*.*<作用中的 thunk 過多>*.*<渲染器介面>*.*<renderer.js
+Toggle password visibility>*.*<切換密碼顯示狀態>*.*<渲染器介面>*.*<renderer.js
+Token-based billing>*.*<依權杖計費>*.*<渲染器介面>*.*<renderer.js
+Too much output to announce, navigate to rows manually to read>*.*<輸出內容過多無法逐一朗讀，請手動導覽至各列進行閱讀>*.*<渲染器介面>*.*<renderer.js
+Trampoline client error>*.*<Trampoline 用戶端錯誤>*.*<渲染器介面>*.*<renderer.js
+Tried to publish with no user. That seems impossible!>*.*<嘗試在沒有使用者的情況下發布。這似乎不可能！>*.*<渲染器介面>*.*<renderer.js
+Tried to use invalid trampoline token>*.*<嘗試使用無效的 trampoline 權杖>*.*<渲染器介面>*.*<renderer.js
+Trust repository>*.*<信任儲存庫>*.*<渲染器介面>*.*<renderer.js
+TrustedTypes policy >*.*<TrustedTypes 政策>*.*<渲染器介面>*.*<renderer.js
+Unable to >*.*<無法>*.*<渲染器介面>*.*<renderer.js
+Unable to change test token expiration>*.*<無法變更測試權杖到期時間>*.*<渲染器介面>*.*<renderer.js
+Unable to change token expiration. See the log for details.>*.*<無法變更權杖到期時間。詳情請參閱記錄檔。>*.*<渲染器介面>*.*<renderer.js
+Unable to check short-lived token rollout; using long-lived tokens.>*.*<無法檢查短期權杖推出狀況；改用長期權杖。>*.*<渲染器介面>*.*<renderer.js
+Unable to determine repository type>*.*<無法判斷儲存庫類型>*.*<渲染器介面>*.*<renderer.js
+Unable to determine the repository directory for the ownership exception.>*.*<無法判斷擁有權例外狀況的儲存庫目錄。>*.*<渲染器介面>*.*<renderer.js
+Unable to display diff when multiple non-consecutive selected.>*.*<選取多個不連續項目時無法顯示差異。>*.*<渲染器介面>*.*<renderer.js
+Unable to initialize cherry-pick progress. No commits provided.>*.*<無法初始化揀選進度。未提供任何提交。>*.*<渲染器介面>*.*<renderer.js
+Unable to interactively rebase if no commits>*.*<如果沒有提交則無法進行互動式變基>*.*<渲染器介面>*.*<renderer.js
+Unable to invalidate rejected GitHub credentials>*.*<無法使被拒絕的 GitHub 認證資訊失效>*.*<渲染器介面>*.*<renderer.js
+Unable to load the diff for this file.>*.*<無法載入此檔案的差異。>*.*<渲染器介面>*.*<renderer.js
+Unable to locate Git>*.*<找不到 Git>*.*<渲染器介面>*.*<renderer.js
+Unable to open external editor>*.*<無法開啟外部編輯器>*.*<渲染器介面>*.*<renderer.js
+Unable to open shell>*.*<無法開啟 Shell>*.*<渲染器介面>*.*<renderer.js
+Unable to read test token expiration>*.*<無法讀取測試權杖到期時間>*.*<渲染器介面>*.*<renderer.js
+Unable to read token expiration. See the log for details.>*.*<無法讀取權杖到期時間。詳情請參閱記錄檔。>*.*<渲染器介面>*.*<renderer.js
+Unable to rebase these branches because one or both of the refs do not exist in the repository>*.*<無法對這些分支進行變基，因為儲存庫中不存在其中一個或兩個參照>*.*<渲染器介面>*.*<renderer.js
+Unable to remove GitHub credentials from secure storage.>*.*<無法從安全儲存區中移除 GitHub 認證資訊。>*.*<渲染器介面>*.*<renderer.js
+Unable to remove unusable GitHub credentials.>*.*<無法移除無法使用的 GitHub 認證資訊。>*.*<渲染器介面>*.*<renderer.js
+Unable to reorder. Reordering replays all commits up to the last one required for the reorder. A merge commit cannot exist among those commits.>*.*<無法重新排序。重新排序會重播所有提交，直到重新排序所需的最後一個提交為止。這些提交中不能存在合併提交。>*.*<渲染器介面>*.*<renderer.js
+Unable to resolve authentication for a private image>*.*<無法解析私人映像檔的身分驗證>*.*<渲染器介面>*.*<renderer.js
+Unable to save GitHub credentials in secure storage.>*.*<無法將 GitHub 認證資訊儲存至安全儲存區。>*.*<渲染器介面>*.*<renderer.js
+Unable to save your GitHub credentials. Please try signing in again.>*.*<無法儲存您的 GitHub 認證資訊。請嘗試重新登入。>*.*<渲染器介面>*.*<renderer.js
+Unable to set cursor position when element is null>*.*<當元素為 null 時無法設定游標位置>*.*<渲染器介面>*.*<renderer.js
+Unable to squash. Squashing replays all commits up to the last one required for the squash. A merge commit cannot exist among those commits.>*.*<無法壓扁。壓扁會重播所有提交，直到壓扁所需的最後一個提交為止。這些提交中不能存在合併提交。>*.*<渲染器介面>*.*<renderer.js
+Unaccounted for step type>*.*<未處理的步驟類型>*.*<渲染器介面>*.*<renderer.js
+Unbinding from mouse events.>*.*<正在解除滑鼠事件的繫結。>*.*<渲染器介面>*.*<renderer.js
+Uncaught exception>*.*<未攔截的例外狀況>*.*<渲染器介面>*.*<renderer.js
+Underline links>*.*<為連結加上底線>*.*<渲染器介面>*.*<renderer.js
+Undo commit>*.*<復原提交>*.*<渲染器介面>*.*<renderer.js
+Undo is disabled while the repository is being updated>*.*<在儲存庫更新期間已停用復原>*.*<渲染器介面>*.*<renderer.js
+Unexpected error from git operations in getConflictDetails>*.*<getConflictDetails 中的 Git 操作發生未預期的錯誤>*.*<渲染器介面>*.*<renderer.js
+Unexpected issue when trying to read emoji into memory>*.*<嘗試將表情符號讀入記憶體時發生未預期的問題>*.*<渲染器介面>*.*<renderer.js
+Unknown CSI code: >*.*<未知的 CSI 代碼：>*.*<渲染器介面>*.*<renderer.js
+Unknown DCS code: >*.*<未知的 DCS 代碼：>*.*<渲染器介面>*.*<renderer.js
+Unknown ESC code: >*.*<未知的 ESC 代碼：>*.*<渲染器介面>*.*<renderer.js
+Unknown EXECUTE code: >*.*<未知的 EXECUTE 代碼：>*.*<渲染器介面>*.*<renderer.js
+Unknown OSC code: >*.*<未知的 OSC 代碼：>*.*<渲染器介面>*.*<renderer.js
+Unknown address>*.*<未知位址>*.*<渲染器介面>*.*<renderer.js
+Unknown anchor position>*.*<未知的錨點位置>*.*<渲染器介面>*.*<renderer.js
+Unknown co-authors>*.*<未知的共同作者>*.*<渲染器介面>*.*<renderer.js
+Unknown license>*.*<未知的授權條款>*.*<渲染器介面>*.*<renderer.js
+Unknown order of iteration.>*.*<未知的反覆運算順序。>*.*<渲染器介面>*.*<renderer.js
+Unknown reason>*.*<未知原因>*.*<渲染器介面>*.*<renderer.js
+Unknown repository section>*.*<未知的儲存庫區段>*.*<渲染器介面>*.*<renderer.js
+Unknown status entry to format>*.*<無法識別要格式化的狀態項目>*.*<渲染器介面>*.*<renderer.js
+Unknown token type>*.*<未知的權杖類型>*.*<渲染器介面>*.*<renderer.js
+Unknown user>*.*<未知使用者>*.*<渲染器介面>*.*<renderer.js
+Unsupported DX10 texture format >*.*<不支援的 DX10 紋理格式>*.*<渲染器介面>*.*<renderer.js
+Unsupported FourCC code: >*.*<不支援的 FourCC 代碼：>*.*<渲染器介面>*.*<renderer.js
+Unsupported conflict kind>*.*<不支援的衝突種類>*.*<渲染器介面>*.*<renderer.js
+Unsupported format, must contain a FourCC code>*.*<不支援的格式，必須包含 FourCC 代碼>*.*<渲染器介面>*.*<renderer.js
+Unsupported protocol. Only https is supported when authenticating with GitHub Enterprise instances.>*.*<不支援的通訊協定。與 GitHub Enterprise 執行個體驗證時僅支援 https。>*.*<渲染器介面>*.*<renderer.js
+Unsupported version: >*.*<不支援的版本：>*.*<渲染器介面>*.*<renderer.js
+Untitled model>*.*<未命名模型>*.*<渲染器介面>*.*<renderer.js
+Untrusted server>*.*<不受信任的伺服器>*.*<渲染器介面>*.*<renderer.js
+Update email>*.*<更新電子郵件>*.*<渲染器介面>*.*<renderer.js
+Update existing Git LFS filters?>*.*<要更新現有的 Git LFS 篩選條件嗎？>*.*<渲染器介面>*.*<renderer.js
+Update existing filters>*.*<更新現有篩選條件>*.*<渲染器介面>*.*<renderer.js
+Updating submodules>*.*<正在更新子模組>*.*<渲染器介面>*.*<renderer.js
+Upstream already exists>*.*<上游已存在>*.*<渲染器介面>*.*<renderer.js
+Usage allowed with exhausted quota>*.*<配額耗盡時仍允許使用>*.*<渲染器介面>*.*<renderer.js
+Use Copilot to suggest resolutions for conflicted files>*.*<使用 Copilot 為衝突檔案提供解決建議>*.*<渲染器介面>*.*<renderer.js
+Use Git Credential Manager>*.*<使用 Git Credential Manager>*.*<渲染器介面>*.*<renderer.js
+Use current file>*.*<使用目前檔案>*.*<渲染器介面>*.*<renderer.js
+Use incoming file>*.*<使用傳入檔案>*.*<渲染器介面>*.*<renderer.js
+Use system OpenSSH (recommended)>*.*<使用系統 OpenSSH（建議）>*.*<渲染器介面>*.*<renderer.js
+Use this tutorial to get comfortable with Git, GitHub, and GitHub Desktop.>*.*<透過本教學熟悉 Git、GitHub 與 GitHub Desktop。>*.*<渲染器介面>*.*<renderer.js
+Used requests>*.*<已使用的請求>*.*<渲染器介面>*.*<renderer.js
+View Copilot plans>*.*<檢視 Copilot 方案>*.*<渲染器介面>*.*<renderer.js
+View all release notes>*.*<檢視所有版本資訊>*.*<渲染器介面>*.*<renderer.js
+View all rulesets for this branch.>*.*<檢視此分支的所有規則集。>*.*<渲染器介面>*.*<renderer.js
+View check details>*.*<檢視檢查詳細資訊>*.*<渲染器介面>*.*<renderer.js
+View commit author information>*.*<檢視提交作者資訊>*.*<渲染器介面>*.*<renderer.js
+View conflicts>*.*<檢視衝突>*.*<渲染器介面>*.*<renderer.js
+View on GitHub>*.*<在 GitHub 上檢視>*.*<渲染器介面>*.*<renderer.js
+View on GitHub Enterprise>*.*<在 GitHub Enterprise 上檢視>*.*<渲染器介面>*.*<renderer.js
+View stash>*.*<檢視暫存>*.*<渲染器介面>*.*<renderer.js
+View your stashed changes>*.*<檢視您暫存的變更>*.*<渲染器介面>*.*<renderer.js
+WARNING: byline#createLineStream is deprecated and will be removed soon>*.*<警告：byline#createLineStream 已棄用且即將移除>*.*<渲染器介面>*.*<renderer.js
+We recommend you avoid committing these files or use>*.*<建議您避免提交這些檔案，或是使用>*.*<渲染器介面>*.*<renderer.js
+We were unable to authenticate with>*.*<我們無法驗證>*.*<渲染器介面>*.*<renderer.js
+We were unable to locate Git on your system. This means you won't be able to execute any Git commands in the>*.*<我們在您的系統中找不到 Git。這代表您將無法在下列環境中執行任何 Git 指令：>*.*<渲染器介面>*.*<renderer.js
+We will help you contribute to the>*.*<我們將協助您貢獻至>*.*<渲染器介面>*.*<renderer.js
+We've detected that you're not running GitHub Desktop from the Applications folder of your machine. This could cause problems with the app, including impacting your ability to sign in.>*.*<我們偵測到您並非從電腦的「應用程式」資料夾中執行 GitHub Desktop。這可能會導致應用程式發生問題，包括影響您的登入功能。>*.*<渲染器介面>*.*<renderer.js
+Weekly limits>*.*<每週上限>*.*<渲染器介面>*.*<renderer.js
+Welcome to >*.*<歡迎使用>*.*<渲染器介面>*.*<renderer.js
+Welcome to GitHub Desktop>*.*<歡迎使用 GitHub Desktop>*.*<渲染器介面>*.*<renderer.js
+What each side changed in this file, what you kept, and what you dropped or overrode.>*.*<各方在此檔案中變更的內容、您保留的內容，以及您捨棄或覆寫的內容。>*.*<渲染器介面>*.*<renderer.js
+When a stash exists, access it at the bottom of the Changes tab to the left.>*.*<當有暫存存在時，可從左側「變更」分頁底部存取。>*.*<渲染器介面>*.*<renderer.js
+When adding a listener with a context, you should remove it with the same context>*.*<使用某個 context 新增接聽程式時，應使用相同的 context 將其移除>*.*<渲染器介面>*.*<renderer.js
+Will be >*.*<將會是>*.*<渲染器介面>*.*<renderer.js
+Will be created as >*.*<將建立為>*.*<渲染器介面>*.*<renderer.js
+Will check out existing branch >*.*<將簽出現有分支>*.*<渲染器介面>*.*<renderer.js
+Will check out remote branch >*.*<將簽出遠端分支>*.*<渲染器介面>*.*<renderer.js
+Work on an existing project in GitHub Desktop>*.*<在 GitHub Desktop 中處理現有專案>*.*<渲染器介面>*.*<renderer.js
+Worktree name>*.*<工作樹名稱>*.*<渲染器介面>*.*<renderer.js
+Worktree will be created at >*.*<工作樹將建立於>*.*<渲染器介面>*.*<renderer.js
+Would you like to automatically start with Copilot whenever conflicts are detected? You can change this anytime in>*.*<每當偵測到衝突時，您想要自動以 Copilot 啟動嗎？您可以隨時在下列位置變更此設定：>*.*<渲染器介面>*.*<renderer.js
+Would you like to forcefully delete the worktree >*.*<您要強制刪除工作樹>*.*<渲染器介面>*.*<renderer.js
+Would you like to open a browser to grant GitHub Desktop permission to access the repository?>*.*<您要開啟瀏覽器以授予 GitHub Desktop 存取該儲存庫的權限嗎？>*.*<渲染器介面>*.*<renderer.js
+Would you like to open a browser to grant GitHub Desktop permission to update workflow files?>*.*<您要開啟瀏覽器以授予 GitHub Desktop 更新工作流程檔案的權限嗎？>*.*<渲染器介面>*.*<renderer.js
+Would you like to retry cloning >*.*<您要重試複製>*.*<渲染器介面>*.*<renderer.js
+Would you like to update the remote to use the expected URL?>*.*<您要更新遠端以使用預期的 URL 嗎？>*.*<渲染器介面>*.*<renderer.js
+Writing objects>*.*<正在寫入物件>*.*<渲染器介面>*.*<renderer.js
+Yes, commit files>*.*<是，提交檔案>*.*<渲染器介面>*.*<renderer.js
+Yes, delete this branch on the remote>*.*<是，刪除遠端上的這個分支>*.*<渲染器介面>*.*<renderer.js
+You are not able to cherry-pick from and to the same branch>*.*<您無法在同一個分支之間進行揀選>*.*<渲染器介面>*.*<renderer.js
+You are not able to rebase this branch onto itself.>*.*<您無法將此分支變基至其自身。>*.*<渲染器介面>*.*<renderer.js
+You can>*.*<您可以>*.*<渲染器介面>*.*<renderer.js
+You can also set an email local to this repository from the>*.*<您也可以在下列位置為此儲存庫設定專屬的電子郵件：>*.*<渲染器介面>*.*<renderer.js
+You can now do this new thing that was added here - #456. Thanks!>*.*<您現在可以使用在此處新增的新功能 - #456。謝謝！>*.*<渲染器介面>*.*<renderer.js
+You can only open pull requests against remote branches.>*.*<您只能針對遠端分支建立拉取請求。>*.*<渲染器介面>*.*<renderer.js
+You can stash your changes now and recover them afterwards.>*.*<您現在可以暫存變更，並在稍後復原它們。>*.*<渲染器介面>*.*<renderer.js
+You can try >*.*<您可以嘗試>*.*<渲染器介面>*.*<renderer.js
+You can update your >*.*<您可以更新您的>*.*<渲染器介面>*.*<renderer.js
+You can:>*.*<您可以：>*.*<渲染器介面>*.*<renderer.js
+You contributed:>*.*<您的貢獻：>*.*<渲染器介面>*.*<renderer.js
+You do not currently have any branch checked out (your HEAD reference is detached). As such your new branch will be based on your currently checked out commit (>*.*<您目前尚未簽出任何分支（您的 HEAD 參照處於分離狀態）。因此，您的新分支將基於目前簽出的提交（>*.*<渲染器介面>*.*<renderer.js
+You have >*.*<您有>*.*<渲染器介面>*.*<renderer.js
+You have a filter applied. There are>*.*<您已套用篩選條件。共有>*.*<渲染器介面>*.*<renderer.js
+You have changes in progress. Undoing the merge commit might result in some of these changes being lost.>*.*<您有進行中的變更。復原合併提交可能會導致其中部分變更遺失。>*.*<渲染器介面>*.*<renderer.js
+You have changes on this branch. What would you like to do with them?>*.*<您在此分支上有變更。您想要如何處理這些變更？>*.*<渲染器介面>*.*<renderer.js
+You have reached your GitHub Copilot session limit.>*.*<您已達到 GitHub Copilot 工作階段上限。>*.*<渲染器介面>*.*<renderer.js
+You have reached your GitHub Copilot usage limit.>*.*<您已達到 GitHub Copilot 使用量上限。>*.*<渲染器介面>*.*<renderer.js
+You have the latest version (last checked>*.*<您使用的是最新版本（上次檢查時間：>*.*<渲染器介面>*.*<renderer.js
+You must set the allowProposedApi option to true to use proposed API>*.*<您必須將 allowProposedApi 選項設定為 true 才能使用提議的 API>*.*<渲染器介面>*.*<renderer.js
+You need to>*.*<您需要>*.*<渲染器介面>*.*<renderer.js
+You will>*.*<您將會>*.*<渲染器介面>*.*<renderer.js
+You're already signed in to>*.*<您已登入>*.*<渲染器介面>*.*<renderer.js
+You're done!>*.*<大功告成！>*.*<渲染器介面>*.*<renderer.js
+Your Account Emails>*.*<您的帳戶電子郵件>*.*<渲染器介面>*.*<renderer.js
+Your Name>*.*<您的姓名>*.*<渲染器介面>*.*<renderer.js
+Your account token is no longer valid and you have been signed out from your >*.*<您的帳戶權杖已失效，您已被登出>*.*<渲染器介面>*.*<renderer.js
+Your branch is up to date with the compared branch (>*.*<您的分支與比較的目標分支完全同步（>*.*<渲染器介面>*.*<renderer.js
+Your commits will be wrongly attributed. >*.*<您的提交歸屬將會出現錯誤。>*.*<渲染器介面>*.*<renderer.js
+Your default branch source is determined by your>*.*<您的預設分支來源取決於您的>*.*<渲染器介面>*.*<renderer.js
+Your default editor is>*.*<您的預設編輯器為>*.*<渲染器介面>*.*<renderer.js
+Your in-progress work will follow you to the new branch>*.*<您進行中的工作將會帶到新分支>*.*<渲染器介面>*.*<renderer.js
+Your new branch will be based on>*.*<您的新分支將基於>*.*<渲染器介面>*.*<renderer.js
+a commit>*.*<一個提交>*.*<渲染器介面>*.*<renderer.js
+a new branch>*.*<一個新分支>*.*<渲染器介面>*.*<renderer.js
+a node selected for removal could not be detached from its tree and cannot be safely returned; refusing to sanitize in place>*.*<選取要移除的節點無法從其樹狀結構中分離，且無法安全返回；拒絕就地清理>*.*<渲染器介面>*.*<renderer.js
+a node selected for removal could not be safely returned; refusing to sanitize in place>*.*<選取要移除的節點無法安全返回；拒絕就地清理>*.*<渲染器介面>*.*<renderer.js
+about 1 hour>*.*<約 1 小時>*.*<渲染器介面>*.*<renderer.js
+about 1 month>*.*<約 1 個月>*.*<渲染器介面>*.*<renderer.js
+about 1 week>*.*<約 1 週>*.*<渲染器介面>*.*<renderer.js
+about 1 year>*.*<約 1 年>*.*<渲染器介面>*.*<renderer.js
+about {{count}} hours>*.*<約 {{count}} 小時>*.*<渲染器介面>*.*<renderer.js
+about {{count}} months>*.*<約 {{count}} 個月>*.*<渲染器介面>*.*<renderer.js
+about {{count}} weeks>*.*<約 {{count}} 週>*.*<渲染器介面>*.*<renderer.js
+about {{count}} years>*.*<約 {{count}} 年>*.*<渲染器介面>*.*<renderer.js
+add this repository>*.*<新增此儲存庫>*.*<渲染器介面>*.*<renderer.js
+almost 1 year>*.*<將近 1 年>*.*<渲染器介面>*.*<renderer.js
+almost {{count}} years>*.*<將近 {{count}} 年>*.*<渲染器介面>*.*<renderer.js
+anchorNode and/or focusNode are null>*.*<anchorNode 及／或 focusNode 為 null>*.*<渲染器介面>*.*<renderer.js
+and collaborate with others.>*.*<並與他人協同合作。>*.*<渲染器介面>*.*<renderer.js
+and try again?>*.*<並再試一次？>*.*<渲染器介面>*.*<renderer.js
+appears to be a Git repository. Would you like to>*.*<似乎是 Git 儲存庫。您是否想要>*.*<渲染器介面>*.*<renderer.js
+appears to be a subfolder of Git repository.>*.*<似乎是 Git 儲存庫的子資料夾。>*.*<渲染器介面>*.*<renderer.js
+at line >*.*<於第 行>*.*<渲染器介面>*.*<renderer.js
+at night>*.*<夜間>*.*<渲染器介面>*.*<renderer.js
+background task environment, skipping prompt>*.*<背景工作環境，略過提示>*.*<渲染器介面>*.*<renderer.js
+bad inst>*.*<錯誤的指令>*.*<渲染器介面>*.*<renderer.js
+base repository can't be null>*.*<基礎儲存庫不能為 null>*.*<渲染器介面>*.*<renderer.js
+bearer token>*.*<Bearer 權杖>*.*<渲染器介面>*.*<renderer.js
+build conflict context>*.*<建立衝突上下文>*.*<渲染器介面>*.*<renderer.js
+but are not the values it expects. Would you like to update them now?>*.*<但並非其預期的值。您現在要更新它們嗎？>*.*<渲染器介面>*.*<renderer.js
+can't convert to Repository without id>*.*<缺少 id 無法轉換為儲存庫>*.*<渲染器介面>*.*<renderer.js
+cannot get uid or gid>*.*<無法取得 uid 或 gid>*.*<渲染器介面>*.*<renderer.js
+check was>*.*<項檢查已>*.*<渲染器介面>*.*<renderer.js
+checkout branch from list>*.*<從清單簽出分支>*.*<渲染器介面>*.*<renderer.js
+checks were>*.*<項檢查已>*.*<渲染器介面>*.*<renderer.js
+cherry-picked commit>*.*<已揀選的提交>*.*<渲染器介面>*.*<renderer.js
+cherry-picking onto>*.*<正在揀選至>*.*<渲染器介面>*.*<renderer.js
+columns is null. Race condition?>*.*<columns 為 null。競爭條件？>*.*<渲染器介面>*.*<renderer.js
+command prompt>*.*<命令提示字元>*.*<渲染器介面>*.*<renderer.js
+commented on>*.*<評論於>*.*<渲染器介面>*.*<renderer.js
+connect failed>*.*<連線失敗>*.*<渲染器介面>*.*<renderer.js
+create branch>*.*<建立分支>*.*<渲染器介面>*.*<renderer.js
+create tag>*.*<建立標籤>*.*<渲染器介面>*.*<renderer.js
+creating the fork manually on GitHub>*.*<在 GitHub 上手動建立 Fork>*.*<渲染器介面>*.*<renderer.js
+credential missing password>*.*<憑證缺少密碼>*.*<渲染器介面>*.*<renderer.js
+credential missing username>*.*<憑證缺少使用者名稱>*.*<渲染器介面>*.*<renderer.js
+css.toColor: Unsupported css format>*.*<css.toColor: 不支援的 CSS 格式>*.*<渲染器介面>*.*<renderer.js
+current branch>*.*<目前分支>*.*<渲染器介面>*.*<renderer.js
+custom instructions>*.*<自訂指示>*.*<渲染器介面>*.*<renderer.js
+days of the month>*.*<月份中的日期>*.*<渲染器介面>*.*<renderer.js
+default branch>*.*<預設分支>*.*<渲染器介面>*.*<renderer.js
+delete the lock file>*.*<刪除鎖定檔案>*.*<渲染器介面>*.*<renderer.js
+dirty is not a string, aborting>*.*<dirty 不是字串，正在中止>*.*<渲染器介面>*.*<renderer.js
+discard changes>*.*<捨棄變更>*.*<渲染器介面>*.*<renderer.js
+do not>*.*<請勿>*.*<渲染器介面>*.*<renderer.js
+does not>*.*<不>*.*<渲染器介面>*.*<renderer.js
+does not match>*.*<不相符>*.*<渲染器介面>*.*<renderer.js
+downloading GitHub Copilot>*.*<正在下載 GitHub Copilot>*.*<渲染器介面>*.*<renderer.js
+duplicate capture group name>*.*<重複的擷取群組名稱>*.*<渲染器介面>*.*<renderer.js
+edit your global Git config file>*.*<編輯您的全域 Git 設定檔>*.*<渲染器介面>*.*<renderer.js
+either of your GitHub.com nor GitHub Enterprise accounts>*.*<您的 GitHub.com 或 GitHub Enterprise 帳戶>*.*<渲染器介面>*.*<renderer.js
+end with >*.*<以 結尾>*.*<渲染器介面>*.*<renderer.js
+expected readStream>*.*<預期為 readStream>*.*<渲染器介面>*.*<renderer.js
+expression nests too deeply>*.*<運算式巢狀過深>*.*<渲染器介面>*.*<renderer.js
+expression too large>*.*<運算式過大>*.*<渲染器介面>*.*<renderer.js
+extension level must be 'block' or 'inline'>*.*<擴充功能層級必須是 'block' 或 'inline'>*.*<渲染器介面>*.*<renderer.js
+extension name required>*.*<需要擴充功能名稱>*.*<渲染器介面>*.*<renderer.js
+file has>*.*<個檔案已有>*.*<渲染器介面>*.*<renderer.js
+file, save it, and come back.>*.*<檔案，儲存它，然後返回。>*.*<渲染器介面>*.*<renderer.js
+files have>*.*<個檔案已有>*.*<渲染器介面>*.*<renderer.js
+files would be overwritten>*.*<檔案將會被覆寫>*.*<渲染器介面>*.*<renderer.js
+final must be a single byte>*.*<final 必須是單一位元組>*.*<渲染器介面>*.*<renderer.js
+for more information on managing large files on GitHub>*.*<以取得在 GitHub 上管理大型檔案的詳細資訊>*.*<渲染器介面>*.*<renderer.js
+for private repositories outside of GitHub.com. This feature is experimental and subject to change.>*.*<適用於 GitHub.com 以外的私有儲存庫。此功能為實驗性功能，可能會有所變動。>*.*<渲染器介面>*.*<renderer.js
+for your repository>*.*<適用於您的儲存庫>*.*<渲染器介面>*.*<renderer.js
+fork behavior settings>*.*<Fork 行為設定>*.*<渲染器介面>*.*<renderer.js
+gather commit context>*.*<收集提交上下文>*.*<渲染器介面>*.*<renderer.js
+gather conflict labels>*.*<收集衝突標籤>*.*<渲染器介面>*.*<renderer.js
+git options>*.*<Git 選項>*.*<渲染器介面>*.*<renderer.js
+grant permission>*.*<授與權限>*.*<渲染器介面>*.*<renderer.js
+half a minute>*.*<半分鐘>*.*<渲染器介面>*.*<renderer.js
+handleSSHHostAuthenticity: background task environment, skipping prompt>*.*<handleSSHHostAuthenticity: 背景工作環境，略過提示>*.*<渲染器介面>*.*<renderer.js
+handleSSHKeyPassphrase: background task environment, skipping prompt>*.*<handleSSHKeyPassphrase: 背景工作環境，略過提示>*.*<渲染器介面>*.*<renderer.js
+handleSSHUserPassword: background task environment, skipping prompt>*.*<handleSSHUserPassword: 背景工作環境，略過提示>*.*<渲染器介面>*.*<renderer.js
+has been merged, you can also go to GitHub to delete the remote branch.>*.*<已合併，您也可以前往 GitHub 刪除遠端分支。>*.*<渲染器介面>*.*<renderer.js
+head repository can't be null>*.*<Head 儲存庫不能為 null>*.*<渲染器介面>*.*<renderer.js
+hidden changes>*.*<隱藏的變更>*.*<渲染器介面>*.*<renderer.js
+ignoring https proxy, not supported in cURL/schannel>*.*<忽略 HTTPS Proxy，cURL/schannel 不支援>*.*<渲染器介面>*.*<renderer.js
+important updates>*.*<重要更新>*.*<渲染器介面>*.*<renderer.js
+improper continuation due to previous async handler, giving up parsing>*.*<由於前一個非同步處理常式導致不當延續，放棄剖析>*.*<渲染器介面>*.*<renderer.js
+in the afternoon>*.*<下午>*.*<渲染器介面>*.*<renderer.js
+in the ancestry path of the most recent commit in your selection.>*.*<在您選取項目中最新提交的祖先歷程路徑中。>*.*<渲染器介面>*.*<renderer.js
+in the browser.>*.*<在瀏覽器中。>*.*<渲染器介面>*.*<renderer.js
+in the evening>*.*<晚上>*.*<渲染器介面>*.*<renderer.js
+in the morning>*.*<早上>*.*<渲染器介面>*.*<renderer.js
+incoming branch>*.*<傳入分支>*.*<渲染器介面>*.*<renderer.js
+inconsistency in matching group data>*.*<比對群組資料不一致>*.*<渲染器介面>*.*<renderer.js
+input is null>*.*<輸入為 null>*.*<渲染器介面>*.*<renderer.js
+integration docs>*.*<整合文件>*.*<渲染器介面>*.*<renderer.js
+intermediate must be in range 0x20 .. 0x2f>*.*<intermediate 必須介於 0x20 .. 0x2f 之間>*.*<渲染器介面>*.*<renderer.js
+invalid character class range>*.*<無效的字元類別範圍>*.*<渲染器介面>*.*<renderer.js
+invalid escape sequence>*.*<無效的跳脫序列>*.*<渲染器介面>*.*<renderer.js
+invalid named capture>*.*<無效的具名擷取>*.*<渲染器介面>*.*<renderer.js
+invalid nested repetition operator>*.*<無效的巢狀重複運算子>*.*<渲染器介面>*.*<renderer.js
+invalid or unsupported Perl syntax>*.*<無效或不支援的 Perl 語法>*.*<渲染器介面>*.*<renderer.js
+invalid range>*.*<無效的範圍>*.*<渲染器介面>*.*<renderer.js
+invalid repeat count>*.*<無效的重複次數>*.*<渲染器介面>*.*<renderer.js
+its tracked branch.>*.*<其追蹤分支。>*.*<渲染器介面>*.*<renderer.js
+just now>*.*<剛剛>*.*<渲染器介面>*.*<renderer.js
+kind contributor>*.*<熱心的貢獻者>*.*<渲染器介面>*.*<renderer.js
+less than a minute>*.*<不到一分鐘>*.*<渲染器介面>*.*<renderer.js
+less than a second>*.*<不到一秒>*.*<渲染器介面>*.*<renderer.js
+less than {{count}} minutes>*.*<不到 {{count}} 分鐘>*.*<渲染器介面>*.*<renderer.js
+less than {{count}} seconds>*.*<不到 {{count}} 秒>*.*<渲染器介面>*.*<renderer.js
+local only>*.*<僅限本機>*.*<渲染器介面>*.*<renderer.js
+macOS only>*.*<僅限 macOS>*.*<渲染器介面>*.*<renderer.js
+maxSubParamsLength must not be greater than 256>*.*<maxSubParamsLength 不能大於 256>*.*<渲染器介面>*.*<renderer.js
+maximum buffer reached>*.*<已達到最大緩衝區>*.*<渲染器介面>*.*<renderer.js
+merge into>*.*<合併至>*.*<渲染器介面>*.*<renderer.js
+merged content that replaces conflict 1>*.*<取代衝突 1 的合併內容>*.*<渲染器介面>*.*<renderer.js
+merged content that replaces conflict 2>*.*<取代衝突 2 的合併內容>*.*<渲染器介面>*.*<renderer.js
+missing argument to repetition operator>*.*<重複運算子缺少引數>*.*<渲染器介面>*.*<renderer.js
+missing closing )>*.*<缺少右括號 )>*.*<渲染器介面>*.*<renderer.js
+missing closing ]>*.*<缺少右方括號 ]>*.*<渲染器介面>*.*<renderer.js
+must specify at least one step>*.*<必須指定至少一個步驟>*.*<渲染器介面>*.*<renderer.js
+name already exists on this account>*.*<此帳號已存在該名稱>*.*<渲染器介面>*.*<renderer.js
+named capture group is missing trailing '}'>*.*<具名擷取群組結尾缺少 '}'>*.*<渲染器介面>*.*<renderer.js
+no id after loading from db>*.*<從資料庫載入後無 ID>*.*<渲染器介面>*.*<renderer.js
+no newline at end of file>*.*<檔案結尾沒有換行符號>*.*<渲染器介面>*.*<renderer.js
+not implemented>*.*<尚未實作>*.*<渲染器介面>*.*<renderer.js
+not included.>*.*<未包含。>*.*<渲染器介面>*.*<renderer.js
+not supported>*.*<不支援>*.*<渲染器介面>*.*<renderer.js
+now to install pending updates.>*.*<立即安裝待處理的更新。>*.*<渲染器介面>*.*<renderer.js
+only one byte as prefix supported>*.*<僅支援單一位元組作為前綴>*.*<渲染器介面>*.*<renderer.js
+only two bytes as intermediates are supported>*.*<僅支援兩個位元組作為中間值>*.*<渲染器介面>*.*<renderer.js
+open a pull request, >*.*<開啟拉取請求，>*.*<渲染器介面>*.*<renderer.js
+over 1 year>*.*<超過 1 年>*.*<渲染器介面>*.*<renderer.js
+over {{count}} years>*.*<超過 {{count}} 年>*.*<渲染器介面>*.*<renderer.js
+path to github.exe>*.*<github.exe 的路徑>*.*<渲染器介面>*.*<renderer.js
+pattern is null>*.*<模式為 null>*.*<渲染器介面>*.*<renderer.js
+perhaps no match attempted>*.*<可能尚未嘗試比對>*.*<渲染器介面>*.*<renderer.js
+prefix must be in range 0x3c .. 0x3f>*.*<前綴必須介於 0x3c .. 0x3f 之間>*.*<渲染器介面>*.*<renderer.js
+processMultiCommitOperationRebaseResult was invoked (which means Desktop went into a conflicts-found state) but the branch was already up-to-date, so there couldn't be any conflicts at all>*.*<已叫用 processMultiCommitOperationRebaseResult（這表示 Desktop 進入了發現衝突狀態），但分支已是最新狀態，因此不可能存在任何衝突>*.*<渲染器介面>*.*<renderer.js
+properly configured>*.*<已正確設定>*.*<渲染器介面>*.*<renderer.js
+proxy url not resolved, ALL_PROXY already set>*.*<Proxy URL 未解析，已設定 ALL_PROXY>*.*<渲染器介面>*.*<renderer.js
+re2 is null>*.*<re2 為 null>*.*<渲染器介面>*.*<renderer.js
+readStream must be readable>*.*<readStream 必須是可讀取的>*.*<渲染器介面>*.*<renderer.js
+regexp/syntax: internal error>*.*<regexp/syntax: 內部錯誤>*.*<渲染器介面>*.*<renderer.js
+regexp: unhandled case in compile>*.*<regexp: 編譯時發生未處理的情況>*.*<渲染器介面>*.*<renderer.js
+release notes>*.*<版本資訊>*.*<渲染器介面>*.*<renderer.js
+remote points elsewhere.>*.*<遠端指向其他位置。>*.*<渲染器介面>*.*<renderer.js
+remote: Compressing objects>*.*<遠端：正在壓縮物件>*.*<渲染器介面>*.*<renderer.js
+remote: Counting objects>*.*<遠端：正在計算物件>*.*<渲染器介面>*.*<renderer.js
+remote: Resolving deltas>*.*<遠端：正在解析差異>*.*<渲染器介面>*.*<renderer.js
+removing the secret from your commit and commit history.>*.*<從您的提交及提交歷程記錄中移除該機密。>*.*<渲染器介面>*.*<renderer.js
+reordering commits on>*.*<正在重新排序提交於>*.*<渲染器介面>*.*<renderer.js
+repository name>*.*<儲存庫名稱>*.*<渲染器介面>*.*<renderer.js
+repository settings>*.*<儲存庫設定>*.*<渲染器介面>*.*<renderer.js
+request an exemption>*.*<申請豁免>*.*<渲染器介面>*.*<renderer.js
+requestAuthenticatedUser was not called with valid OAuth state. This is likely due to a browser reloading the callback URL. Contact GitHub Support if you believe this is an error>*.*<叫用 requestAuthenticatedUser 時未提供有效的 OAuth 狀態。這可能是因為瀏覽器重新載入了回呼 URL。如果您認為這是個錯誤，請聯絡 GitHub 支援>*.*<渲染器介面>*.*<renderer.js
+resolve conflicts with Copilot>*.*<使用 Copilot 解決衝突>*.*<渲染器介面>*.*<renderer.js
+restart GitHub Desktop>*.*<重新啟動 GitHub Desktop>*.*<渲染器介面>*.*<renderer.js
+restore stashed changes>*.*<還原暫存的變更>*.*<渲染器介面>*.*<renderer.js
+retry failed>*.*<重試失敗>*.*<渲染器介面>*.*<renderer.js
+root node is clobbered and cannot be sanitized in-place>*.*<根節點已被覆蓋，無法就地淨化>*.*<渲染器介面>*.*<renderer.js
+root node is forbidden and cannot be sanitized in-place>*.*<根節點被禁止，無法就地淨化>*.*<渲染器介面>*.*<renderer.js
+row is invalid. Race condition?>*.*<資料列無效。是否發生競爭條件？>*.*<渲染器介面>*.*<renderer.js
+see changes from the following >*.*<檢視來自下列項目的變更>*.*<渲染器介面>*.*<renderer.js
+several menu components>*.*<數個選單元件>*.*<渲染器介面>*.*<renderer.js
+squashing commits on>*.*<正在壓扁提交於>*.*<渲染器介面>*.*<renderer.js
+start argument out of range>*.*<start 引數超出範圍>*.*<渲染器介面>*.*<renderer.js
+start with >*.*<開頭為>*.*<渲染器介面>*.*<renderer.js
+stash and checkout>*.*<暫存並簽出>*.*<渲染器介面>*.*<renderer.js
+target branch>*.*<目標分支>*.*<渲染器介面>*.*<renderer.js
+textarea-caret-position#getCaretCoordinates should only be called in a browser>*.*<textarea-caret-position#getCaretCoordinates 只能在瀏覽器中呼叫>*.*<渲染器介面>*.*<renderer.js
+that will be committed. Are you sure you want to commit these changes?>*.*<即將被提交。您確定要提交這些變更嗎？>*.*<渲染器介面>*.*<renderer.js
+the current branch>*.*<目前分支>*.*<渲染器介面>*.*<renderer.js
+the password for the user >*.*<該使用者的密碼>*.*<渲染器介面>*.*<renderer.js
+the remote>*.*<遠端>*.*<渲染器介面>*.*<renderer.js
+these workflows>*.*<這些工作流程>*.*<渲染器介面>*.*<renderer.js
+to GitHub>*.*<至 GitHub>*.*<渲染器介面>*.*<renderer.js
+to clone from anywhere within the app>*.*<以從應用程式中的任何位置複製>*.*<渲染器介面>*.*<renderer.js
+to customize how commit messages are generated.>*.*<以自訂提交訊息的產生方式。>*.*<渲染器介面>*.*<renderer.js
+to display these notifications from GitHub Desktop.>*.*<以顯示來自 GitHub Desktop 的這些通知。>*.*<渲染器介面>*.*<renderer.js
+to quickly add a local repository, and>*.*<以快速新增本機儲存庫，以及>*.*<渲染器介面>*.*<renderer.js
+to try again.>*.*<以再試一次。>*.*<渲染器介面>*.*<renderer.js
+trailing backslash at end of expression>*.*<運算式結尾有多餘的反斜線>*.*<渲染器介面>*.*<renderer.js
+unaccounted for git status entry possibility>*.*<未考慮到的 git status 項目可能性>*.*<渲染器介面>*.*<renderer.js
+unexpected )>*.*<未預期的 )>*.*<渲染器介面>*.*<renderer.js
+unhandled case in Inst.toString>*.*<Inst.toString 中未處理的情況>*.*<渲染器介面>*.*<renderer.js
+usage stats>*.*<使用情況統計資料>*.*<渲染器介面>*.*<renderer.js
+user not found>*.*<找不到使用者>*.*<渲染器介面>*.*<renderer.js
+user unknown>*.*<未知使用者>*.*<渲染器介面>*.*<renderer.js
+value must not be falsy>*.*<值不得為 falsy>*.*<渲染器介面>*.*<renderer.js
+values lesser than -1 are not allowed>*.*<不允許小於 -1 的值>*.*<渲染器介面>*.*<renderer.js
+will be shown in the pull request list.>*.*<將會顯示在拉取請求清單中。>*.*<渲染器介面>*.*<renderer.js
+worktree name>*.*<工作樹名稱>*.*<渲染器介面>*.*<renderer.js
+worktree path>*.*<工作樹路徑>*.*<渲染器介面>*.*<renderer.js
+write data discarded, use flow control to avoid losing data>*.*<寫入資料已捨棄，請使用流量控制以避免資料遺失>*.*<渲染器介面>*.*<renderer.js
+writeSync is unreliable and will be removed soon.>*.*<writeSync 不可靠且即將被移除。>*.*<渲染器介面>*.*<renderer.js
+your global git config>*.*<您的全域 git 設定>*.*<渲染器介面>*.*<renderer.js
+your tool of choice, or close to resolve manually.>*.*<您選擇的工具，或關閉以手動解決。>*.*<渲染器介面>*.*<renderer.js
+your username and password>*.*<您的使用者名稱和密碼>*.*<渲染器介面>*.*<renderer.js
+as determined by your>*.*<取決於您的>*.*<渲染器介面>*.*<renderer.js
+Deepin Terminal>*.*<Deepin 終端機>*.*<渲染器介面>*.*<renderer.js
+Delete branch>*.*<刪除分支>*.*<渲染器介面>*.*<renderer.js
+Delete remote branch>*.*<刪除遠端分支>*.*<渲染器介面>*.*<renderer.js
+EEEE, MMMM do, y>*.*<y年MMMMdo EEEE>*.*<渲染器介面>*.*<renderer.js
+Elementary Terminal>*.*<Elementary 終端機>*.*<渲染器介面>*.*<renderer.js
+Fluent Terminal>*.*<Fluent 終端機>*.*<渲染器介面>*.*<renderer.js
+GNOME Terminal>*.*<GNOME 終端機>*.*<渲染器介面>*.*<renderer.js
+Git Credential Manager>*.*<Git 憑證管理員>*.*<渲染器介面>*.*<renderer.js
+IntelliJ IDEA Community Edition >*.*<IntelliJ IDEA 社群版>*.*<渲染器介面>*.*<renderer.js
+JetBrains IntelliJ Idea Community Edition>*.*<JetBrains IntelliJ Idea 社群版>*.*<渲染器介面>*.*<renderer.js
+JetBrains PyCharm Community Edition>*.*<JetBrains PyCharm 社群版>*.*<渲染器介面>*.*<renderer.js
+LXDE Terminal>*.*<LXDE 終端機>*.*<渲染器介面>*.*<renderer.js
+MATE Terminal>*.*<MATE 終端機>*.*<渲染器介面>*.*<renderer.js
+MMM d, y>*.*<y年M月d日>*.*<渲染器介面>*.*<renderer.js
+MMM d, yyyy>*.*<yyyy年M月d日>*.*<渲染器介面>*.*<renderer.js
+MMMM do, y>*.*<y年MMMMdo>*.*<渲染器介面>*.*<renderer.js
+MMMM do, yyyy>*.*<yyyy年MMMMdo>*.*<渲染器介面>*.*<renderer.js
+PyCharm Community Edition>*.*<PyCharm 社群版>*.*<渲染器介面>*.*<renderer.js
+Windows Terminal>*.*<Windows 終端機>*.*<渲染器介面>*.*<renderer.js
+XFCE Terminal>*.*<XFCE 終端機>*.*<渲染器介面>*.*<renderer.js
+   he is here   >*.*<他在這裡>*.*<主程序介面>*.*<main.js
+ after a stream was destroyed>*.*<在串流銷毀之後>*.*<主程序介面>*.*<main.js
+ method is not implemented>*.*<方法尚未實作>*.*<主程序介面>*.*<main.js
+ not defined: conflicts with the method >*.*<未定義：與方法衝突>*.*<主程序介面>*.*<main.js
+ Able to merge.>*.*<可以合併。>*.*<渲染器介面>*.*<renderer.js
+ Can't automatically merge.>*.*<無法自動合併。>*.*<渲染器介面>*.*<renderer.js
+ Conflicted files>*.*<發生衝突的檔案>*.*<渲染器介面>*.*<renderer.js
+ Do you want to create a fork of this repository at >*.*<您是否要在下列位置建立此儲存庫的復刻（Fork）：>*.*<渲染器介面>*.*<renderer.js
+ GitHub Desktop has no permission to display notifications. Please, enable them in the>*.*<GitHub Desktop 沒有顯示通知的權限。請在下列位置啟用：>*.*<渲染器介面>*.*<renderer.js
+ Resolve with Copilot>*.*<使用 Copilot 解決>*.*<渲染器介面>*.*<renderer.js
+ Skipped by Copilot>*.*<已由 Copilot 略過>*.*<渲染器介面>*.*<renderer.js
+ Thanks @>*.*<感謝 @>*.*<渲染器介面>*.*<renderer.js
+ The following files would be overwritten:>*.*<下列檔案將會被覆寫：>*.*<渲染器介面>*.*<renderer.js
+ Unable to merge unrelated histories in this repository>*.*<無法在此儲存庫中合併無關聯的歷史記錄>*.*<渲染器介面>*.*<renderer.js
+ You can drag & drop an existing repository folder here to add it to Desktop>*.*<您可以將現有的儲存庫資料夾拖放至此處，以將其新增至 Desktop>*.*<渲染器介面>*.*<renderer.js
+ Your current stash will be overwritten by creating a new stash>*.*<建立新的暫存將會覆寫您目前的暫存>*.*<渲染器介面>*.*<renderer.js
+ account. Do you want to sign in again?>*.*<帳號。您想要再次登入嗎？>*.*<渲染器介面>*.*<renderer.js
+ added lines>*.*<行新增>*.*<渲染器介面>*.*<renderer.js
+ already exists>*.*<已經存在>*.*<渲染器介面>*.*<renderer.js
+ already exists on the remote.>*.*<已存在於遠端。>*.*<渲染器介面>*.*<renderer.js
+ and renaming this branch will not change the branch name on the remote.>*.*<且重新命名此分支不會變更遠端上的分支名稱。>*.*<渲染器介面>*.*<renderer.js
+ appears to be owned by another user on your machine. Adding untrusted repositories may automatically execute files in the repository.>*.*<似乎屬於您電腦上的其他使用者。新增不受信任的儲存庫可能會自動執行該儲存庫中的檔案。>*.*<渲染器介面>*.*<renderer.js
+ are entirely different commit histories.>*.*<為完全不同的提交歷史記錄。>*.*<渲染器介面>*.*<renderer.js
+ been resolved.>*.*<已解決。>*.*<渲染器介面>*.*<renderer.js
+ by applying its >*.*<透過套用其>*.*<渲染器介面>*.*<renderer.js
+ changed files?>*.*<個變更的檔案？>*.*<渲染器介面>*.*<renderer.js
+ choose an email local to this repository from the>*.*<從中為此儲存庫選擇本機電子郵件：>*.*<渲染器介面>*.*<renderer.js
+ could not be created.>*.*<無法建立。>*.*<渲染器介面>*.*<renderer.js
+ doesn't match your GitHub>*.*<與您的 GitHub 不符>*.*<渲染器介面>*.*<renderer.js
+ exist on your machine.>*.*<存在於您的電腦上。>*.*<渲染器介面>*.*<renderer.js
+ failed in your pull request>*.*<在您的提取請求（Pull Request）中失敗>*.*<渲染器介面>*.*<renderer.js
+ file already. Checking this box will result in the existing file being overwritten.>*.*<檔案已存在。勾選此方塊將會導致現有檔案被覆寫。>*.*<渲染器介面>*.*<renderer.js
+ files changed>*.*<個檔案已變更>*.*<渲染器介面>*.*<renderer.js
+ files selected>*.*<個已選取的檔案>*.*<渲染器介面>*.*<renderer.js
+ for GitHub Desktop in the>*.*<適用於 GitHub Desktop，位於>*.*<渲染器介面>*.*<renderer.js
+ for your repository.>*.*<針對您的儲存庫。>*.*<渲染器介面>*.*<renderer.js
+ git configuration >*.*<Git 組態設定>*.*<渲染器介面>*.*<renderer.js
+ helps you work with GitHub locally.>*.*<協助您在本地端使用 GitHub。>*.*<渲染器介面>*.*<renderer.js
+ hook failed. What would you like to do?>*.*<掛鉤（Hook）執行失敗。您想要執行什麼操作？>*.*<渲染器介面>*.*<renderer.js
+ in progress that you have not yet committed.>*.*<正在進行中，且您尚未提交。>*.*<渲染器介面>*.*<renderer.js
+ in your >*.*<在您的>*.*<渲染器介面>*.*<renderer.js
+ is a fork of>*.*<是下列項目的復刻（Fork）：>*.*<渲染器介面>*.*<renderer.js
+ is already up to date>*.*<已經是最新狀態>*.*<渲染器介面>*.*<renderer.js
+ is already up to date with >*.*<已經與下列內容同步至最新狀態：>*.*<渲染器介面>*.*<renderer.js
+ is an open source project published under the MIT License. You can view the source code and contribute to this project on>*.*<是依 MIT 授權條款發布的開源專案。您可以檢視原始碼並在下列位置參與貢獻：>*.*<渲染器介面>*.*<renderer.js
+ is configured to delete items immediately.>*.*<已設定為立即刪除項目。>*.*<渲染器介面>*.*<renderer.js
+ is not a valid name.>*.*<不是有效的名稱。>*.*<渲染器介面>*.*<renderer.js
+ is potentially unsafe>*.*<潛在不安全>*.*<渲染器介面>*.*<renderer.js
+ is the >*.*<是>*.*<渲染器介面>*.*<renderer.js
+ is the version control system.>*.*<是版本控制系統。>*.*<渲染器介面>*.*<renderer.js
+ is up to date with all commits from>*.*<已同步來自下列項目的所有最新提交：>*.*<渲染器介面>*.*<renderer.js
+ is where you store your code and collaborate with others.>*.*<是您存放代碼並與他人協作的地方。>*.*<渲染器介面>*.*<renderer.js
+ key fingerprint is>*.*<金鑰指紋為>*.*<渲染器介面>*.*<renderer.js
+ machine and will be installed at the next launch or>*.*<電腦，並將在下次啟動時安裝，或者>*.*<渲染器介面>*.*<renderer.js
+ menu or>*.*<選單或>*.*<渲染器介面>*.*<renderer.js
+ no longer exists. Remove it from this repository?>*.*<已不存在。要從此儲存庫中將其移除嗎？>*.*<渲染器介面>*.*<renderer.js
+ on top of >*.*<於基底之上：>*.*<渲染器介面>*.*<renderer.js
+ removed lines>*.*<行已刪除>*.*<渲染器介面>*.*<renderer.js
+ repositories use>*.*<儲存庫使用>*.*<渲染器介面>*.*<renderer.js
+ to a branch>*.*<至分支>*.*<渲染器介面>*.*<renderer.js
+ to choose a new location.>*.*<以選擇新位置。>*.*<渲染器介面>*.*<renderer.js
+ to confirm.>*.*<以確認。>*.*<渲染器介面>*.*<renderer.js
+ to continue?>*.*<是否繼續？>*.*<渲染器介面>*.*<renderer.js
+ to match >*.*<以符合>*.*<渲染器介面>*.*<renderer.js
+ to store large files on GitHub.>*.*<以便在 GitHub 上儲存大型檔案。>*.*<渲染器介面>*.*<renderer.js
+ users weren't found and won't be added as co-authors of this commit. Are you sure you want to commit?>*.*<位使用者未找到，將不會被新增為此提交的共同作者。確定要提交嗎？>*.*<渲染器介面>*.*<renderer.js
+ was unknown. Available options are {auto, browser, node}>*.*<為未知選項。可用的選項為 {auto, browser, node}>*.*<渲染器介面>*.*<renderer.js
+ when changes are present on your branch.>*.*<當您的分支上有變更時。>*.*<渲染器介面>*.*<renderer.js
+ when merging >*.*<合併時：>*.*<渲染器介面>*.*<renderer.js
+ will be started, including all of >*.*<將會啟動，包含所有的>*.*<渲染器介面>*.*<renderer.js
+ with the account>*.*<使用帳號>*.*<渲染器介面>*.*<renderer.js
+ you can share it, >*.*<您可以分享它，>*.*<渲染器介面>*.*<renderer.js
+ your pull request>*.*<您的提取請求（Pull Request）>*.*<渲染器介面>*.*<renderer.js
+IntelliJ IDEA Community Edition>*.*<IntelliJ IDEA 社群版>*.*<渲染器介面>*.*<renderer.js
+ as determined by your>*.*<取決於您的>*.*<渲染器介面>*.*<renderer.js

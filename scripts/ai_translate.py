@@ -8,8 +8,10 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -21,7 +23,6 @@ USER_ZH = TEMP_DIR / "UserTemp.zh"
 PROMPT_FILE = TEMP_DIR / "ai_prompt.txt"
 RESPONSE_TXT = TEMP_DIR / "ai_response.txt"
 RESPONSE_JSON = TEMP_DIR / "ai_response.json"
-MISSING_FILE = TEMP_DIR / "ai_missing_prompt.txt"
 CACHE_SENT = TEMP_DIR / ".cache_sent_records.json"
 
 DELIM = ">*.*<"
@@ -189,11 +190,10 @@ def calculate_progress() -> dict[str, int | float]:
     """精確計算中文化進度統計。"""
     mappings = load_existing_mappings(USER_ZH)
     all_scanned, total_scanned = get_all_scanned_strings()
-    
-    # 只要 target 含有中文，即視為已完成翻譯
+
     translated_count = 0
     untranslated_count = 0
-    
+
     for s, cat, fn in all_scanned:
         if s in mappings and has_chinese(mappings[s][0]):
             translated_count += 1
@@ -214,7 +214,6 @@ def parse_any_ai_content(text: str) -> list[tuple[str, str, str, str]]:
     results: list[tuple[str, str, str, str]] = []
     text_clean = text.strip()
 
-    # 1. 優先從文字中自動擷取 JSON 區塊（自動忽略任何註解、markdown 標記或聊天說明）
     json_str = None
     if "```json" in text_clean:
         m = re.search(r"```json\s*([\s\S]*?)\s*```", text_clean)
@@ -226,7 +225,6 @@ def parse_any_ai_content(text: str) -> list[tuple[str, str, str, str]]:
             json_str = m.group(1).strip()
 
     if not json_str:
-        # 尋找最外層的 [ ... ] 或 { ... }
         m = re.search(r"(\[[\s\S]*\]|\{[\s\S]*\})", text_clean)
         if m:
             json_str = m.group(1).strip()
@@ -258,7 +256,6 @@ def parse_any_ai_content(text: str) -> list[tuple[str, str, str, str]]:
         except Exception:
             pass
 
-    # 2. 逐行解析純文字對照
     lines = text_clean.splitlines()
     ignore_keys = {"original", "translation", "category", "file", "target", "source", "zh", "en"}
     for raw in lines:
@@ -314,7 +311,6 @@ def generate_prompt(skip_existing: bool = True, batch_size: int = 150, input_fil
                 src = parts[0]
                 cat = parts[1].strip() if len(parts) > 1 else "自訂清單"
                 fn = parts[2].strip() if len(parts) > 2 else "renderer.js"
-                # skip_existing 時，只要含有中文就跳過
                 is_translated = src in mappings and has_chinese(mappings[src][0])
                 if not skip_existing or not is_translated:
                     targets.append((src, cat, fn))
@@ -347,7 +343,7 @@ def generate_prompt(skip_existing: bool = True, batch_size: int = 150, input_fil
 
     PROMPT_FILE.write_text("\n".join(prompt_content), encoding="utf-8")
     
-    # 紀錄快取：保存原貌與 strip 對照表
+    # 保存 sent 條目快取（供匯入時智慧還原首尾空格）
     CACHE_SENT.write_text(json.dumps([t[0] for t in batch], ensure_ascii=False, indent=2), encoding="utf-8")
 
     if not RESPONSE_TXT.exists() and not RESPONSE_JSON.exists():
@@ -396,9 +392,8 @@ def import_response(file_path: str | None = None) -> int:
 
     mappings = load_existing_mappings(USER_ZH)
     
-    # 建立 sent_items 快取以便智慧對齊空格
     sent_items: list[str] = []
-    sent_stripped_map: dict[str, str] = {}  # {s.strip(): s}
+    sent_stripped_map: dict[str, str] = {}
     if CACHE_SENT.exists():
         try:
             sent_items = json.loads(CACHE_SENT.read_text(encoding="utf-8"))
@@ -412,7 +407,6 @@ def import_response(file_path: str | None = None) -> int:
     imported_sources = set()
 
     for src, tgt, cat, fn in parsed_items:
-        # 智慧空格還原：若 AI 吃掉前後空格，自動找回原始 sent 條目的精確空格
         real_src = src
         if real_src not in mappings and real_src.strip() in sent_stripped_map:
             real_src = sent_stripped_map[real_src.strip()]
@@ -420,7 +414,6 @@ def import_response(file_path: str | None = None) -> int:
         imported_sources.add(real_src)
         imported_sources.add(real_src.strip())
 
-        # 僅當譯文包含中文時才進行有效合併
         if has_chinese(tgt):
             if real_src in mappings:
                 updated_count += 1
@@ -443,29 +436,128 @@ def import_response(file_path: str | None = None) -> int:
     print(f"   - 目前完成度：{prog['percent']} %")
     print("=" * 60)
 
-    # 智慧核對缺漏
+    # 未翻項目直接保留在未翻譯清單中，下次產提示詞自動抓取，不另外產缺漏檔案
     if sent_items:
-        missing = [item for item in sent_items if item not in imported_sources and item.strip() not in imported_sources]
-        if missing:
-            print(f"\n⚠️ 【自動偵測缺漏】：本批發送的項目中有 {len(missing)} 筆在回覆中遺漏了！")
-            missing_prompt = [
-                AI_SYSTEM_INSTRUCTION,
-                f"【注意：上次的翻譯有 {len(missing)} 筆項目遺漏未翻，請只翻譯下列遺漏的項目】：",
-                "---",
-            ]
-            for m in missing:
-                missing_prompt.append(f"{m}{DELIM}(待翻譯){DELIM}遺漏補翻{DELIM}renderer.js")
-            missing_prompt.append("---")
-            MISSING_FILE.write_text("\n".join(missing_prompt), encoding="utf-8")
-            CACHE_SENT.write_text(json.dumps(missing, ensure_ascii=False, indent=2), encoding="utf-8")
-            print(f"📋 已自動將漏掉的項目打包至：{MISSING_FILE}")
-            print(f"👉 請複製補翻檔案再次給 AI，完成後貼回 ai_response.txt 再次匯入！\n")
+        uncovered = [item for item in sent_items if item not in imported_sources and item.strip() not in imported_sources]
+        if uncovered:
+            print(f"\nℹ️ 本次回覆未涵蓋原發送中的 {len(uncovered)} 筆項目，已自動保留在待翻譯清單。")
+            print("👉 下次執行 [1] 產生提示詞時會自動包含，無須另外手動補翻！\n")
         else:
-            print("\n🎉 太棒了！本批次所有項目皆已完整翻譯，無任何缺漏！")
-            CACHE_SENT.unlink(missing_ok=True)
-            RESPONSE_TXT.write_text("# 請將下一批 AI 回覆貼在此處並存檔\n", encoding="utf-8")
+            print("\n🎉 太棒了！本批次所有項目皆已完整翻譯入庫！\n")
 
+    CACHE_SENT.unlink(missing_ok=True)
+    RESPONSE_TXT.write_text("# 請將下一批 AI 回覆貼在此處並存檔\n", encoding="utf-8")
     return 0
+
+
+def check_and_clean_dictionary() -> None:
+    """字典健檢與過時/無效詞條清理工具（提供數據並由使用者選擇保留或刪除）。"""
+    if not USER_ZH.exists():
+        print("❌ 字典檔案不存在！")
+        return
+
+    m_in = ORIG_DIR / "main.js"
+    r_in = ORIG_DIR / "renderer.js"
+    if not m_in.exists() or not r_in.exists():
+        print("❌ Orig/ 內缺少官方原版檔案，無法比對有效性！")
+        return
+
+    m_orig = m_in.read_text(encoding="utf-8")
+    r_orig = r_in.read_text(encoding="utf-8")
+
+    raw_lines = USER_ZH.read_text(encoding="utf-8").splitlines()
+    total_lines = 0
+    entries: list[tuple[str, str, str, str]] = []
+    sources: list[str] = []
+
+    for raw in raw_lines:
+        line = raw.strip()
+        if not line or line.startswith("#") or DELIM not in line:
+            continue
+        total_lines += 1
+        i = line.find(DELIM)
+        source = line[:i]
+        rest = line[i + len(DELIM) :]
+        parts = rest.split(DELIM, 2)
+        if len(parts) == 3:
+            target, category, target_file = parts[0], parts[1], parts[2].strip()
+            entries.append((source, target, category, target_file))
+            sources.append(source)
+
+    counts = Counter(sources)
+    dup_keys = {k: v for k, v in counts.items() if v > 1}
+    dup_lines_count = sum(v - 1 for v in dup_keys.values())
+
+    # 去重保留最後一筆
+    unique_dict: dict[str, tuple[str, str, str]] = {}
+    for src, tgt, cat, fn in entries:
+        unique_dict[src] = (tgt, cat, fn)
+
+    # 檢測在當前 Orig 中找不到的詞條
+    obsolete_items: list[tuple[str, str, str, str]] = []
+    for src, (tgt, cat, fn) in unique_dict.items():
+        if fn == "main.js" and src not in m_orig:
+            obsolete_items.append((src, tgt, cat, fn))
+        elif fn == "renderer.js" and src not in r_orig:
+            obsolete_items.append((src, tgt, cat, fn))
+
+    print("\n" + "=" * 65)
+    print("        🧹 字典健檢與過時詞條管理工具")
+    print("=" * 65)
+    print(f"  📊 字典收錄總行數：{total_lines} 筆 (去重後不重複鍵值：{len(unique_dict)} 筆)")
+    print(f"  🔁 發現重複定義項：{len(dup_keys)} 組 (共溢出 {dup_lines_count} 行)")
+    print(f"  🗑️  官方原版已無此代碼 (過時/無效詞條)：{len(obsolete_items)} 筆")
+    if obsolete_items:
+        print("     (主要來自 GitHub Desktop 官方升級改版後移除或重構的字串)")
+    print("-" * 65)
+
+    if not obsolete_items and dup_lines_count == 0:
+        print("🎉 恭喜！目前字典完全健康，無重複且 100% 匹配當前官方原版代碼！\n")
+        return
+
+    print("針對上述檢測結果，請選擇處理方式：")
+    print(f"  [1] 刪除無效詞條（清理 {len(obsolete_items)} 筆過時條目 + 自動合一重複項，使套用達到 0 警告）")
+    print(f"  [2] 繼續保留無效詞條（僅自動合一重複項，完整保留 {len(obsolete_items)} 筆過時歷史詞條）")
+    print("  [0] 返回主選單（不對字典做任何更動）")
+    print("=" * 65)
+
+    try:
+        ans = input("👉 請輸入選項 [0-2]: ").strip()
+    except (EOFError, KeyboardInterrupt):
+        return
+
+    if ans == "1":
+        # 刪除無效詞條
+        bak_file = USER_ZH.with_suffix(".zh.bak")
+        shutil.copy2(USER_ZH, bak_file)
+        
+        obsolete_srcs = {src for src, _, _, _ in obsolete_items}
+        cleaned_dict = {src: val for src, val in unique_dict.items() if src not in obsolete_srcs}
+        save_mappings(USER_ZH, cleaned_dict)
+
+        print("\n" + "=" * 65)
+        print(f"✅ 清理完成！")
+        print(f"   - 已移除過時無效詞條：{len(obsolete_items)} 筆")
+        print(f"   - 已合一重複定義行：{dup_lines_count} 行")
+        print(f"   - 字典現存精華詞條：{len(cleaned_dict)} 筆")
+        print(f"   - 原始檔案已安全備份至：{bak_file.name}")
+        print("=" * 65 + "\n")
+
+    elif ans == "2":
+        # 保留無效詞條，僅去重
+        bak_file = USER_ZH.with_suffix(".zh.bak")
+        shutil.copy2(USER_ZH, bak_file)
+        save_mappings(USER_ZH, unique_dict)
+
+        print("\n" + "=" * 65)
+        print(f"✅ 已完成重複項合一！")
+        print(f"   - 保留全部過時詞條：{len(obsolete_items)} 筆")
+        print(f"   - 已合一重複定義行：{dup_lines_count} 行")
+        print(f"   - 字典收錄詞條數：{len(unique_dict)} 筆")
+        print(f"   - 原始檔案已安全備份至：{bak_file.name}")
+        print("=" * 65 + "\n")
+    else:
+        print("\n↩️ 已取消，字典維持原狀。\n")
 
 
 def apply_patch() -> int:
@@ -486,17 +578,16 @@ def interactive_menu() -> None:
         print(f"  📊 翻譯進度：[已完成 {prog['translated']} / {prog['total']} 筆] ({prog['percent']}%)")
         print(f"  ⏳ 待翻譯剩餘：{prog['remaining']} 筆  |  📚 字典累積收錄：{prog['dict_total']} 條")
         print("-" * 60)
-        print("  [1] 掃描並產生 AI 提示詞 (預設自動跳過已翻譯，直接翻未翻譯的)")
-        print("  [2] 貼上/匯入 AI 翻譯結果 (智慧對齊空格 + 偵測抓漏)")
-        print("  [3] 檢視缺漏清單 / 開啟補翻提示詞檔案")
-        print("  [4] 一鍵編譯套用 (輸出至 Windows/ 目錄)")
-        print("  [5] 自訂批次數量大量翻譯 (輸入數量或輸入 all 全部匯出)")
-        print("  [6] 開啟專案工作資料夾 (Temp / Windows / Orig)")
-        print("  [0] 離開選單")
+        print("  [1] 掃描並產生 AI 提示詞 (自動抓取未翻譯，可自訂數量或 all)")
+        print("  [2] 貼上/匯入 AI 翻譯結果 (智慧對齊空格與即時進度更新)")
+        print("  [3] 一鍵編譯套用 (輸出至 Windows/ 目錄)")
+        print("  [4] 字典健檢與過時詞條清理 (顯示無效筆數，提供刪除/保留選擇)")
+        print("  [5] 開啟專案工作資料夾 (Temp / Windows / Orig)")
+        print("  [0] 離開工作台")
         print("=" * 60)
 
         try:
-            choice = input("👉 請輸入選項數字 [0-6]: ").strip()
+            choice = input("👉 請輸入選項數字 [0-5]: ").strip()
         except (EOFError, KeyboardInterrupt):
             print("\n👋 已退出工作台！")
             break
@@ -521,31 +612,12 @@ def interactive_menu() -> None:
             import_response()
 
         elif choice == "3":
-            if MISSING_FILE.exists():
-                print(f"\n📋 發現上次遺漏的補翻檔案：{MISSING_FILE}")
-                lines = MISSING_FILE.read_text(encoding="utf-8").splitlines()
-                print("內容預覽：")
-                for l in lines[25:35]:
-                    print("  ", l)
-                if len(lines) > 35:
-                    print(f"  ... 還有更多 (共 {len(lines)-25} 筆)")
-            else:
-                print("\n🎉 目前沒有待補翻的缺漏項目！")
-
-        elif choice == "4":
             apply_patch()
 
-        elif choice == "5":
-            b_input = input("\n請輸入每批次翻譯項目數量 (建議 100~300，直接 Enter 預設 150，輸入 'all' 為全部): ").strip().lower()
-            if b_input == "all":
-                bs = 0
-            elif b_input.isdigit() and int(b_input) > 0:
-                bs = int(b_input)
-            else:
-                bs = 150
-            generate_prompt(skip_existing=True, batch_size=bs)
+        elif choice == "4":
+            check_and_clean_dictionary()
 
-        elif choice == "6":
+        elif choice == "5":
             import os
             os.system(f'explorer "{TEMP_DIR}"')
 
@@ -566,10 +638,12 @@ def main() -> int:
     p_prompt.add_argument("-i", "--input", help="手動指定待翻譯純文字檔")
     p_prompt.add_argument("-b", "--batch-size", type=int, default=150, help="每批次翻譯數量 (預設 150，設為 0 代表全部)")
 
-    p_import = subparsers.add_parser("import", help="匯入 AI 翻譯結果並比對缺漏")
+    p_import = subparsers.add_parser("import", help="匯入 AI 翻譯結果")
     p_import.add_argument("-f", "--file", help="指定 AI 回覆檔案")
 
     p_apply = subparsers.add_parser("apply", help="將字典檔套用產生 Windows/ 翻譯檔")
+
+    p_clean = subparsers.add_parser("clean", help="檢查並清理字典中的過時或重複詞條")
 
     p_menu = subparsers.add_parser("menu", help="啟動全自動互動數字選單")
 
@@ -586,6 +660,9 @@ def main() -> int:
         return import_response(file_path=args.file)
     elif args.action == "apply":
         return apply_patch()
+    elif args.action == "clean":
+        check_and_clean_dictionary()
+        return 0
     return 0
 
 
