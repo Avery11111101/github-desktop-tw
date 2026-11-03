@@ -1,148 +1,119 @@
-# [B.M] GitHub Desktop 正體中文化
+# GitHub Desktop 繁體中文在地化專案 🇹🇼
 
-[![Windows](https://img.shields.io/badge/OS-Windows-0078D6?logo=windows&logoColor=white)](https://desktop.github.com/)
-[![Python 3](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![GitHub](https://img.shields.io/badge/GitHub-bm--githubdesktop--tw-181717?logo=github)](https://github.com/BoringMan314/bm-githubdesktop-tw)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-本專案對應 **GitHub Desktop 3.5.6**（Windows）：以對照表將官方 `main.js`、`renderer.js` 內介面字串替換為**繁體中文**，產出檔置於 `Windows/`，覆蓋本機安裝目錄即可套用。
-
-*以繁体中文替换 GitHub Desktop 界面字串（Windows）。*<br>
-*Windows 向けに GitHub Desktop の UI 文字列を繁体字中国語へ置換。*<br>
-*Replaces GitHub Desktop UI strings with Traditional Chinese (Windows).*
-
-> **聲明**：本專案為第三方在地化資源與工具，與 **GitHub**／**GitHub Desktop** 官方無關。請遵守官方軟體授權與使用條款；修改安裝檔有風險，請自行備份。
+針對 **GitHub Desktop**（Windows 版）的繁體中文在地化套件與自動化翻譯工具。  
+本專案提供預編譯的中文化檔案，並內建**全自動互動式數字選單**與 **AI 協同翻譯工作流**，讓任何人都能在官方釋出新版本時，一鍵提取、配合 AI 全自動翻譯、自動抓漏補正，輕鬆產出最新版的繁中介面！
 
 ---
 
-![介面示意](screenshots/screenshot.png)
+## 📌 版本支援
+
+- **GitHub Desktop 官方最新版本**：`v3.6.10`
+- **系統需求**：Windows 10 / 11、Python 3.8+（僅自行編譯/翻譯時需要）
 
 ---
 
-## 目錄
+## 🚀 快速安裝（一般使用者）
 
-- [功能](#功能)
-- [系統需求](#系統需求)
-- [安裝方式](#安裝方式)
-- [自行編譯與套用](#自行編譯與套用)
-- [技術概要](#技術概要)
-- [專案結構](#專案結構)
-- [版本與對照表維護](#版本與對照表維護)
-- [疑難排解：白屏與卡住](#疑難排解白屏與卡住)
-- [維護者：更新 GitHub](#維護者更新-github)
-- [參考資料](#參考資料)
-- [授權](#授權)
-- [問題與建議](#問題與建議)
+如果你只想直接使用繁體中文化版本：
 
----
-
-## 功能
-
-- 將 **GitHub Desktop** 介面字串改為**正體中文**（選單、對話框、說明文字等，依對照表涵蓋範圍為準）。
-- 透過 `Temp/UserTemp.zh` 維護英→中對照，由腳本批次套用至 `Orig/`，輸出至 `Windows/`。
-- 升級官方程式後，可自新版安裝目錄更新 `Orig/` 並調整對照表後重新產生。
+1. **關閉 GitHub Desktop**（請確保背景處理序已完全結束）。
+2. 下載或取得本專案 `Windows/` 資料夾內的兩個檔案：
+   - `Windows/main.js`
+   - `Windows/renderer.js`
+3. 將這兩個檔案複製並覆蓋到你的 GitHub Desktop 安裝路徑：
+   ```text
+   %LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\
+   ```
+4. 重新啟動 GitHub Desktop，即可享受繁體中文介面！
 
 ---
 
-## 系統需求
+## 🎮 最無腦操作：全自動互動式選單工作台
 
-- **Windows**
-- **Python 3**（自行編譯、驗證對照表時需要）
+為了免去使用者反覆手動打各類指令的困擾，本專案提供**全自動互動式數字選單**！
 
----
-
-## 安裝方式
-
-1. 關閉 **GitHub Desktop**（必要時於工作管理員結束相關處理序）。
-2. 將本專案 `Windows` 資料夾內的 **`main.js`**、**`renderer.js`** 複製到本機安裝路徑並覆蓋：  
-   `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\`
-3. 重新啟動 GitHub Desktop。
-
-若遇權限問題，可嘗試以系統管理員身分執行：
-
-`powershell -ExecutionPolicy Bypass -File scripts\copy_to_github_desktop.ps1`
-
----
-
-## 自行編譯與套用
-
-1. 從本機 **GitHub Desktop 安裝目錄**複製**未修改**的 `main.js`、`renderer.js`，覆蓋本專案 `Orig/main.js`、`Orig/renderer.js`（**版本須與實際安裝一致**）。
-2. 編輯對照表 `Temp/UserTemp.zh`：每列格式為 `英文原文>*.*<譯文>*.*<分類>*.*<main.js 或 renderer.js>`，程式依「英文原文」做全文取代。
-3. 於專案根目錄執行：`python scripts/validate_orig.py`
-4. 執行：`python scripts/apply_zh_patch.py`（預設寫入 `Windows/main.js` 與 `Windows/renderer.js`）。
-5. 將上述兩個檔複製到 `resources\app\` 覆蓋原版。
-
-升級 GitHub Desktop 後，若官方改寫某句英文，對照表內對應「英文原文」也須一併更新，否則該句不會被替換。
-
-更完整的版更流程與腳本說明見 [`scripts/README.md`](scripts/README.md)。
-
----
-
-## 技術概要
-
-- **對照表** `UserTemp.zh` 定義來源字串與譯文；**`apply_zh_patch.py`** 讀取 `Orig/` 與對照表，以較長字串優先替換，寫入 `Windows/`。
-- **`validate_orig.py`** 檢查檔案存在、對照合理性與套用後結構（例如 `createElement` 數量），降低誤換導致白屏的風險。
-
----
-
-## 專案結構
-
-| 路徑 | 說明 |
-|------|------|
-| [`Orig/main.js`](Orig/main.js)、[`Orig/renderer.js`](Orig/renderer.js) | 自官方安裝目錄備份的未修改 bundle |
-| [`Windows/main.js`](Windows/main.js)、[`Windows/renderer.js`](Windows/renderer.js) | 套用對照後產物，供覆蓋安裝目錄 |
-| [`Temp/UserTemp.zh`](Temp/UserTemp.zh) | 英→中對照表 |
-| [`scripts/`](scripts/) | `validate_orig.py`、`apply_zh_patch.py`、PowerShell 複製／驗證腳本等 |
-
----
-
-## 版本與對照表維護
-
-- 本 README 開頭所標 **對應 GitHub Desktop 版本** 請與 `Orig/` 實際來源一致。
-- 換版時請**先**更新 `Orig/`，再跑 `validate` → 修正 `UserTemp.zh` → `apply`（細節見 `scripts/README.md`）。
-
----
-
-## 疑難排解：白屏與卡住
-
-1. **只覆蓋兩個檔**：僅替換 `resources\app\main.js` 與 `resources\app\renderer.js`，**勿**整包刪除或覆蓋整個 `app` 資料夾（缺少 `index.html`、`package.json` 等會白屏）。
-2. **版本一致**：`Orig` 須與安裝目錄**同一版**；產物與 `app-3.5.x` 等路徑需對應。
-3. **完全結束程式後再覆蓋**。
-4. 本專案以 `validate_orig.py` 檢查套用後骨架；若仍白屏，於 GitHub Desktop 按 **Ctrl+Shift+I** 開啟開發者工具，查看 **Console** 第一則紅色錯誤。
-5. **隔離測試**（判斷白屏來自 main 或 renderer）：
-   - `python scripts/apply_zh_patch.py --main-only`
-   - `python scripts/apply_zh_patch.py --renderer-only`  
-   每次產生後覆蓋至 `resources\app\` 再重開測試。
-6. **還原英文**：將安裝目錄內兩檔換回官方原版後若白屏消失，可確認與繁體檔案有關，再搭配上一項縮小範圍。
-
----
-
-## 維護者：更新 GitHub
-
-**Bash / Git Bash / PowerShell：**
-
+👉 **啟動方式**：直接在專案根目錄開啟終端機（PowerShell 或 CMD），執行以下指令即可進入選單：
 ```powershell
-git add .
-git commit -m "docs: 更新 README 與授權說明"
-git push origin main
+python scripts\ai_translate.py
 ```
 
+```text
+=======================================================
+    🇹🇼 GitHub Desktop 繁體中文化 - 自動化工作台
+=======================================================
+  目前字典收錄詞條數：518 筆
+-------------------------------------------------------
+  [1] 掃描並產生 AI 提示詞 (預設跳過已翻譯，直接翻未翻譯的)
+  [2] 貼上/匯入 AI 翻譯結果 (自動合併 + 自動偵測抓漏)
+  [3] 檢視缺漏清單 / 開啟補翻提示詞檔案
+  [4] 一鍵編譯套用 (輸出至 Windows/ 目錄)
+  [5] 批次快速翻譯 (自訂批次數量，適合大量翻新)
+  [6] 開啟專案工作資料夾 (Temp / Windows / Orig)
+  [0] 離開選單
+=======================================================
+👉 請輸入選項數字 [0-6]:
+```
+
+### ✨ 特色亮點
+- **智能過濾（不重複翻譯）**：掃描時**自動排除目前已收錄的譯文**，只專注翻譯官方新版中未翻譯的新字串，大幅省時與節省 AI Token！
+- **自訂批次數量（大量翻新）**：
+  - 預設批次量調高至 **150 筆**。
+  - 在選單中可**自由輸入任意數字**（例如 200, 300, 500 等），或輸入 **`all`** 一次性匯出所有未翻譯字串，極致高效！
+- **純數字選單**：全流程只需敲數字與 Enter，無腦直覺。
+
 ---
 
-## 參考資料
+## 🤖 翻譯標準工作流程（搭配 AI 互動）
 
-- GitHub Desktop 官網：https://desktop.github.com  
-- GithubDesktopZhTool：https://github.com/robotze/GithubDesktopZhTool  
-- GithubDesktopTW：https://github.com/NeKoOuO/GithubDesktopTW  
+```mermaid
+flowchart TD
+    A["1. 複製官方最新原版至 Orig/"] --> B["2. 執行 python scripts\ai_translate.py 按 [1] 產生提示詞"]
+    B --> C["3. 複製 Temp/ai_prompt.txt 給 AI 翻譯"]
+    C --> D["4. 將 AI 回覆貼入 Temp/ai_response.txt 存檔"]
+    D --> E["5. 選單按 [2] 自動匯入與核對"]
+    E -->|發現有漏翻項目| F["系統自動生成 Temp/ai_missing_prompt.txt<br>複製補翻內容再丟給 AI"]
+    F --> D
+    E -->|全部翻譯完畢| G["6. 選單按 [4] 一鍵套用編譯至 Windows/"]
+```
+
+### 詳細四步操作指南
+
+#### 步驟 1：準備官方新版檔案
+將官方新安裝目錄 `%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app\` 內的未修改檔案覆蓋至專案的 `Orig/` 目錄：
+- `Orig/main.js`
+- `Orig/renderer.js`
+
+#### 步驟 2：選單按 `[1]` 產生提示詞
+- 系統自動掃描 `Orig/`，**自動過濾已翻譯項目**。
+- 自動建立包含台灣 Git 術語規範的提示詞：`Temp/ai_prompt.txt`。
+- 自動準備好空白回填檔：`Temp/ai_response.txt`。
+
+#### 步驟 3：複製給 AI 並貼回存檔
+1. 開啟 `Temp/ai_prompt.txt` 全選複製貼給 ChatGPT / Claude / Gemini。
+2. 將 AI 回覆內容貼入 `Temp/ai_response.txt`（支援 **JSON** 或**純文字**雙格式）並存檔。
+
+#### 步驟 4：選單按 `[2]` 匯入與自動抓漏
+- 系統自動合併字典。
+- ⚠️ 若 AI 漏翻，終端機會直接提示漏了幾筆，並**自動打包成 `Temp/ai_missing_prompt.txt`**，只需再次發給 AI 並貼回即可！
+- 全部無漏後，於選單按 `[4]`，立即產生最終檔案至 `Windows/`，覆蓋回官方目錄即完成！
 
 ---
 
-## 授權
+## 📂 檔案角色說明
 
-本專案以 [MIT License](LICENSE) 授權。
+| 檔案路徑 | 角色定位 | 說明 |
+| :--- | :--- | :--- |
+| `scripts/ai_translate.py` | 互動工作台主程式 | 執行直接開啟數字選單介面 |
+| `Orig/` | 官方原始碼 | 放官方未修改的 `main.js` 與 `renderer.js` |
+| `Windows/` | 翻譯產出物 | 替換完成的中文化 bundle，直接覆蓋安裝目錄使用 |
+| `Temp/UserTemp.zh` | 核心字典 | 保存所有「英 ➜ 繁中」對照規則 |
+| `Temp/ai_prompt.txt` | 提示詞 | 由腳本產生，複製傳給 AI 翻譯 |
+| `Temp/ai_response.txt` | 回填檔 | 貼入 AI 回覆內容的地方（支援純文字與 JSON） |
+| `Temp/ai_missing_prompt.txt`| 補翻檔 | 當 AI 有漏翻時，腳本自動生成的二次提示詞 |
 
 ---
 
-## 問題與建議
+## ⚖️ 授權與免責聲明
 
-歡迎使用 [GitHub Issues](https://github.com/BoringMan314/bm-githubdesktop-tw/issues) 回報（請盡量附 GitHub Desktop 版本、作業系統與重現步驟）。
+- 本專案僅為第三方繁體中文在地化資源與自動化工具，與 GitHub 官方無隸屬關係。
+- 專案程式碼基於 MIT 授權條款開源；修改安裝檔案具有一定風險，覆蓋前建議先行備份原檔。
