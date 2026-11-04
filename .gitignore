@@ -7,6 +7,7 @@ Thumbs.db
 desktop.ini
 /*.url
 /*.zip
+*.bak
 README.AI.md
 Temp/ai_*.*
 Temp/.cache_*.*

@@ -232,6 +232,31 @@ def parse_any_ai_content(text: str) -> list[tuple[str, str, str, str]]:
     if json_str:
         try:
             data = json.loads(json_str)
+        except Exception as json_err:
+            # 容錯處理 1: 清理常見的未跳脫引號問題（如 """ 或未轉義的單獨雙引號）
+            cleaned_json = re.sub(r':\s*""",?', ': "\\"",', json_str)
+            try:
+                data = json.loads(cleaned_json)
+            except Exception:
+                data = None
+                print(f"⚠️ JSON 結構解析失敗 ({json_err})，啟動容錯正則提取機制...", file=sys.stderr)
+                # 容錯處理 2: 正則抽取每個 JSON 條目物件
+                pattern = re.compile(
+                    r'\{\s*"original"\s*:\s*(?:"((?:\\.|[^"\\])*)"|"""\s*,)\s*,\s*'
+                    r'"translation"\s*:\s*(?:"((?:\\.|[^"\\])*)"|"""\s*,)',
+                    re.DOTALL
+                )
+                for m_obj in pattern.finditer(json_str):
+                    src_val = m_obj.group(1) or '"'
+                    tgt_val = m_obj.group(2) or '"'
+                    src_val = src_val.encode('utf-8').decode('unicode_escape', errors='replace')
+                    tgt_val = tgt_val.encode('utf-8').decode('unicode_escape', errors='replace')
+                    if src_val and tgt_val:
+                        results.append((src_val, tgt_val.strip(), "AI翻譯", "renderer.js"))
+                if results:
+                    return results
+
+        if data:
             if isinstance(data, list):
                 for item in data:
                     if isinstance(item, dict):
@@ -253,8 +278,6 @@ def parse_any_ai_content(text: str) -> list[tuple[str, str, str, str]]:
                             results.append((k, str(tgt).strip(), str(cat).strip(), str(fn).strip()))
             if results:
                 return results
-        except Exception:
-            pass
 
     lines = text_clean.splitlines()
     ignore_keys = {"original", "translation", "category", "file", "target", "source", "zh", "en"}
