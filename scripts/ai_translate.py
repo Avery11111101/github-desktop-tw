@@ -27,7 +27,7 @@ CACHE_SENT = TEMP_DIR / ".cache_sent_records.json"
 
 DELIM = ">*.*<"
 
-AI_SYSTEM_INSTRUCTION = """你是一位專業的繁體中文在地化翻譯專家（台灣地區軟體與 Git 術語習慣）。
+AI_SYSTEM_INSTRUCTION = """你是一位專業的繁體中文在地化翻譯專家（台灣的軟體與 Git 術語習慣）。
 請將以下軟體介面字串翻譯為精準流暢的台灣繁體中文。
 
 翻譯規範：
@@ -108,7 +108,11 @@ def looks_like_ui_english(t: str) -> bool:
     t_strip = t.strip()
     if len(t_strip) < 3 or len(t_strip) > 200:
         return False
-    if not (t_strip[0].isalnum() or t_strip.startswith("&")):
+    # 若以 & 開頭，必須是選單快速鍵 (例如 &File, &Edit)，不得為 && 或實體
+    if t_strip.startswith("&"):
+        if not re.match(r"^&[a-zA-Z]", t_strip):
+            return False
+    elif not t_strip[0].isalnum():
         return False
     if not any(c.isalpha() for c in t_strip):
         return False
@@ -122,9 +126,30 @@ def looks_like_ui_english(t: str) -> bool:
         return False
     if re.search(r"\b(px|em|rem|vh|vw|ms|s|deg)\b", t_strip):
         return False
-    if t_strip.startswith("/") or t_strip.startswith(".") or t_strip.endswith(".js"):
+    if t_strip.startswith("/") or t_strip.startswith(".") or t_strip.endswith(".js") or t_strip.endswith(".exe") or t_strip.startswith("application/"):
+        return False
+    if "monospace" in t_strip or "Software\\\\" in t_strip:
         return False
     if " " not in t_strip and not t_strip.startswith("&"):
+        return False
+    # 過濾程式邏輯、運算子與正規表示式殘留
+    if re.search(r"(&&|\|\||===|!==|=>|\+\+|--)", t_strip):
+        return False
+    if re.search(r"\b(return|typeof|void|delete|throw|new Error)\b", t_strip):
+        return False
+    if re.search(r"\bin\s+[a-zA-Z0-9_\.]+(\&\&|\|\||\?|\:|\))", t_strip):
+        return False
+    if re.search(r"(opts=%|%d|%j|nexttick|id\+\+|input\[type=|read 0|replaceCaret|replaceTilde|Run the trap)", t_strip):
+        return False
+    if re.search(r"['\":][a-zA-Z0-9_\$]+\.[a-zA-Z0-9_\$]+", t_strip) or re.search(r"\(\[[^\]]+\]\)", t_strip):
+        return False
+    # 過濾 HTML/CSS 類別列表 (例如 "branch-name-warning branch-name-error", "icon spin")
+    if re.match(r"^[a-z0-9\-]+(\s+[a-z0-9\-]+)+$", t_strip) and ("-" in t_strip or re.search(r"\b(spin|blankslate|selectable|expanded|tooltip|item)\b", t_strip)):
+        return False
+    # 過濾常見日期時間格式字串 (例如 "h:mm:ss a z")
+    if re.match(r"^[hHmsaAyYMdpP\s\:\.\,\/zZ\']+$", t_strip) or t_strip in ("eeee 'at' p",):
+        return False
+    if t_strip in ("use strict", "rune <null>", "&quot;"):
         return False
     return True
 
@@ -165,8 +190,8 @@ def load_existing_mappings(path: Path) -> dict[str, tuple[str, str, str]]:
     if not path.exists():
         return mappings
     for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#"):
+        line = raw.rstrip("\r\n")
+        if not line.strip() or line.strip().startswith("#"):
             continue
         i = line.find(DELIM)
         if i < 0:
@@ -282,14 +307,14 @@ def parse_any_ai_content(text: str) -> list[tuple[str, str, str, str]]:
     lines = text_clean.splitlines()
     ignore_keys = {"original", "translation", "category", "file", "target", "source", "zh", "en"}
     for raw in lines:
-        line = raw.strip()
-        if not line or line.startswith("#"):
+        line = raw.rstrip("\r\n")
+        if not line.strip() or line.strip().startswith("#"):
             continue
         if DELIM in line:
             parts = line.split(DELIM)
             if len(parts) >= 2:
                 src = parts[0]
-                tgt = parts[1].strip()
+                tgt = parts[1]
                 cat = parts[2].strip() if len(parts) > 2 else "AI翻譯"
                 fn = parts[3].strip() if len(parts) > 3 else "renderer.js"
                 if src and tgt and tgt != "(待翻譯)":
@@ -414,6 +439,8 @@ def import_response(file_path: str | None = None) -> int:
         return 1
 
     mappings = load_existing_mappings(USER_ZH)
+    all_scanned, _ = get_all_scanned_strings()
+    scanned_stripped_map = {s.strip(): s for s, _, _ in all_scanned}
     
     sent_items: list[str] = []
     sent_stripped_map: dict[str, str] = {}
@@ -431,11 +458,23 @@ def import_response(file_path: str | None = None) -> int:
 
     for src, tgt, cat, fn in parsed_items:
         real_src = src
-        if real_src not in mappings and real_src.strip() in sent_stripped_map:
-            real_src = sent_stripped_map[real_src.strip()]
+        # 智慧對齊原文空格（優先比對發送快取與掃描原版）
+        if real_src not in mappings:
+            if real_src.strip() in sent_stripped_map:
+                real_src = sent_stripped_map[real_src.strip()]
+            elif real_src.strip() in scanned_stripped_map:
+                real_src = scanned_stripped_map[real_src.strip()]
+            elif real_src.strip() in mappings:
+                real_src = real_src.strip()
 
         imported_sources.add(real_src)
         imported_sources.add(real_src.strip())
+
+        # 智慧對齊譯文的首尾空格
+        if real_src.startswith(" ") and not tgt.startswith(" "):
+            tgt = " " + tgt
+        if real_src.endswith(" ") and not tgt.endswith(" "):
+            tgt = tgt + " "
 
         if has_chinese(tgt):
             if real_src in mappings:
@@ -494,11 +533,13 @@ def check_and_clean_dictionary() -> None:
     sources: list[str] = []
 
     for raw in raw_lines:
-        line = raw.strip()
-        if not line or line.startswith("#") or DELIM not in line:
+        line = raw.rstrip("\r\n")
+        if not line.strip() or line.strip().startswith("#") or DELIM not in line:
             continue
         total_lines += 1
         i = line.find(DELIM)
+        if i < 0:
+            continue
         source = line[:i]
         rest = line[i + len(DELIM) :]
         parts = rest.split(DELIM, 2)

@@ -14,8 +14,8 @@ MIN_LEN = 12
 def parse_pairs(path: Path) -> tuple[list[tuple[str, str]], list[tuple[str, str]]]:
     main_p, ren_p = [], []
     for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#") or DELIM not in line:
+        line = raw.rstrip("\r\n")
+        if not line.strip() or line.strip().startswith("#") or DELIM not in line:
             continue
         i = line.find(DELIM)
         src = line[:i]

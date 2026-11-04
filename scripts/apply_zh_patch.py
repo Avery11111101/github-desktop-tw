@@ -42,8 +42,8 @@ def parse_mapping(path: Path) -> tuple[list[tuple[str, str]], list[tuple[str, st
     renderer_dict: dict[str, str] = {}
     text = path.read_text(encoding="utf-8")
     for raw in text.splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#"):
+        line = raw.rstrip("\r\n")
+        if not line.strip() or line.strip().startswith("#"):
             continue
         if DELIM not in line:
             continue

@@ -70,7 +70,7 @@ Add an Existing Repository from your local drive…>*.*<開啟本機現有儲存
 Create a tutorial repository…>*.*<建立教學儲存庫…>*.*<開始頁面>*.*<renderer.js
 null,"ProTip!">*.*<null,"提示：">*.*<開始頁面>*.*<renderer.js
 ProTip! Press>*.*<提示：>*.*<開始頁面>*.*<renderer.js
-You can drag & drop an existing repository folder here to add it to Desktop>*.*<您可以將現有的儲存庫資料夾拖放至此處，以新增至 Desktop>*.*<渲染器介面>*.*<renderer.js
+You can drag & drop an existing repository folder here to add it to Desktop>*.*<您可以將現有的儲存庫資料夾拖放至此處以新增到 Desktop>*.*<渲染器介面>*.*<renderer.js
 Clone a repository>*.*<複製儲存庫>*.*<待分組>*.*<renderer.js
 "Sign in";>*.*<"登入";>*.*<待分組>*.*<renderer.js
 Sign in to your GitHub.com account to access your repositories.>*.*<登入您的 GitHub.com 帳戶以存取儲存庫。>*.*<待分組>*.*<renderer.js
@@ -103,7 +103,7 @@ The commits from the selected branch will be added to the current branch via a m
 The commits in the selected branch will be combined into one commit in the current branch.>*.*<所選分支的所有提交將合併為單一提交後加入目前分支。>*.*<介面補齊>*.*<renderer.js
 The commits from the selected branch will be rebased and added to the current branch.>*.*<所選分支的提交將重新定基底（rebase）後加入目前分支。>*.*<介面補齊>*.*<renderer.js
 Unable to start rebase. Check you have chosen a valid branch.>*.*<無法開始重新定基底。請確認您已選擇有效的分支。>*.*<介面補齊>*.*<renderer.js
-Unable to merge unrelated histories in this repository>*.*<無法在此儲存庫中合併無關的歷史紀錄>*.*<渲染器介面>*.*<renderer.js
+Unable to merge unrelated histories in this repository>*.*<無法合併此儲存庫中無關的歷史紀錄>*.*<渲染器介面>*.*<renderer.js
 Unable to merge unrelated histories in this repository.>*.*<無法合併此儲存庫中不相關的歷史記錄。>*.*<介面補齊>*.*<renderer.js
 This action cannot be undone.>*.*<此動作無法復原。>*.*<介面補齊>*.*<renderer.js
 Sign in to your GitHub Enterprise>*.*<登入您的 GitHub Enterprise>*.*<介面補齊>*.*<renderer.js
@@ -362,7 +362,7 @@ Callback was already called.>*.*<回呼已經被呼叫過了。>*.*<主程序介
 Cannot pipe, not readable>*.*<無法透過管線傳輸，不可讀取>*.*<主程序介面>*.*<main.js
 Expected a string>*.*<預期應為字串>*.*<主程序介面>*.*<main.js
 Invalid Date pass to format>*.*<傳入無效的日期格式>*.*<主程序介面>*.*<main.js
-after a stream was destroyed>*.*<串流損毀之後>*.*<主程序介面>*.*<main.js
+after a stream was destroyed>*.*<於資料流損毀之後>*.*<主程序介面>*.*<main.js
 method is not implemented>*.*<方法尚未實作>*.*<主程序介面>*.*<main.js
 &&t<=>*.*<&&t<=>*.*<主程序介面>*.*<main.js
 Cannot call>*.*<無法呼叫>*.*<遺漏補翻>*.*<renderer.js
@@ -431,18 +431,18 @@ wrapped data>*.*<已封裝的 data>*.*<主程序介面>*.*<main.js
 wrapped end>*.*<已封裝的 end>*.*<主程序介面>*.*<main.js
 write after end>*.*<寫入於結束之後 (write after end)>*.*<主程序介面>*.*<main.js
 xRange return>*.*<xRange return>*.*<主程序介面>*.*<main.js
-Able to merge.>*.*<可以合併。>*.*<渲染器介面>*.*<renderer.js
+Able to merge.>*.*<可以進行合併。>*.*<渲染器介面>*.*<renderer.js
 Can't automatically merge.>*.*<無法自動合併。>*.*<渲染器介面>*.*<renderer.js
 Conflicted files>*.*<發生衝突的檔案>*.*<渲染器介面>*.*<renderer.js
 Do you want to create a fork of this repository at>*.*<您是否要在下列位置建立此儲存庫的復刻 (Fork)：>*.*<遺漏補翻>*.*<renderer.js
-GitHub Desktop has no permission to display notifications. Please, enable them in the>*.*<GitHub Desktop 沒有顯示通知的權限。請在下列位置啟用：>*.*<渲染器介面>*.*<renderer.js
+GitHub Desktop has no permission to display notifications. Please, enable them in the>*.*<GitHub Desktop 沒有顯示通知的權限。請在以下位置啟用：>*.*<渲染器介面>*.*<renderer.js
 GitHub Enterprise>*.*<GitHub Enterprise>*.*<遺漏補翻>*.*<renderer.js
 Resolve with Copilot>*.*<使用 Copilot 解決>*.*<渲染器介面>*.*<renderer.js
 Skipped by Copilot>*.*<已由 Copilot 略過>*.*<渲染器介面>*.*<renderer.js
 Thanks @>*.*<感謝 @>*.*<渲染器介面>*.*<renderer.js
 The following files would be overwritten:>*.*<下列檔案將會被覆寫：>*.*<渲染器介面>*.*<renderer.js
 Your current stash will be overwritten by creating a new stash>*.*<建立新的暫存將會覆寫您目前的暫存>*.*<渲染器介面>*.*<renderer.js
-not defined: conflicts with the method >*.*<未定義：與方法衝突>*.*<主程序介面>*.*<main.js
+not defined: conflicts with the method >*.*<未定義：與該方法衝突>*.*<主程序介面>*.*<main.js
 Cannot call >*.*<無法呼叫>*.*<主程序介面>*.*<main.js
 Invalid SemVer Range: >*.*<無效的 SemVer 版本範圍：>*.*<主程序介面>*.*<main.js
 Invalid Version: >*.*<無效的版本：>*.*<主程序介面>*.*<main.js
@@ -454,65 +454,65 @@ Unexpected operation: >*.*<非預期的操作：>*.*<主程序介面>*.*<main.js
 Unknown encoding: >*.*<未知的編碼：>*.*<主程序介面>*.*<main.js
 eval at >*.*<eval 於>*.*<主程序介面>*.*<main.js
 invalid increment argument: >*.*<無效的遞增引數：>*.*<主程序介面>*.*<main.js
-Do you want to create a fork of this repository at >*.*<是否要在下列位置建立此儲存庫的分叉 (Fork)：>*.*<渲染器介面>*.*<renderer.js
-account. Do you want to sign in again?>*.*<帳戶。您想要重新登入嗎？>*.*<渲染器介面>*.*<renderer.js
-added lines>*.*<新增行數>*.*<渲染器介面>*.*<renderer.js
+Do you want to create a fork of this repository at >*.*<您是否要在以下位置建立此儲存庫的復刻（Fork）：>*.*<渲染器介面>*.*<renderer.js
+account. Do you want to sign in again?>*.*<帳戶。您要重新登入嗎？>*.*<渲染器介面>*.*<renderer.js
+added lines>*.*<行新增>*.*<渲染器介面>*.*<renderer.js
 already exists>*.*<已經存在>*.*<渲染器介面>*.*<renderer.js
-already exists on the remote.>*.*<已經存在於遠端。>*.*<渲染器介面>*.*<renderer.js
-and renaming this branch will not change the branch name on the remote.>*.*<且重新命名此分支並不會變更遠端上的分支名稱。>*.*<渲染器介面>*.*<renderer.js
+already exists on the remote.>*.*<已存在於遠端。>*.*<渲染器介面>*.*<renderer.js
+and renaming this branch will not change the branch name on the remote.>*.*<且重新命名此分支不會變更遠端上的分支名稱。>*.*<渲染器介面>*.*<renderer.js
 appears to be owned by another user on your machine. Adding untrusted repositories may automatically execute files in the repository.>*.*<似乎屬於您電腦上的其他使用者。新增不受信任的儲存庫可能會自動執行該儲存庫中的檔案。>*.*<渲染器介面>*.*<renderer.js
 are entirely different commit histories.>*.*<是完全不同的提交歷史紀錄。>*.*<渲染器介面>*.*<renderer.js
 been resolved.>*.*<已解決。>*.*<渲染器介面>*.*<renderer.js
 by applying its >*.*<透過套用其>*.*<渲染器介面>*.*<renderer.js
 changed files?>*.*<個變更的檔案？>*.*<渲染器介面>*.*<renderer.js
-choose an email local to this repository from the>*.*<從中為此儲存庫選取本機專用的電子郵件：>*.*<渲染器介面>*.*<renderer.js
+choose an email local to this repository from the>*.*<從中選擇此儲存庫專用的本機電子郵件地址：>*.*<渲染器介面>*.*<renderer.js
 could not be created.>*.*<無法建立。>*.*<渲染器介面>*.*<renderer.js
-doesn't match your GitHub>*.*<與您的 GitHub 不相符>*.*<渲染器介面>*.*<renderer.js
+doesn't match your GitHub>*.*<與您的 GitHub 不符>*.*<渲染器介面>*.*<renderer.js
 exist on your machine.>*.*<存在於您的電腦上。>*.*<渲染器介面>*.*<renderer.js
-failed in your pull request>*.*<在您的提取請求 (Pull Request) 中失敗>*.*<渲染器介面>*.*<renderer.js
+failed in your pull request>*.*<在您的提取請求（Pull Request）中失敗>*.*<渲染器介面>*.*<renderer.js
 file already. Checking this box will result in the existing file being overwritten.>*.*<檔案。勾選此方塊將會覆寫現有檔案。>*.*<渲染器介面>*.*<renderer.js
 files changed>*.*<個檔案已變更>*.*<渲染器介面>*.*<renderer.js
 files selected>*.*<個檔案已選取>*.*<渲染器介面>*.*<renderer.js
-for GitHub Desktop in the>*.*<給 GitHub Desktop 於>*.*<渲染器介面>*.*<renderer.js
-for your repository.>*.*<給您的儲存庫。>*.*<渲染器介面>*.*<renderer.js
-git configuration >*.*<Git 設定檔>*.*<渲染器介面>*.*<renderer.js
-helps you work with GitHub locally.>*.*<協助您於本機搭配 GitHub 進行開發。>*.*<渲染器介面>*.*<renderer.js
-hook failed. What would you like to do?>*.*<Hook 失敗。您想要執行什麼操作？>*.*<渲染器介面>*.*<renderer.js
-in progress that you have not yet committed.>*.*<進行中且尚未提交。>*.*<渲染器介面>*.*<renderer.js
-in your >*.*<於您的>*.*<渲染器介面>*.*<renderer.js
-is a fork of>*.*<分叉自>*.*<渲染器介面>*.*<renderer.js
+for GitHub Desktop in the>*.*<用於 GitHub Desktop，位於>*.*<渲染器介面>*.*<renderer.js
+for your repository.>*.*<用於您的儲存庫。>*.*<渲染器介面>*.*<renderer.js
+git configuration >*.*<Git 組態設定>*.*<渲染器介面>*.*<renderer.js
+helps you work with GitHub locally.>*.*<協助您在本機操作 GitHub。>*.*<渲染器介面>*.*<renderer.js
+hook failed. What would you like to do?>*.*<Hook 執行失敗。您想進行什麼操作？>*.*<渲染器介面>*.*<renderer.js
+in progress that you have not yet committed.>*.*<正在進行中但尚未提交。>*.*<渲染器介面>*.*<renderer.js
+in your >*.*<位於您的>*.*<渲染器介面>*.*<renderer.js
+is a fork of>*.*<是此專案的復刻（Fork）：>*.*<渲染器介面>*.*<renderer.js
 is already up to date>*.*<已經是最新狀態>*.*<渲染器介面>*.*<renderer.js
-is already up to date with >*.*<已經與下列項目同步至最新狀態：>*.*<渲染器介面>*.*<renderer.js
-is an open source project published under the MIT License. You can view the source code and contribute to this project on>*.*<是一個在 MIT 授權條款下發布的開源專案。您可以檢視原始碼並參與貢獻於>*.*<渲染器介面>*.*<renderer.js
+is already up to date with >*.*<已經與以下內容保持最新狀態：>*.*<渲染器介面>*.*<renderer.js
+is an open source project published under the MIT License. You can view the source code and contribute to this project on>*.*<是一個在 MIT 授權條款下發布的開源專案。您可以檢視原始碼並在以下位置為此專案做出貢獻：>*.*<渲染器介面>*.*<renderer.js
 is configured to delete items immediately.>*.*<已設定為立即刪除項目。>*.*<渲染器介面>*.*<renderer.js
 is expected':n.ProtectedBranchRequiredStatus,>*.*<為必填':n.ProtectedBranchRequiredStatus,>*.*<渲染器介面>*.*<renderer.js
 is not a valid name.>*.*<不是有效的名稱。>*.*<渲染器介面>*.*<renderer.js
 is potentially unsafe>*.*<可能存在安全風險>*.*<渲染器介面>*.*<renderer.js
 is the >*.*<是>*.*<渲染器介面>*.*<renderer.js
 is the version control system.>*.*<是版本控制系統。>*.*<渲染器介面>*.*<renderer.js
-is up to date with all commits from>*.*<已同步所有提交自>*.*<渲染器介面>*.*<renderer.js
-is where you store your code and collaborate with others.>*.*<是您存放程式碼並與他人協作的地方。>*.*<渲染器介面>*.*<renderer.js
+is up to date with all commits from>*.*<已同步所有提交，與以下來源保持最新：>*.*<渲染器介面>*.*<renderer.js
+is where you store your code and collaborate with others.>*.*<是您儲存程式碼並與他人協作的地方。>*.*<渲染器介面>*.*<renderer.js
 key fingerprint is>*.*<金鑰指紋為>*.*<渲染器介面>*.*<renderer.js
-machine and will be installed at the next launch or>*.*<電腦，並將於下次啟動時安裝，或>*.*<渲染器介面>*.*<renderer.js
+machine and will be installed at the next launch or>*.*<電腦上，並將於下次啟動時安裝，或者>*.*<渲染器介面>*.*<renderer.js
 menu or>*.*<選單或>*.*<渲染器介面>*.*<renderer.js
-no longer exists. Remove it from this repository?>*.*<已不存在。要將其從此儲存庫中移除嗎？>*.*<渲染器介面>*.*<renderer.js
-on top of >*.*<於基底之上：>*.*<渲染器介面>*.*<renderer.js
-removed lines>*.*<移除行數>*.*<渲染器介面>*.*<renderer.js
+no longer exists. Remove it from this repository?>*.*<已不存在。要將它從此儲存庫中移除嗎？>*.*<渲染器介面>*.*<renderer.js
+on top of >*.*<基礎之上>*.*<渲染器介面>*.*<renderer.js
+removed lines>*.*<行刪除>*.*<渲染器介面>*.*<renderer.js
 repositories use>*.*<儲存庫使用>*.*<渲染器介面>*.*<renderer.js
 to a branch>*.*<至分支>*.*<渲染器介面>*.*<renderer.js
-to choose a new location.>*.*<以選取新位置。>*.*<渲染器介面>*.*<renderer.js
+to choose a new location.>*.*<以選擇新位置。>*.*<渲染器介面>*.*<renderer.js
 to confirm.>*.*<以確認。>*.*<渲染器介面>*.*<renderer.js
 to continue?>*.*<以繼續？>*.*<渲染器介面>*.*<renderer.js
 to match >*.*<以符合>*.*<渲染器介面>*.*<renderer.js
 to store large files on GitHub.>*.*<用於在 GitHub 上儲存大型檔案。>*.*<渲染器介面>*.*<renderer.js
-users weren't found and won't be added as co-authors of this commit. Are you sure you want to commit?>*.*<位使用者未找到，因此不會被加入為此提交的共同作者。您確定要提交嗎？>*.*<渲染器介面>*.*<renderer.js
-was unknown. Available options are {auto, browser, node}>*.*<未知。可用的選項為 {auto, browser, node}>*.*<渲染器介面>*.*<renderer.js
-when changes are present on your branch.>*.*<當您的分支上有變更時。>*.*<渲染器介面>*.*<renderer.js
-when merging >*.*<當合併>*.*<渲染器介面>*.*<renderer.js
-will be started, including all of >*.*<即將開始，包含所有的>*.*<渲染器介面>*.*<renderer.js
+users weren't found and won't be added as co-authors of this commit. Are you sure you want to commit?>*.*<位使用者未找到，因此不會被新增為此提交的共同作者。確定仍要提交嗎？>*.*<渲染器介面>*.*<renderer.js
+was unknown. Available options are {auto, browser, node}>*.*<未知。可用選項為 {auto, browser, node}>*.*<渲染器介面>*.*<renderer.js
+when changes are present on your branch.>*.*<當分支上有變更時。>*.*<渲染器介面>*.*<renderer.js
+when merging >*.*<合併時>*.*<渲染器介面>*.*<renderer.js
+will be started, including all of >*.*<即將啟動，包括所有>*.*<渲染器介面>*.*<renderer.js
 with the account>*.*<使用帳戶>*.*<渲染器介面>*.*<renderer.js
 you can share it, >*.*<您可以分享它，>*.*<渲染器介面>*.*<renderer.js
-your pull request>*.*<您的提取請求 (Pull Request)>*.*<渲染器介面>*.*<renderer.js
+your pull request>*.*<您的提取請求>*.*<渲染器介面>*.*<renderer.js
 1 conflict>*.*<1 個衝突>*.*<渲染器介面>*.*<renderer.js
 1 conflicted file>*.*<1 個衝突檔案>*.*<渲染器介面>*.*<renderer.js
 1 day>*.*<1 天>*.*<渲染器介面>*.*<renderer.js
@@ -617,7 +617,7 @@ Avatar URL>*.*<大頭貼 URL>*.*<渲染器介面>*.*<renderer.js
 Avatar URL already resolved or endpoint is missing>*.*<大頭貼 URL 已解析或缺少端點>*.*<渲染器介面>*.*<renderer.js
 Avatar for unknown user>*.*<未知使用者的大頭貼>*.*<渲染器介面>*.*<renderer.js
 Avatar token missing>*.*<缺少大頭貼權杖（Token）>*.*<渲染器介面>*.*<renderer.js
-he is here   >*.*<他在這裡>*.*<主程序介面>*.*<main.js
+he is here   >*.*<他就在這裡>*.*<主程序介面>*.*<main.js
 Avatar tokens are only available for ghe.com>*.*<頭像權杖僅適用於 ghe.com>*.*<渲染器介面>*.*<renderer.js
 Azure API version>*.*<Azure API 版本>*.*<渲染器介面>*.*<renderer.js
 Background updates>*.*<背景更新>*.*<渲染器介面>*.*<renderer.js
@@ -1776,77 +1776,81 @@ PyCharm Community Edition>*.*<PyCharm 社群版>*.*<渲染器介面>*.*<renderer
 Windows Terminal>*.*<Windows 終端機>*.*<渲染器介面>*.*<renderer.js
 XFCE Terminal>*.*<XFCE 終端機>*.*<渲染器介面>*.*<renderer.js
 IntelliJ IDEA Community Edition>*.*<IntelliJ IDEA 社群版>*.*<渲染器介面>*.*<renderer.js
-   he is here   >*.*<他就在這裡>*.*<主程序介面>*.*<main.js
- after a stream was destroyed>*.*<於資料流損毀之後>*.*<主程序介面>*.*<main.js
+GNOME Console>*.*<GNOME 終端機>*.*<渲染器介面>*.*<renderer.js
+   he is here   >*.*<他在這裡>*.*<主程序介面>*.*<main.js
+ after a stream was destroyed>*.*<於串流損毀之後>*.*<主程序介面>*.*<main.js
  method is not implemented>*.*<方法尚未實作>*.*<主程序介面>*.*<main.js
- not defined: conflicts with the method >*.*<未定義：與該方法衝突>*.*<主程序介面>*.*<main.js
- Able to merge.>*.*<可以進行合併。>*.*<渲染器介面>*.*<renderer.js
+ not defined: conflicts with the method >*.*<未定義：與方法衝突>*.*<主程序介面>*.*<main.js
+ Able to merge.>*.*<可以合併。>*.*<渲染器介面>*.*<renderer.js
  Can't automatically merge.>*.*<無法自動合併。>*.*<渲染器介面>*.*<renderer.js
- Conflicted files>*.*<發生衝突的檔案>*.*<渲染器介面>*.*<renderer.js
- Do you want to create a fork of this repository at >*.*<您是否要在以下位置建立此儲存庫的復刻（Fork）：>*.*<渲染器介面>*.*<renderer.js
+ Conflicted files>*.*<衝突的檔案>*.*<渲染器介面>*.*<renderer.js
+ Do you want to create a fork of this repository at >*.*<您要在以下位置建立此儲存庫的派生 (Fork) 嗎：>*.*<渲染器介面>*.*<renderer.js
  GitHub Desktop has no permission to display notifications. Please, enable them in the>*.*<GitHub Desktop 沒有顯示通知的權限。請在以下位置啟用：>*.*<渲染器介面>*.*<renderer.js
  Resolve with Copilot>*.*<使用 Copilot 解決>*.*<渲染器介面>*.*<renderer.js
  Skipped by Copilot>*.*<已由 Copilot 略過>*.*<渲染器介面>*.*<renderer.js
  Thanks @>*.*<感謝 @>*.*<渲染器介面>*.*<renderer.js
  The following files would be overwritten:>*.*<下列檔案將會被覆寫：>*.*<渲染器介面>*.*<renderer.js
- Unable to merge unrelated histories in this repository>*.*<無法合併此儲存庫中無關的歷史紀錄>*.*<渲染器介面>*.*<renderer.js
+ Unable to merge unrelated histories in this repository>*.*<無法在此儲存庫中合併無關的歷史記錄>*.*<渲染器介面>*.*<renderer.js
  You can drag & drop an existing repository folder here to add it to Desktop>*.*<您可以將現有的儲存庫資料夾拖放至此處以新增到 Desktop>*.*<渲染器介面>*.*<renderer.js
- Your current stash will be overwritten by creating a new stash>*.*<建立新的暫存將會覆寫您目前的暫存>*.*<渲染器介面>*.*<renderer.js
- account. Do you want to sign in again?>*.*<帳戶。您要重新登入嗎？>*.*<渲染器介面>*.*<renderer.js
+ Your current stash will be overwritten by creating a new stash>*.*<建立新的暫存將會覆寫目前的暫存>*.*<渲染器介面>*.*<renderer.js
+ account. Do you want to sign in again?>*.*<帳戶。您要再次登入嗎？>*.*<渲染器介面>*.*<renderer.js
  added lines>*.*<行新增>*.*<渲染器介面>*.*<renderer.js
  already exists>*.*<已經存在>*.*<渲染器介面>*.*<renderer.js
  already exists on the remote.>*.*<已存在於遠端。>*.*<渲染器介面>*.*<renderer.js
- and renaming this branch will not change the branch name on the remote.>*.*<且重新命名此分支不會變更遠端上的分支名稱。>*.*<渲染器介面>*.*<renderer.js
+ and renaming this branch will not change the branch name on the remote.>*.*<且重新命名此分支並不會變更遠端上的分支名稱。>*.*<渲染器介面>*.*<renderer.js
  appears to be owned by another user on your machine. Adding untrusted repositories may automatically execute files in the repository.>*.*<似乎屬於您電腦上的其他使用者。新增不受信任的儲存庫可能會自動執行該儲存庫中的檔案。>*.*<渲染器介面>*.*<renderer.js
- are entirely different commit histories.>*.*<是完全不同的提交歷史紀錄。>*.*<渲染器介面>*.*<renderer.js
+ are entirely different commit histories.>*.*<為完全不同的提交歷史記錄。>*.*<渲染器介面>*.*<renderer.js
  been resolved.>*.*<已解決。>*.*<渲染器介面>*.*<renderer.js
  by applying its >*.*<透過套用其>*.*<渲染器介面>*.*<renderer.js
  changed files?>*.*<個變更的檔案？>*.*<渲染器介面>*.*<renderer.js
- choose an email local to this repository from the>*.*<從中選擇此儲存庫專用的本機電子郵件地址：>*.*<渲染器介面>*.*<renderer.js
+ choose an email local to this repository from the>*.*<從以下選項中選擇此儲存庫專用的電子郵件地址：>*.*<渲染器介面>*.*<renderer.js
  could not be created.>*.*<無法建立。>*.*<渲染器介面>*.*<renderer.js
- doesn't match your GitHub>*.*<與您的 GitHub 不符>*.*<渲染器介面>*.*<renderer.js
+ doesn't match your GitHub>*.*<與您的 GitHub 不相符>*.*<渲染器介面>*.*<renderer.js
  exist on your machine.>*.*<存在於您的電腦上。>*.*<渲染器介面>*.*<renderer.js
- failed in your pull request>*.*<在您的提取請求（Pull Request）中失敗>*.*<渲染器介面>*.*<renderer.js
- file already. Checking this box will result in the existing file being overwritten.>*.*<檔案。勾選此方塊將會覆寫現有檔案。>*.*<渲染器介面>*.*<renderer.js
+ failed in your pull request>*.*<在您的拉取請求 (PR) 中失敗>*.*<渲染器介面>*.*<renderer.js
+ file already. Checking this box will result in the existing file being overwritten.>*.*<檔案已存在。勾選此方塊將會覆寫現有檔案。>*.*<渲染器介面>*.*<renderer.js
  files changed>*.*<個檔案已變更>*.*<渲染器介面>*.*<renderer.js
  files selected>*.*<個檔案已選取>*.*<渲染器介面>*.*<renderer.js
- for GitHub Desktop in the>*.*<用於 GitHub Desktop，位於>*.*<渲染器介面>*.*<renderer.js
- for your repository.>*.*<用於您的儲存庫。>*.*<渲染器介面>*.*<renderer.js
- git configuration >*.*<Git 組態設定>*.*<渲染器介面>*.*<renderer.js
- helps you work with GitHub locally.>*.*<協助您在本機操作 GitHub。>*.*<渲染器介面>*.*<renderer.js
- hook failed. What would you like to do?>*.*<Hook 執行失敗。您想進行什麼操作？>*.*<渲染器介面>*.*<renderer.js
+ for GitHub Desktop in the>*.*<針對 GitHub Desktop 於>*.*<渲染器介面>*.*<renderer.js
+ for your repository.>*.*<給您的儲存庫。>*.*<渲染器介面>*.*<renderer.js
+ git configuration >*.*<Git 設定>*.*<渲染器介面>*.*<renderer.js
+ helps you work with GitHub locally.>*.*<能協助您在本地端與 GitHub 協同工作。>*.*<渲染器介面>*.*<renderer.js
+ hook failed. What would you like to do?>*.*<Hook 執行失敗。您想要做什麼？>*.*<渲染器介面>*.*<renderer.js
  in progress that you have not yet committed.>*.*<正在進行中但尚未提交。>*.*<渲染器介面>*.*<renderer.js
- in your >*.*<位於您的>*.*<渲染器介面>*.*<renderer.js
- is a fork of>*.*<是此專案的復刻（Fork）：>*.*<渲染器介面>*.*<renderer.js
+ in your >*.*<於您的>*.*<渲染器介面>*.*<renderer.js
+ is a fork of>*.*<是以下儲存庫的派生：>*.*<渲染器介面>*.*<renderer.js
  is already up to date>*.*<已經是最新狀態>*.*<渲染器介面>*.*<renderer.js
- is already up to date with >*.*<已經與以下內容保持最新狀態：>*.*<渲染器介面>*.*<renderer.js
- is an open source project published under the MIT License. You can view the source code and contribute to this project on>*.*<是一個在 MIT 授權條款下發布的開源專案。您可以檢視原始碼並在以下位置為此專案做出貢獻：>*.*<渲染器介面>*.*<renderer.js
+ is already up to date with >*.*<已經與以下項目保持最新狀態：>*.*<渲染器介面>*.*<renderer.js
+ is an open source project published under the MIT License. You can view the source code and contribute to this project on>*.*<是依 MIT 授權條款發布的開放原始碼專案。您可以在以下位置檢視原始碼並做出貢獻：>*.*<渲染器介面>*.*<renderer.js
  is configured to delete items immediately.>*.*<已設定為立即刪除項目。>*.*<渲染器介面>*.*<renderer.js
  is not a valid name.>*.*<不是有效的名稱。>*.*<渲染器介面>*.*<renderer.js
- is potentially unsafe>*.*<可能存在安全風險>*.*<渲染器介面>*.*<renderer.js
+ is potentially unsafe>*.*<可能不安全>*.*<渲染器介面>*.*<renderer.js
  is the >*.*<是>*.*<渲染器介面>*.*<renderer.js
- is the version control system.>*.*<是版本控制系統。>*.*<渲染器介面>*.*<renderer.js
- is up to date with all commits from>*.*<已同步所有提交，與以下來源保持最新：>*.*<渲染器介面>*.*<renderer.js
- is where you store your code and collaborate with others.>*.*<是您儲存程式碼並與他人協作的地方。>*.*<渲染器介面>*.*<renderer.js
+ is the version control system.>*.*<為版本控制系統。>*.*<渲染器介面>*.*<renderer.js
+ is up to date with all commits from>*.*<已同步所有來自於以下項目的提交：>*.*<渲染器介面>*.*<renderer.js
+ is where you store your code and collaborate with others.>*.*<是您存放程式碼並與他人協作的地方。>*.*<渲染器介面>*.*<renderer.js
  key fingerprint is>*.*<金鑰指紋為>*.*<渲染器介面>*.*<renderer.js
- machine and will be installed at the next launch or>*.*<電腦上，並將於下次啟動時安裝，或者>*.*<渲染器介面>*.*<renderer.js
+ machine and will be installed at the next launch or>*.*<電腦中，並將於下次啟動時安裝，或是>*.*<渲染器介面>*.*<renderer.js
  menu or>*.*<選單或>*.*<渲染器介面>*.*<renderer.js
  no longer exists. Remove it from this repository?>*.*<已不存在。要將它從此儲存庫中移除嗎？>*.*<渲染器介面>*.*<renderer.js
- on top of >*.*<基礎之上>*.*<渲染器介面>*.*<renderer.js
+ on top of >*.*<於基底之上>*.*<渲染器介面>*.*<renderer.js
  removed lines>*.*<行刪除>*.*<渲染器介面>*.*<renderer.js
  repositories use>*.*<儲存庫使用>*.*<渲染器介面>*.*<renderer.js
  to a branch>*.*<至分支>*.*<渲染器介面>*.*<renderer.js
  to choose a new location.>*.*<以選擇新位置。>*.*<渲染器介面>*.*<renderer.js
  to confirm.>*.*<以確認。>*.*<渲染器介面>*.*<renderer.js
- to continue?>>*.*<以繼續？>>*.*<渲染器介面>*.*<renderer.js
+ to continue?>*.*<以繼續？>*.*<渲染器介面>*.*<renderer.js
  to match >*.*<以符合>*.*<渲染器介面>*.*<renderer.js
- to store large files on GitHub.>*.*<用於在 GitHub 上儲存大型檔案。>*.*<渲染器介面>*.*<renderer.js
+ to store large files on GitHub.>*.*<以在 GitHub 上儲存大檔案。>*.*<渲染器介面>*.*<renderer.js
  users weren't found and won't be added as co-authors of this commit. Are you sure you want to commit?>*.*<位使用者未找到，因此不會被新增為此提交的共同作者。確定仍要提交嗎？>*.*<渲染器介面>*.*<renderer.js
- was unknown. Available options are {auto, browser, node}>*.*<未知。可用選項為 {auto, browser, node}>*.*<渲染器介面>*.*<renderer.js
- when changes are present on your branch.>*.*<當分支上有變更時。>*.*<渲染器介面>*.*<renderer.js
- when merging >*.*<合併時>*.*<渲染器介面>*.*<renderer.js
- will be started, including all of >*.*<即將啟動，包括所有>*.*<渲染器介面>*.*<renderer.js
+ was unknown. Available options are {auto, browser, node}>*.*<未知。可用選項包括 {auto, browser, node}>*.*<渲染器介面>*.*<renderer.js
+ when changes are present on your branch.>*.*<當您的分支上有變更時。>*.*<渲染器介面>*.*<renderer.js
+ when merging >*.*<當合併>*.*<渲染器介面>*.*<renderer.js
+ will be started, including all of >*.*<將會啟動，包括所有>*.*<渲染器介面>*.*<renderer.js
  with the account>*.*<使用帳戶>*.*<渲染器介面>*.*<renderer.js
  you can share it, >*.*<您可以分享它，>*.*<渲染器介面>*.*<renderer.js
- your pull request>*.*<您的提取請求>*.*<渲染器介面>*.*<renderer.js
-GNOME Console>*.*<GNOME 終端機>*.*<渲染器介面>*.*<renderer.js
+ your pull request>*.*<您的拉取請求 (PR)>*.*<渲染器介面>*.*<renderer.js
+fatal: your current branch '.*' does not have any commits yet>*.*<fatal: 您的當前分支 '.*' 尚無任何提交>*.*<渲染器介面>*.*<renderer.js
+ as determined by your>*.*<根據您的設定決定：>*.*<渲染器介面>*.*<renderer.js
+Mona Lisa>*.*<蒙娜麗莎>*.*<渲染器介面>*.*<renderer.js
+Subproject commit ([^-]+)(-dirty)?$>*.*<子專案提交 ([^-]+)(-dirty)?$>*.*<渲染器介面>*.*<renderer.js

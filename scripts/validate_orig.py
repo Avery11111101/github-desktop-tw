@@ -35,8 +35,8 @@ def _load_mapping() -> tuple[list[tuple[str, str, str, str]], list[tuple[str, st
     main_rows: list[tuple[str, str, str, str]] = []
     renderer_rows: list[tuple[str, str, str, str]] = []
     for raw in MAP_PATH.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#") or DELIM not in line:
+        line = raw.rstrip("\r\n")
+        if not line.strip() or line.strip().startswith("#") or DELIM not in line:
             continue
         p = _parse_zh_line(line)
         if not p:
