@@ -1854,3 +1854,4 @@ fatal: your current branch '.*' does not have any commits yet>*.*<fatal: 您的�
  as determined by your>*.*<根據您的設定決定：>*.*<渲染器介面>*.*<renderer.js
 Mona Lisa>*.*<蒙娜麗莎>*.*<渲染器介面>*.*<renderer.js
 Subproject commit ([^-]+)(-dirty)?$>*.*<子專案提交 ([^-]+)(-dirty)?$>*.*<渲染器介面>*.*<renderer.js
+Windsurf (User)>*.*<Windsurf (使用者)>*.*<渲染器介面>*.*<renderer.js

@@ -12,12 +12,14 @@ import shutil
 import subprocess
 import sys
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMP_DIR = ROOT / "Temp"
 ORIG_DIR = ROOT / "Orig"
 WIN_DIR = ROOT / "Windows"
+BACKUP_DIR = ROOT / "Backups"
 USER_ZH = TEMP_DIR / "UserTemp.zh"
 
 PROMPT_FILE = TEMP_DIR / "ai_prompt.txt"
@@ -624,6 +626,234 @@ def check_and_clean_dictionary() -> None:
         print("\n↩️ 已取消，字典維持原狀。\n")
 
 
+def parse_version_tuple(folder_name: str) -> tuple[int, ...]:
+    nums = re.findall(r"\d+", folder_name)
+    return tuple(map(int, nums)) if nums else (0,)
+
+
+def get_github_desktop_app_dir() -> tuple[Path | None, str | None]:
+    """自動偵測本機最新安裝的 GitHub Desktop resources/app 路徑與版本。"""
+    local_app_data = os.environ.get("LOCALAPPDATA")
+    if not local_app_data:
+        return None, None
+    gh_dir = Path(local_app_data) / "GitHubDesktop"
+    if not gh_dir.exists():
+        return None, None
+    try:
+        app_dirs = [d for d in gh_dir.iterdir() if d.is_dir() and d.name.startswith("app-")]
+    except Exception:
+        return None, None
+    if not app_dirs:
+        return None, None
+    app_dirs.sort(key=lambda d: parse_version_tuple(d.name), reverse=True)
+    latest_app = app_dirs[0]
+    version = latest_app.name.replace("app-", "")
+    target = latest_app / "resources" / "app"
+    if not target.exists():
+        return None, None
+    return target, version
+
+
+def is_github_desktop_running() -> bool:
+    """檢查 GitHubDesktop.exe 是否正在執行。"""
+    try:
+        res = subprocess.run(
+            ["tasklist", "/FI", "IMAGENAME eq GitHubDesktop.exe", "/NH"],
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+        return "GitHubDesktop.exe" in res.stdout
+    except Exception:
+        return False
+
+
+def close_github_desktop_process() -> bool:
+    """自動關閉正在執行的 GitHub Desktop 處理序。"""
+    try:
+        subprocess.run(["taskkill", "/F", "/IM", "GitHubDesktop.exe"], capture_output=True, timeout=5)
+        return True
+    except Exception:
+        return False
+
+
+def launch_github_desktop() -> None:
+    """啟動 GitHub Desktop。"""
+    local_app_data = os.environ.get("LOCALAPPDATA")
+    if not local_app_data:
+        return
+    gh_exe = Path(local_app_data) / "GitHubDesktop" / "GitHubDesktop.exe"
+    if gh_exe.exists():
+        try:
+            flags = getattr(subprocess, "DETACHED_PROCESS", 0) if sys.platform == "win32" else 0
+            subprocess.Popen([str(gh_exe)], creationflags=flags)
+            print("🚀 已為您啟動 GitHub Desktop！")
+        except Exception as e:
+            print(f"⚠️ 啟動失敗：{e}")
+
+
+def install_to_github_desktop() -> int:
+    """一鍵將 Windows/ 內的繁中成品安裝套用至 GitHub Desktop，安裝前自動備份原檔。"""
+    main_win = WIN_DIR / "main.js"
+    ren_win = WIN_DIR / "renderer.js"
+
+    if not main_win.exists() or not ren_win.exists():
+        print("\n⚠️ 尚未在 Windows/ 目錄找到編譯成品！")
+        ans = input("👉 是否立即執行 [3] 一鍵編譯套用？[Y/n]: ").strip().lower()
+        if ans in ("", "y", "yes"):
+            code = apply_patch()
+            if code != 0:
+                print("❌ 編譯失敗，終止安裝！")
+                return 1
+        else:
+            print("↩️ 安裝已取消。")
+            return 1
+
+    app_target, version = get_github_desktop_app_dir()
+    if not app_target or not version:
+        print("\n❌ 自動偵測失敗：找不到 GitHub Desktop 安裝目錄！")
+        print(r"💡 請確認您已安裝 GitHub Desktop，預設路徑應為：%LOCALAPPDATA%\GitHubDesktop\app-*\resources\app")
+        return 1
+
+    print("\n" + "=" * 65)
+    print("      🚀 一鍵安裝套用繁體中文至 GitHub Desktop")
+    print("=" * 65)
+    print(f"  🔍 偵測到本機版本：GitHub Desktop v{version}")
+    print(f"  📁 目標安裝路徑：{app_target}")
+    print("-" * 65)
+
+    if is_github_desktop_running():
+        print("⚠️ 偵測到 GitHub Desktop 正在執行中！")
+        ans = input("👉 為了避免檔案鎖定導致寫入失敗，是否由程式自動關閉 GitHub Desktop？[Y/n]: ").strip().lower()
+        if ans in ("", "y", "yes"):
+            close_github_desktop_process()
+            print("🛑 已成功結束 GitHub Desktop 處理序。")
+        else:
+            print("⚠️ 未關閉處理序，若覆蓋時出現權限錯誤請手動關閉後重試。")
+
+    # 1. 建立備份
+    BACKUP_DIR.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    backup_folder = BACKUP_DIR / f"backup_{version}_{timestamp}"
+    backup_folder.mkdir(parents=True, exist_ok=True)
+
+    dest_main = app_target / "main.js"
+    dest_ren = app_target / "renderer.js"
+
+    backed_files = []
+    if dest_main.exists():
+        shutil.copy2(dest_main, backup_folder / "main.js")
+        backed_files.append("main.js")
+    if dest_ren.exists():
+        shutil.copy2(dest_ren, backup_folder / "renderer.js")
+        backed_files.append("renderer.js")
+
+    meta = {
+        "version": version,
+        "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "app_dir": str(app_target),
+        "files": backed_files,
+    }
+    (backup_folder / "backup_meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    print(f"📦 【步驟 1/2】原版檔案已安全備份至：\n   👉 {backup_folder}")
+
+    # 2. 替換檔案
+    try:
+        shutil.copy2(main_win, dest_main)
+        shutil.copy2(ren_win, dest_ren)
+    except Exception as e:
+        print(f"\n❌ 覆蓋寫入時發生錯誤：{e}")
+        print("💡 請確認 GitHub Desktop 已完全關閉，或以系統管理員身分執行。")
+        return 1
+
+    print(f"✅ 【步驟 2/2】繁中化檔案已成功替換覆蓋至安裝目錄！")
+    print("=" * 65)
+    print(f"🎉 恭喜！GitHub Desktop (v{version}) 繁體中文化套用完成！")
+    print("💡 日後若想還原官方英文原版，隨時可在工作台選單執行 [5] 還原原版檔案。")
+    print("=" * 65)
+
+    ans = input("\n👉 是否立即為您開啟 GitHub Desktop 檢視繁中介面？[Y/n]: ").strip().lower()
+    if ans in ("", "y", "yes"):
+        launch_github_desktop()
+    return 0
+
+
+def restore_from_backup() -> int:
+    """從 Backups/ 目錄下的備份還原官方原版檔案至 GitHub Desktop。"""
+    if not BACKUP_DIR.exists():
+        print("\n❌ 尚未找到任何備份資料夾 (Backups/)！")
+        return 1
+
+    backups = [d for d in BACKUP_DIR.iterdir() if d.is_dir() and (d / "main.js").exists() and (d / "renderer.js").exists()]
+    if not backups:
+        print("\n❌ Backups/ 資料夾中沒有找到包含完整 main.js 與 renderer.js 的備份！")
+        return 1
+
+    backups.sort(key=lambda d: d.stat().st_mtime, reverse=True)
+
+    print("\n" + "=" * 65)
+    print("        🔄 還原官方原版檔案 (從備份還原)")
+    print("=" * 65)
+    print(f"  📦 共找到 {len(backups)} 筆可用備份紀錄：")
+    for idx, b in enumerate(backups, 1):
+        meta_file = b / "backup_meta.json"
+        ver_info = ""
+        date_info = datetime.fromtimestamp(b.stat().st_mtime).strftime("%Y-%m-%d %H:%M:%S")
+        if meta_file.exists():
+            try:
+                m = json.loads(meta_file.read_text(encoding="utf-8"))
+                ver_info = f" (v{m.get('version', '未知')})"
+                date_info = m.get("created_at", date_info)
+            except Exception:
+                pass
+        rec_tag = " [最新備份 - 推薦]" if idx == 1 else ""
+        print(f"  [{idx}] {date_info}{ver_info} - {b.name}{rec_tag}")
+    print("  [0] 取消並返回主選單")
+    print("-" * 65)
+
+    sel = input(f"👉 請選擇欲還原的備份編號 [預設 1]: ").strip()
+    if sel == "0":
+        print("↩️ 已取消還原。")
+        return 0
+    if not sel:
+        chosen = backups[0]
+    elif sel.isdigit() and 1 <= int(sel) <= len(backups):
+        chosen = backups[int(sel) - 1]
+    else:
+        print("⚠️ 無效的選擇，已取消。")
+        return 1
+
+    app_target, version = get_github_desktop_app_dir()
+    if not app_target:
+        print("\n❌ 自動偵測失敗：找不到 GitHub Desktop 安裝目錄！")
+        return 1
+
+    if is_github_desktop_running():
+        print("⚠️ 偵測到 GitHub Desktop 正在執行中！")
+        ans = input("👉 是否由程式自動為您關閉 GitHub Desktop 以進行還原？[Y/n]: ").strip().lower()
+        if ans in ("", "y", "yes"):
+            close_github_desktop_process()
+            print("🛑 已結束 GitHub Desktop 處理序。")
+
+    try:
+        shutil.copy2(chosen / "main.js", app_target / "main.js")
+        shutil.copy2(chosen / "renderer.js", app_target / "renderer.js")
+    except Exception as e:
+        print(f"\n❌ 還原時發生錯誤：{e}")
+        return 1
+
+    print("\n" + "=" * 65)
+    print(f"✅ 還原成功！已成功將備份 ({chosen.name}) 還原至 GitHub Desktop！")
+    print(f"📁 目標路徑：{app_target}")
+    print("=" * 65)
+
+    ans = input("\n👉 是否立即啟動 GitHub Desktop？[Y/n]: ").strip().lower()
+    if ans in ("", "y", "yes"):
+        launch_github_desktop()
+    return 0
+
+
 def apply_patch() -> int:
     patch_script = ROOT / "scripts" / "apply_zh_patch.py"
     print("\n🚀 正在套用翻譯至 Windows/ 目錄...")
@@ -644,14 +874,16 @@ def interactive_menu() -> None:
         print("-" * 60)
         print("  [1] 掃描並產生 AI 提示詞 (自動抓取未翻譯，可自訂數量或 all)")
         print("  [2] 貼上/匯入 AI 翻譯結果 (智慧對齊空格與即時進度更新)")
-        print("  [3] 一鍵編譯套用 (輸出至 Windows/ 目錄)")
-        print("  [4] 字典健檢與過時詞條清理 (顯示無效筆數，提供刪除/保留選擇)")
-        print("  [5] 開啟專案工作資料夾 (Temp / Windows / Orig)")
+        print("  [3] 一鍵編譯繁中檔案 (輸出至 Windows/ 目錄)")
+        print("  [4] 🚀 一鍵安裝至 GitHub Desktop (自動偵測版本、備份原檔並套用)")
+        print("  [5] 🔄 還原官方原版檔案 (從工作目錄備份還原)")
+        print("  [6] 字典健檢與過時詞條清理 (顯示無效筆數，提供刪除/保留選擇)")
+        print("  [7] 開啟專案工作資料夾 (Temp / Windows / Orig / Backups)")
         print("  [0] 離開工作台")
         print("=" * 60)
 
         try:
-            choice = input("👉 請輸入選項數字 [0-5]: ").strip()
+            choice = input("👉 請輸入選項數字 [0-7]: ").strip()
         except (EOFError, KeyboardInterrupt):
             print("\n👋 已退出工作台！")
             break
@@ -679,11 +911,17 @@ def interactive_menu() -> None:
             apply_patch()
 
         elif choice == "4":
-            check_and_clean_dictionary()
+            install_to_github_desktop()
 
         elif choice == "5":
+            restore_from_backup()
+
+        elif choice == "6":
+            check_and_clean_dictionary()
+
+        elif choice == "7":
             import os
-            os.system(f'explorer "{TEMP_DIR}"')
+            os.system(f'explorer "{ROOT}"')
 
         elif choice == "0" or choice.lower() in ("q", "exit"):
             print("\n👋 感謝使用，已退出工作台！")
@@ -707,6 +945,10 @@ def main() -> int:
 
     p_apply = subparsers.add_parser("apply", help="將字典檔套用產生 Windows/ 翻譯檔")
 
+    p_install = subparsers.add_parser("install", help="一鍵安裝至本機 GitHub Desktop (自動備份原檔)")
+
+    p_restore = subparsers.add_parser("restore", help="從 Backups/ 備份還原官方原版檔案")
+
     p_clean = subparsers.add_parser("clean", help="檢查並清理字典中的過時或重複詞條")
 
     p_menu = subparsers.add_parser("menu", help="啟動全自動互動數字選單")
@@ -724,6 +966,10 @@ def main() -> int:
         return import_response(file_path=args.file)
     elif args.action == "apply":
         return apply_patch()
+    elif args.action == "install":
+        return install_to_github_desktop()
+    elif args.action == "restore":
+        return restore_from_backup()
     elif args.action == "clean":
         check_and_clean_dictionary()
         return 0

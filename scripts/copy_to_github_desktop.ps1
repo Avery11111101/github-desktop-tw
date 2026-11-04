@@ -36,7 +36,24 @@ if (Test-Path $asar) {
     Write-Warning "偵測到 app.asar。一般仍會讀取同層 app\ 內的 main.js；若覆蓋後仍白屏，請改從安裝目錄再確認實際載入的是哪一份 bundle。"
 }
 
+# 替換前自動在專案 Backups/ 目錄建立備份
+$backupRoot = Join-Path $root "Backups"
+if (-not (Test-Path $backupRoot)) {
+    New-Item -ItemType Directory -Path $backupRoot -Force | Out-Null
+}
+$timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
+$version = $apps[0].Name.Replace("app-", "")
+$backupDir = Join-Path $backupRoot "backup_${version}_${timestamp}"
+New-Item -ItemType Directory -Path $backupDir -Force | Out-Null
+
+$destMain = Join-Path $dest "main.js"
+$destRen = Join-Path $dest "renderer.js"
+
+if (Test-Path $destMain) { Copy-Item -LiteralPath $destMain -Destination (Join-Path $backupDir "main.js") -Force }
+if (Test-Path $destRen) { Copy-Item -LiteralPath $destRen -Destination (Join-Path $backupDir "renderer.js") -Force }
+Write-Host "📦 原版檔案已安全備份至: $backupDir"
+
 Write-Host "目標: $dest"
-Copy-Item -LiteralPath $srcMain -Destination (Join-Path $dest "main.js") -Force
-Copy-Item -LiteralPath $srcRen -Destination (Join-Path $dest "renderer.js") -Force
-Write-Host "已覆蓋 main.js 與 renderer.js。請重新啟動 GitHub Desktop。"
+Copy-Item -LiteralPath $srcMain -Destination $destMain -Force
+Copy-Item -LiteralPath $srcRen -Destination $destRen -Force
+Write-Host "✅ 已成功覆蓋 main.js 與 renderer.js！請重新啟動 GitHub Desktop。"

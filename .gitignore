@@ -12,4 +12,6 @@ README.AI.md
 Temp/ai_*.*
 Temp/.cache_*.*
 Temp/.last_sent.json
+Backups/
+
 
